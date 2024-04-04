@@ -5,6 +5,10 @@
       <sourceFolder url="file://$MODULE_DIR$/system" isTestSource="false" packagePrefix="CodeIgniter\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/writable/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/writable/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/writable/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/writable/session" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
