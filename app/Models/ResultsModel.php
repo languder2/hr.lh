@@ -69,12 +69,13 @@ class ResultsModel extends GeneralModel{
             $results[$result->id]= $result;
         return $results;
     }
-
     public function getResult($id= false){
         if($id== false) return false;
         $q= $this->db->table("results")->where(["id"=>$id])->get();
         if($q->getNumRows()==0) return false;
         return  $q->getFirstRow("array");
     }
+
+
 
 }

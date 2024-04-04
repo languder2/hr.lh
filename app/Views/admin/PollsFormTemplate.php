@@ -30,16 +30,16 @@
             <?php $qcnt=1;?>
             <?php if(isset($form['questions'])) $qcnt+= count($form['questions']); ?>
             <div class="questions">
-                <div class="accordion-item question" data-qid="1">
+                <div class="accordion-item question" data-qid="n0">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q-n0">
                             Вопрос
                         </button>
                     </h2>
-                    <div id="collapse-q1" class="accordion-collapse collapse show question">
+                    <div id="collapse-q-n0" class="accordion-collapse collapse show question">
                         <div class="accordion-body">
                             <div class="mb-2">
-                                <input type="text" class="form-control py-2 px-2" name="form[questions][1][question]" placeholder="Вопрос" value="">
+                                <input type="text" class="form-control py-2 px-2" name="form[questions][n0][question]" placeholder="Вопрос" value="">
                             </div>
                             <div class="container-fluid answers mt-2 px-1">
                                 <table class="table caption-top align-middle mb-0 pb-0" data-laid="1">
@@ -47,13 +47,13 @@
                                     <tbody>
                                     <tr class="answer">
                                         <td style="width: 70px;">
-                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][sort][]" placeholder="Sort" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][n0][answers][sort][]" placeholder="Sort" value="">
                                         </td>
                                         <td>
-                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][answer][]" placeholder="Ответ" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][n0][answers][answer][]" placeholder="Ответ" value="">
                                         </td>
                                         <td>
-                                            <select class="form-select" name="form[questions][1][answers][result][]">
+                                            <select class="form-select" name="form[questions][n0][answers][result][]">
                                                 <option value="0">Результат</option>
                                                 <?php if(isset($results)) foreach ($results as $result):?>
                                                     <option value="<?=$result->id?>"><?=$result->name?></option>
@@ -61,14 +61,14 @@
                                             </select>
                                         </td>
                                         <td style="width: 70px;">
-                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][weight][]" placeholder="Вес" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][n0][answers][weight][]" placeholder="Вес" value="">
                                         </td>
                                     </tr>
                                     </tbody>
                                     <tfoot>
                                     <tr>
                                         <td colspan="10" class="text-end border-0">
-                                            <button class="btn btn-primary addAnswer" onclick="addAnswer('1'); return false;">Добавить ответ</button>
+                                            <button class="btn btn-primary addAnswer" onclick="addAnswer('n0'); return false;">Добавить ответ</button>
                                         </td>
                                     </tr>
                                     </tfoot>

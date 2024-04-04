@@ -21,7 +21,6 @@ class GeneralModel extends AuthModel{
         }
         return $results;
     }
-
     public function getFormErrors($validator){
         $results= [];
         $errors= $validator->getErrors();
@@ -32,5 +31,4 @@ class GeneralModel extends AuthModel{
         }
         return $results;
     }
-
 }
