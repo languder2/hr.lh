@@ -1,0 +1,13 @@
+INFO - 2024-02-09 05:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 11:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 11:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-09 11:50:55 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Models\AdminModel.php on line 10.
+ 1 APPPATH\Models\AdminModel.php(10): json_decode(null)
+ 2 APPPATH\Controllers\admin\Admin.php(20): App\Models\AdminModel->hasAuth(Object(CodeIgniter\Session\Session))
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Admin->index('')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-09 11:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 11:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-09 11:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

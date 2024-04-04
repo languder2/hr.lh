@@ -1,0 +1,1174 @@
+INFO - 2023-12-08 04:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 04:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 04:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 04:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 04:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:30:49 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\FacultyList.php on line 18.
+ 1 APPPATH\Views\admin\FacultyList.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:36:55 --> Trying to get property 'code' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 33.
+ 1 APPPATH\Views\admin\FacultyList.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:38:25 --> Trying to get property 'code' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 33.
+ 1 APPPATH\Views\admin\FacultyList.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:38:39 --> Trying to get property 'name' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 33.
+ 1 APPPATH\Views\admin\FacultyList.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:38:52 --> Undefined index: code
+in APPPATH\Views\admin\FacultyList.php on line 33.
+ 1 APPPATH\Views\admin\FacultyList.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:40:13 --> Undefined index: specs
+in APPPATH\Models\FacultyModel.php on line 24.
+ 1 APPPATH\Models\FacultyModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:48:06 --> Trying to get property 'name' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 32.
+ 1 APPPATH\Views\admin\FacultyList.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 06:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 06:49:13 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\FacultyList.php on line 32.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 06:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:26:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:33:19 --> Trying to get property 'name' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 35.
+ 1 APPPATH\Views\admin\FacultyList.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:37:39 --> Call to undefined function App\Models\object()
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:37:47 --> Undefined variable: tmp
+in APPPATH\Models\FacultyModel.php on line 8.
+ 1 APPPATH\Models\FacultyModel.php(8): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:37:58 --> Call to undefined function App\Models\object()
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:38:10 --> Call to undefined function App\Models\object()
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:38:38 --> syntax error, unexpected '1' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 07:38:47 --> syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:38:52 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Models\FacultyModel.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:39:46 --> Call to undefined function App\Models\stdClass()
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:39:50 --> Call to undefined function App\Models\stdClass()
+in APPPATH\Models\FacultyModel.php on line 7.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:44:45 --> syntax error, unexpected '"<pre>"' (T_CONSTANT_ENCAPSED_STRING)
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 07:44:57 --> syntax error, unexpected '"<pre>"' (T_CONSTANT_ENCAPSED_STRING)
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 07:46:23 --> syntax error, unexpected '"<pre>"' (T_CONSTANT_ENCAPSED_STRING)
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:47:21 --> syntax error, unexpected '1' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Models\FacultyModel.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 07:47:24 --> syntax error, unexpected '"1"' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Models\FacultyModel.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:49:01 --> Cannot use object of type stdClass as array
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:49:54 --> Cannot use object of type stdClass as array
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:50:54 --> Cannot use object of type stdClass as array
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:51:19 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Models\FacultyModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:53:44 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:54:52 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Models\FacultyModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:55:12 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Models\FacultyModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:55:54 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Models\FacultyModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:58:57 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 23.
+ 1 APPPATH\Models\FacultyModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 07:59:06 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 23.
+ 1 APPPATH\Models\FacultyModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 07:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 07:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:01:40 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 08:02:25 --> syntax error, unexpected '}'
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 [internal function]: spl_autoload_call()
+ 5 SYSTEMPATH\Config\Factories.php(283): class_exists()
+ 6 SYSTEMPATH\Config\Factories.php(202): CodeIgniter\Config\Factories::locateClass()
+ 7 SYSTEMPATH\Config\Factories.php(161): CodeIgniter\Config\Factories::getDefinedInstance()
+ 8 SYSTEMPATH\Common.php(827): CodeIgniter\Config\Factories::__callStatic()
+ 9 APPPATH\Controllers\admin\Faculty.php(13): model()
+10 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\admin\Faculty->__construct()
+11 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+13 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:02:32 --> Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP)
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:02:36 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:02:43 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:10:04 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 20.
+ 1 APPPATH\Models\FacultyModel.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:10:20 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 APPPATH\Models\FacultyModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:10:51 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 APPPATH\Models\FacultyModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:11:41 --> Undefined property: stdClass::$specs
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 APPPATH\Models\FacultyModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:11:47 --> Undefined property: stdClass::$specs
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 APPPATH\Models\FacultyModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:12:56 --> Undefined property: stdClass::$levels
+in APPPATH\Models\FacultyModel.php on line 18.
+ 1 APPPATH\Models\FacultyModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:14:38 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-08 08:14:41 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-12-08 08:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:15:23 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Models\FacultyModel.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-08 08:15:26 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Models\FacultyModel.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-12-08 08:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:15:58 --> Undefined property: stdClass::$levels
+in APPPATH\Models\FacultyModel.php on line 18.
+ 1 APPPATH\Models\FacultyModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:16:02 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Models\FacultyModel.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Models\FacultyModel.php(18): count()
+ 3 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:17:44 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 19.
+ 1 APPPATH\Models\FacultyModel.php(19): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:18:23 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 APPPATH\Models\FacultyModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 08:18:30 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Models\FacultyModel.php on line 25.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-12-08 08:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:20:23 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 26.
+ 1 APPPATH\Models\FacultyModel.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:20:55 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 27.
+ 1 APPPATH\Models\FacultyModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:22:29 --> Trying to get property 'code' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 23.
+ 1 APPPATH\Views\admin\FacultyList.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:24:40 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:25:26 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 22.
+ 1 APPPATH\Models\FacultyModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:28:09 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 31.
+ 1 APPPATH\Models\FacultyModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:28:22 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\FacultyList.php on line 20.
+ 1 APPPATH\Views\admin\FacultyList.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:28:26 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\FacultyList.php on line 20.
+ 1 APPPATH\Views\admin\FacultyList.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:28:37 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\FacultyList.php on line 20.
+ 1 APPPATH\Views\admin\FacultyList.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:29:38 --> Trying to get property 'code' of non-object
+in APPPATH\Views\admin\FacultyList.php on line 23.
+ 1 APPPATH\Views\admin\FacultyList.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 08:32:52 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\FacultyList.php on line 20.
+ 1 APPPATH\Views\admin\FacultyList.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(28): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 08:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-08 08:57:41 --> mysqli_sql_exception: Unknown column 'fID' in 'where clause' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\FacultyModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-08 08:57:41 --> Unknown column 'fID' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-08 08:58:11 --> mysqli_sql_exception: Unknown column 'fID' in 'where clause' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\FacultyModel.php(10): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-08 08:58:11 --> Unknown column 'fID' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 08:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:00:18 --> Undefined variable: department
+in APPPATH\Models\FacultyModel.php on line 13.
+ 1 APPPATH\Models\FacultyModel.php(13): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:01:27 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 17.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:01:47 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 17.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:01:55 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 17.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:02:30 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Models\FacultyModel.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Models\FacultyModel.php(16): count()
+ 3 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:02:55 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 17.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:03:07 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 17.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:09:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\admin\Faculty.php(25): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:09:45 --> Undefined variable: value
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getFacultyList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:09:55 --> Undefined variable: value
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getFacultyList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:10:02 --> Undefined variable: value
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getFacultyList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:10:15 --> Undefined variable: value
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getFacultyList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:10:44 --> Undefined variable: value
+in APPPATH\Models\FacultyModel.php on line 10.
+ 1 APPPATH\Models\FacultyModel.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(25): App\Models\FacultyModel->getFacultyList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:11:41 --> Creating default object from empty value
+in APPPATH\Controllers\admin\Faculty.php on line 25.
+ 1 APPPATH\Controllers\admin\Faculty.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-08 09:15:40 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-08 09:15:40 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-08 09:15:52 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-08 09:15:52 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-08 09:16:16 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-08 09:16:16 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\FacultyModel.php(17): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\admin\Faculty.php(27): App\Models\FacultyModel->getLevelList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:20:06 --> Creating default object from empty value
+in APPPATH\Models\FacultyModel.php on line 27.
+ 1 APPPATH\Models\FacultyModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:20:33 --> Undefined property: stdClass::$2
+in APPPATH\Models\FacultyModel.php on line 27.
+ 1 APPPATH\Models\FacultyModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:24:49 --> Undefined property: stdClass::$department
+in APPPATH\Models\FacultyModel.php on line 29.
+ 1 APPPATH\Models\FacultyModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:25:12 --> Undefined property: stdClass::$department
+in APPPATH\Models\FacultyModel.php on line 30.
+ 1 APPPATH\Models\FacultyModel.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:25:39 --> Array to string conversion
+in APPPATH\Models\FacultyModel.php on line 29.
+ 1 APPPATH\Models\FacultyModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 09:25:49 --> Array to string conversion
+in APPPATH\Models\FacultyModel.php on line 29.
+ 1 APPPATH\Models\FacultyModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\admin\Faculty.php(28): App\Models\FacultyModel->getSpecList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 09:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 09:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 12:09:44 --> Call to undefined function r()
+in APPPATH\Views\admin\FacultyList.php on line 15.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\admin\Faculty.php(32): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 12:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 12:11:35 --> Undefined property: stdClass::$2
+in APPPATH\Views\admin\FacultyList.php on line 24.
+ 1 APPPATH\Views\admin\FacultyList.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(32): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 12:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 12:11:57 --> Undefined property: stdClass::$2
+in APPPATH\Views\admin\FacultyList.php on line 24.
+ 1 APPPATH\Views\admin\FacultyList.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(32): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 12:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 12:12:15 --> Undefined property: stdClass::$2
+in APPPATH\Views\admin\FacultyList.php on line 24.
+ 1 APPPATH\Views\admin\FacultyList.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(32): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 12:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-08 12:12:29 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\admin\FacultyList.php on line 24.
+ 1 APPPATH\Views\admin\FacultyList.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\work\\OSPanel\\domains\\mgu\\app\\Views\\admin\\FacultyList.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\admin\Faculty.php(32): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\admin\Faculty->list()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-08 12:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-08 12:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

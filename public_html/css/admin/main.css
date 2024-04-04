@@ -1,0 +1,23 @@
+/**/
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.callout{
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+.callout-success{
+    border-left-color: #198754;
+}
+.callout-error{
+    border-left-color: #dc3545;
+}
+.border-custom1{
+    border-color: #ced4da;
+}

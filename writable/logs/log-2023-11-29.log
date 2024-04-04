@@ -1,0 +1,491 @@
+CRITICAL - 2023-11-29 03:35:04 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 03:35:04 --> Uncaught Error: Class 'Locale' not found in D:\work\sites\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\sites\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\sites\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\sites\\m...')
+#4 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\sites\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\sites\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\sites\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\sites\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\sites\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 03:37:18 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 03:37:18 --> Uncaught Error: Class 'Locale' not found in D:\work\sites\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\sites\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\sites\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\sites\\m...')
+#4 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\sites\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\sites\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\sites\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\sites\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\sites\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 03:47:44 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 03:47:44 --> Uncaught Error: Class 'Locale' not found in D:\work\sites\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\sites\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\sites\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\sites\\m...')
+#4 D:\work\sites\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\sites\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\sites\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\sites\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\sites\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\sites\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 08:25:07 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 08:25:07 --> Uncaught Error: Class 'Locale' not found in D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\OSPanel\domains\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\OSPanel...')
+#4 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\OSPanel\domains\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\OSPanel\domains\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\OSPanel\domains\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 08:25:53 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 08:25:53 --> Uncaught Error: Class 'Locale' not found in D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\OSPanel\domains\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\OSPanel...')
+#4 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\OSPanel\domains\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\OSPanel\domains\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\OSPanel\domains\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 08:26:24 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(66): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-29 08:26:24 --> Uncaught Error: Class 'Locale' not found in D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php:136
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Helpers\number_helper.php(55): format_number()
+#1 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(145): number_to_size()
+#2 D:\work\OSPanel\domains\mgu\app\Views\errors\html\error_exception.php(361): CodeIgniter\Debug\BaseExceptionHandler::describeMemory()
+#3 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(241): include('D:\\work\\OSPanel...')
+#4 D:\work\OSPanel\domains\mgu\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\work\OSPanel\domains\mgu\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render()
+#6 D:\work\OSPanel\domains\mgu\system\Debug\Exceptions.php(149): CodeIgniter\Debug\ExceptionHandler->handle()
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension()
+#1 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\work\OSPanel\domains\mgu\public\index.php(66): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-11-29 05:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 05:26:42 --> Error connecting to the database: mysqli_sql_exception: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+ in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(185): mysqli->real_connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\work\OSPanel\domains\mgu\app\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+ in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\work\OSPanel\domains\mgu\app\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+#3 D:\work\OSPanel\domains\mgu\app\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+#4 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-29 05:26:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 05:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 05:37:56 --> mysqli_sql_exception: Table 'mgu.mgu_indextree' doesn't exist in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-29 05:37:56 --> Table 'mgu.mgu_indextree' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 05:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 05:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 05:57:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM test' at line 1 in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-29 05:57:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM test' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\test.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 06:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 06:00:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM test' at line 1 in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-29 06:00:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM test' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\test.php(10): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 06:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 06:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 06:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 06:08:25 --> mysqli_sql_exception: Table 'mgu.test' doesn't exist in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-29 06:08:25 --> Table 'mgu.test' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\test.php(10): App\Models\TestModel->getNews()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 06:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 06:08:25 --> mysqli_sql_exception: Table 'mgu.test' doesn't exist in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-29 06:08:25 --> Table 'mgu.test' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\test.php(10): App\Models\TestModel->getNews()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 07:29:05 --> mysqli_sql_exception: Table 'mgu.mgu_indextree' doesn't exist in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\work\OSPanel\domains\mgu\app\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\app\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+#5 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+#6 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-29 07:29:05 --> Table 'mgu.mgu_indextree' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\IndexTreeModel.php(9): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH\Controllers\IndexTree.php(12): App\Models\IndexTreeModel->getIndexTreeList()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\IndexTree->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 07:31:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(185): mysqli->real_connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#5 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-29 07:31:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'mgu'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\test.php(10): App\Models\TestModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 07:31:32 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(185): mysqli->real_connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#5 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-29 07:31:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'mgu'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\test.php(10): App\Models\TestModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-29 07:31:32 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php(185): mysqli->real_connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'mgu' in D:\work\OSPanel\domains\mgu\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 D:\work\OSPanel\domains\mgu\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\work\OSPanel\domains\mgu\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 D:\work\OSPanel\domains\mgu\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\work\OSPanel\domains\mgu\system\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#5 D:\work\OSPanel\domains\mgu\app\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 D:\work\OSPanel\domains\mgu\app\Controllers\test.php(10): App\Models\TestModel->getNews()
+#7 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(942): App\Controllers\test->index()
+#8 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 D:\work\OSPanel\domains\mgu\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\work\OSPanel\domains\mgu\public\index.php(78): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-11-29 07:31:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'mgu'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\TestModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\test.php(10): App\Models\TestModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\test->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 07:58:32 --> Argument 1 passed to CodeIgniter\Router\RouteCollection::get() must be of the type string, array given, called in D:\work\OSPanel\domains\mgu\app\Config\Routes.php on line 11
+in SYSTEMPATH\Router\RouteCollection.php on line 1016.
+ 1 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get()
+ 2 SYSTEMPATH\Router\RouteCollection.php(344): require('D:\\work\\OSPanel\\domains\\mgu\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(78): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 07:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 07:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
