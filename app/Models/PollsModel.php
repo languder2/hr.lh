@@ -10,10 +10,14 @@ class PollsModel extends ResultsModel {
         parent::__construct($db, $validation);
         $this->session= \Config\Services::session();
     }
-
     public function polls(){
         return [];
     }
+    public function addPoll($req= false){
+        if(!is_array($req)) return false;
+        echo "<pre>";
+        print_r($req);
 
+    }
 
 }

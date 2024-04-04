@@ -52,10 +52,33 @@ class PollsController extends BaseController
     }
 
     public function processing(){
-        $req= $this->request->getVar();
-        echo "<pre>";
-        print_r($req);
+        $form= $this->request->getVar("form");
 
+        if($form['op']=="add")
+            $this->model->addPoll($form);
+        $rules= [
+            'form.pollname' => 'required',
+        ];
+        $messages= [
+            'form.pollname'=>[
+                "required"=>"required",
+            ],
+        ];
+        $inputs = $this->validate($rules,$messages);
+        if (!$inputs) {
+
+
+
+
+
+        }
+        die();
+        echo "<br>";
+//        echo strlen($form['name']);
+        die();
+        ECHO "<pre>";
+        print_r($form);
+        die();
     }
 
 }

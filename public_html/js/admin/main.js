@@ -37,11 +37,9 @@ $(document).ready(function(){
 });
 
 function addAnswer(qid){
-    console.log(qid);
     let answer= $(".example-answer tbody").html();
     let question= $("[data-qid="+qid+"]");
     answer= answer.replaceAll("replace-qid",qid);
     question.find(".answers tbody").append(answer);
-    return false;
     return false;
 }

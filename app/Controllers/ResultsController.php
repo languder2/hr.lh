@@ -76,7 +76,6 @@ class ResultsController extends BaseController
                 "required"=>"required",
             ],
         ];
-
         $inputs = $this->validate($rules,$messages);
         if (!$inputs) {
             $this->session->setFlashdata("form",$this->request->getVar('form'));

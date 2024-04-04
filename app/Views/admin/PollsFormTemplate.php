@@ -1,5 +1,5 @@
 <?php if(isset($header)) echo $header; ?>
-    <form method="post" action="<?=base_url("admin/polls/form/processing")?>" class="container-md w-100 ">
+    <form method="post" action="<?=base_url("admin/polls/form/processing")?>" class="container-md w-100 pb-3">
         <input type="hidden" name="form[op]" value="<?=@$op?>">
         <input type="hidden" name="form[id]" value="<?=@$id?>">
         <input type="hidden" name="form[nq]" value="0">
@@ -16,9 +16,16 @@
             </div>
         <?php endif;?>
         <div class="mb-3">
-            <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[name]" placeholder="Название опроса" value="<?=@$form['name']?>">
+            <input type="text" class="form-control py-2 px-2" name="form[pollname]" placeholder="Название опроса" value="<?=@$form['name']?>">
         </div>
-
+        <div class="mb-3">
+            <select class="form-select" name="form[fixed]">
+                <option value="0">Фиксированный результат</option>
+                <?php if(isset($results)) foreach ($results as $result):?>
+                    <option value="<?=$result->id?>"><?=$result->name?></option>
+                <?php endforeach;?>
+            </select>
+        </div>
         <div class="accordion mb-3" id="questions" data-last-question-id="1">
             <?php $qcnt=1;?>
             <?php if(isset($form['questions'])) $qcnt+= count($form['questions']); ?>
@@ -32,15 +39,7 @@
                     <div id="collapse-q1" class="accordion-collapse collapse show question">
                         <div class="accordion-body">
                             <div class="mb-2">
-                                <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][1][question]" placeholder="Вопрос" value="">
-                            </div>
-                            <div class="mb-2">
-                                <select class="form-select" name="form[questions][1][fixed]">
-                                    <option value="0">Фиксированный результат</option>
-                                    <?php if(isset($results)) foreach ($results as $result):?>
-                                        <option value="<?=$result->id?>"><?=$result->name?></option>
-                                    <?php endforeach;?>
-                                </select>
+                                <input type="text" class="form-control py-2 px-2" name="form[questions][1][question]" placeholder="Вопрос" value="">
                             </div>
                             <div class="container-fluid answers mt-2 px-1">
                                 <table class="table caption-top align-middle mb-0 pb-0" data-laid="1">
@@ -48,10 +47,10 @@
                                     <tbody>
                                     <tr class="answer">
                                         <td style="width: 70px;">
-                                            <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][1][answers][sort][]" placeholder="Sort" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][sort][]" placeholder="Sort" value="">
                                         </td>
                                         <td>
-                                            <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][1][answers][answer][]" placeholder="Ответ" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][answer][]" placeholder="Ответ" value="">
                                         </td>
                                         <td>
                                             <select class="form-select" name="form[questions][1][answers][result][]">
@@ -62,7 +61,7 @@
                                             </select>
                                         </td>
                                         <td style="width: 70px;">
-                                            <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][1][answers][weight][]" placeholder="Вес" value="">
+                                            <input type="text" class="form-control py-2 px-2" name="form[questions][1][answers][weight][]" placeholder="Вес" value="">
                                         </td>
                                     </tr>
                                     </tbody>
@@ -88,15 +87,15 @@
         </div>
     </form>
 
-<div class="example-answer">
+<div class="example-answer d-none">
     <table>
         <tbody>
         <tr class="answer">
             <td style="width: 70px;">
-                <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][replace-qid][answers][sort][]" placeholder="Sort" value="">
+                <input type="text" class="form-control py-2 px-2" name="form[questions][replace-qid][answers][sort][]" placeholder="Sort" value="">
             </td>
             <td>
-                <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][replace-qid][answers][answer][]" placeholder="Ответ" value="">
+                <input type="text" class="form-control py-2 px-2" name="form[questions][replace-qid][answers][answer][]" placeholder="Ответ" value="">
             </td>
             <td>
                 <select class="form-select" name="form[questions][replace-qid][answers][result][]">
@@ -107,13 +106,13 @@
                 </select>
             </td>
             <td style="width: 70px;">
-                <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][replace-qid][answers][weight][]" placeholder="Вес" value="">
+                <input type="text" class="form-control py-2 px-2" name="form[questions][replace-qid][answers][weight][]" placeholder="Вес" value="">
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-<div class="example-question">
+<div class="example-question d-none">
     <div class="accordion-item question" data-qid="replace-qid">
         <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q-replace-qid">
@@ -123,15 +122,7 @@
         <div id="collapse-q-replace-qid" class="accordion-collapse collapse show question">
             <div class="accordion-body">
                 <div class="mb-2">
-                    <input type="text" class="form-control py-2 px-2 <?=((isset($validator) && !empty($validator->getError("form.name")))?"alert alert-danger":"")?>" name="form[questions][replace-qid][question]" placeholder="Вопрос" value="">
-                </div>
-                <div class="mb-2">
-                    <select class="form-select" name="form[questions][replace-qid][fixed]">
-                        <option value="0">Фиксированный результат</option>
-                        <?php if(isset($results)) foreach ($results as $result):?>
-                            <option value="<?=$result->id?>"><?=$result->name?></option>
-                        <?php endforeach;?>
-                    </select>
+                    <input type="text" class="form-control py-2 px-2" name="form[questions][replace-qid][question]" placeholder="Вопрос" value="">
                 </div>
                 <div class="container-fluid answers mt-2 px-1">
                     <table class="table caption-top align-middle mb-0 pb-0" data-laid="1">
