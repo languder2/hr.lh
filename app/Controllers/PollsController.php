@@ -9,13 +9,9 @@ class PollsController extends BaseController
     public function __construct(){
         $this->model= model(HubModel::class);
     }
-    public function exit(){
-        $this->session->destroy();
-        return redirect()->to(base_url("admin/"));
-    }
 
     public function list(){
-        if(!$this->model->hasAuth($this->session))
+        if(!$this->model->hasAuth())
             return redirect()->to(base_url(ADMIN));
         $this->data["title"]= "Control Panel: Polls";
         $this->data['menu4MainMenu']= $this->model->getMenu("admin");
@@ -31,7 +27,7 @@ class PollsController extends BaseController
         return view("admin/PollsTemplate",$this->data);
     }
     public function form($op= "add",$id= false){
-        if(!$this->model->hasAuth($this->session))
+        if(!$this->model->hasAuth())
             return redirect()->to(base_url(ADMIN));
         $this->data["title"]= "Control Panel: Results";
         $this->data['menu4MainMenu']= $this->model->getMenu("admin");
@@ -54,13 +50,15 @@ class PollsController extends BaseController
     }
 
     public function processing(){
+        if(!$this->model->hasAuth())
+            return redirect()->to(base_url(ADMIN));
         $form= $this->request->getVar("form");
         $poll= $this->model->disassemblePollForm($form);
         $rules= [
-            'form.pollname' => 'required',
+            'form.poll-name' => 'required',
         ];
         $messages= [
-            'form.pollname'=>[
+            'form.poll-name'=>[
                 "required"=>"required",
             ],
         ];
@@ -72,7 +70,6 @@ class PollsController extends BaseController
                 return redirect()->to(base_url("/admin/polls/add"));
             else
                 return redirect()->to(base_url("/admin/polls/edit/".$poll->id));
-            print_r($this->validator->getErrors());
             return false;
         }
         if($form['op']=="add") $this->model->addPoll($poll);

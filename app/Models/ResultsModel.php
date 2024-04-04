@@ -8,7 +8,6 @@ class ResultsModel extends GeneralModel{
     public function __construct(?ConnectionInterface $db = null, ?ValidationInterface $validation = null)
     {
         parent::__construct($db, $validation);
-        $this->session= \Config\Services::session();
     }
 
     public function deleteResult($id= false){

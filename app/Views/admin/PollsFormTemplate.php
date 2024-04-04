@@ -1,13 +1,13 @@
 <?php if(isset($header)) echo $header; ?>
     <form method="post" action="<?=base_url("admin/polls/form/processing")?>" class="container-md w-100 pb-3">
-        <input type="hidden" name="form[op]" value="<?=@$op?>">
-        <input type="hidden" name="form[id]" value="<?=@$id?>">
-        <input type="hidden" name="form[nq]" value="<?=(isset($poll->maxQID)?$poll->maxQID:"n1")?>">
+        <input type="hidden" name="form[op]" value="<?=$op??""?>">
+        <input type="hidden" name="form[id]" value="<?=$id??""?>">
+        <input type="hidden" name="form[nq]" value="<?=$poll->maxQID??"n1"?>">
         <h3 class="mb-2 mt-3 text-center">
-            <?php if($op=="add"):?>
+            <?php if(isset($op) and $op=="add"):?>
                 Добавить опрос
             <?php else:?>
-                Редактировать опрос: #<?=$id?>
+                Редактировать опрос: #<?=$id??""?>
             <?php endif;?>
         </h3>
         <?php if(!empty($errors)):?>
@@ -16,9 +16,11 @@
             </div>
         <?php endif;?>
         <div class="mb-3">
-            <input type="text" class="form-control py-2 px-2
-                <?=((isset($validator) && !empty($validator->getError("form.pollname")))?"alert alert-danger":"")?>
-                " name="form[pollname]" placeholder="Название опроса" value="<?=isset($poll->name)?$poll->name:""?>">
+            <label class="w-100">
+                <input type="text" class="form-control py-2 px-2
+                    <?=((isset($validator) && !empty($validator->getError("form.poll-name")))?"alert alert-danger":"")?>
+                    " name="form[poll-name]" placeholder="Название опроса" value="<?=$poll->name??""?>">
+            </label>
         </div>
         <div class="mb-3">
              <select class="form-select" name="form[fixed]">

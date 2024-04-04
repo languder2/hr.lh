@@ -1,16 +1,16 @@
 <?php
 namespace App\Models;
 use CodeIgniter\Database\ConnectionInterface;
-use CodeIgniter\Model;
 use CodeIgniter\Validation\ValidationInterface;
-
 class GeneralModel extends AuthModel{
     public function __construct(?ConnectionInterface $db = null, ?ValidationInterface $validation = null)
     {
         parent::__construct($db, $validation);
-        $this->session= \Config\Services::session();
     }
-
+    public function getFlashdata($arg):array|object|string
+    {
+        return $this->session->getFlashdata($arg);
+    }
     public function getMenu($section= "public",$parent= 0){
         $q= $this->db->table("menu")->where(["section"=>$section,"parent"=>$parent,"display"=>'1'])->orderBy("sort")->get();
         $results= [];

@@ -1,19 +1,18 @@
 <?php
 namespace App\Models;
 use CodeIgniter\Database\ConnectionInterface;
-use CodeIgniter\Model;
 use CodeIgniter\Validation\ValidationInterface;
 
 class PollsModel extends ResultsModel {
+
     public function __construct(?ConnectionInterface $db = null, ?ValidationInterface $validation = null)
     {
         parent::__construct($db, $validation);
-        $this->session= \Config\Services::session();
     }
-    public function polls(){
+    public function polls():array{
         return [];
     }
-    public function disassemblePollAnswers($answers){
+    public function disassemblePollAnswers($answers):array{
         $results= [];
         $sort= [];
         $max= (int)max($answers['sort']);
@@ -31,16 +30,16 @@ class PollsModel extends ResultsModel {
                 "sort"=> $ns++,
                 "result"=> $answers['result'][$key],
                 "weight"=> $answers['weight'][$key],
-                "status"=> isset($answers['status'][$key])?$answers['status'][$key]:1,
+                "status"=> $answers['status'][$key] ?? 1,
             ];
         }
         return $results;
     }
-    public function disassemblePollForm($form){
+    public function disassemblePollForm($form):object|bool{
         if(!is_array($form)) return false;
         $poll=(object)[
             "id"=>(int)$form['id'],
-            "name"=>trim($form['pollname']),
+            "name"=>trim($form['poll-name']),
             "maxQID"=> "n".((int)str_replace("n","",max(array_keys ($form['questions'])))+1),
             "fixed"=>empty($form['fixed'])?0:$form['fixed'],
             "questions"=> $form['questions']
@@ -51,7 +50,7 @@ class PollsModel extends ResultsModel {
         }
         return $poll;
     }
-    public function addPoll($poll= false){
+    public function addPoll($poll= false):bool{
         if(!is_object($poll)) return false;
         $sql= (object)[
             "name"=>$poll->name,

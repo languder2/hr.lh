@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\HubModel;
+use CodeIgniter\HTTP\RedirectResponse;
 
 class ResultsController extends BaseController
 {
@@ -12,13 +13,8 @@ class ResultsController extends BaseController
         $this->data= [];
         helper(['form', 'url']);
     }
-    public function exit(){
-        $this->session->destroy();
-        return redirect()->to(base_url("admin/"));
-    }
-
     public function list(){
-        if(!$this->model->hasAuth($this->session))
+        if(!$this->model->hasAuth())
             return redirect()->to(base_url(ADMIN));
         $this->data["title"]= "Control Panel: Polls";
         $this->data['menu4MainMenu']= $this->model->getMenu("admin");
@@ -32,7 +28,7 @@ class ResultsController extends BaseController
     }
 
     public function form($op= "add",$id= false){
-        if(!$this->model->hasAuth($this->session))
+        if(!$this->model->hasAuth())
             return redirect()->to(base_url(ADMIN));
         $this->data["title"]= "Control Panel: Results";
         $this->data['menu4MainMenu']= $this->model->getMenu("admin");
@@ -54,8 +50,10 @@ class ResultsController extends BaseController
     }
 
     public function processing(){
+        if(!$this->model->hasAuth())
+            return redirect()->to(base_url(ADMIN));
         $form= (object)$this->request->getVar('form');
-        if(!$this->model->hasAuth($this->session))
+        if(!$this->model->hasAuth())
             return redirect()->to(base_url(ADMIN));
         $rules= [
             'form.name' => 'required|is_unique[results.name]',
@@ -90,12 +88,17 @@ class ResultsController extends BaseController
         return redirect()->to(base_url("/admin/results/"));
     }
 
-    public function status(){
+    public function status():bool|RedirectResponse{
+        if(!$this->model->hasAuth())
+            return redirect()->to(base_url(ADMIN));
         $req= $this->request->getVar();
         $this->model->resultChangeStatus($req);
+        return true;
     }
 
-    public function delete($id){
+    public function delete($id):RedirectResponse{
+        if(!$this->model->hasAuth())
+            return redirect()->to(base_url(ADMIN));
         $this->model->deleteResult($id);
         return redirect()->to(base_url("/admin/results/"));
     }
