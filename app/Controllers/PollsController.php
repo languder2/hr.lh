@@ -68,7 +68,7 @@ class PollsController extends BaseController
             $this->session->setFlashdata("validator",$this->validator);
             if($form['op']=="add")
                 return redirect()->to(base_url("/admin/polls/add"));
-            else
+            if($form['op']=="edit")
                 return redirect()->to(base_url("/admin/polls/edit/".$poll->id));
             return false;
         }
