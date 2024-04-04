@@ -26,12 +26,12 @@ $(document).ready(function(){
     });
 
     $(".addQuestion").click(function(){
-        let nq= parseInt($("[name='form[nq]']").val());
-        $("[name='form[nq]']").val(nq+1);
+        let nq= $("[name='form[nq]']").val();
+        $("[name='form[nq]']").val("n"+(parseInt(nq.replace("n",""))+1));
         let question= $(".example-question").html();
-        question= question.replaceAll("replace-qid","n"+nq);
+        question= question.replaceAll("replace-qid",nq);
         $(".questions").append(question);
-        addAnswer("n"+nq);
+        addAnswer(nq);
         return false;
     });
 });

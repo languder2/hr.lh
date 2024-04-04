@@ -9,4 +9,9 @@
         </a>
     </div>
 </div>
+<?php if(isset($message) and !empty($message)):?>
+    <div class="mb-3 callout <?=$message->class?>">
+        <?=$message->message?>
+    </div>
+<?php endif; ?>
 <?php if(isset($footer)) echo $footer; ?>
