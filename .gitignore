@@ -1,7 +1,6 @@
 /writable/debugbar/
-/writable/cache
-/writable/logs
-/writable/session
-/writable
-/.idea
-debugbar_*.json
+/writable/cache/
+/writable/logs/
+/writable/session/
+/writable/
+/.idea/
