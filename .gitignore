@@ -1,4 +1,6 @@
-/writable/debugbar/*
-/writable/cache/*
-/writable/logs/*
-/writable/session/*
+/writable/debugbar/
+/writable/cache/
+/writable/logs/
+/writable/session/
+/writable/
+/.idea/
