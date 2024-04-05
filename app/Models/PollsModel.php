@@ -9,9 +9,6 @@ class PollsModel extends ResultsModel {
     {
         parent::__construct($db, $validation);
     }
-    public function polls():array{
-        return [];
-    }
     public function disassemblePollAnswers($answers):array{
         $results= [];
         $sort= [];
@@ -59,16 +56,47 @@ class PollsModel extends ResultsModel {
         ];
         $this->db->table("polls")->insert($sql);
         $pid= $this->db->insertID();
+        $si= 1;
         foreach ($poll->questions as $question){
             $sql= (object)[
                 "poll"=>$pid,
                 "question"=> $question->question,
                 "answers"=> json_encode($question->answers),
                 "status"=>"1",
+                "sort"=>$si++,
             ];
             $this->db->table("questions")->insert($sql);
         }
         $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Опрос добавлен: #$pid, $poll->name"]);
         return true;
     }
+    public function getQuestions($pid,$status= false){
+        $results= [];
+        $where= ["poll"=>$pid];
+        if($status!== false) $where= ["status"=>$status];
+        $q= $this->db->table("questions")->where($where)->get();
+        foreach ($q->getResult() as $result){
+            $result->answers= json_decode($result->answers);
+            $results[$result->id]= $result;
+        }
+        return $results;
+    }
+    public function polls($where= [],$order= false, $view= false):array{
+        $results= [];
+        if(empty($where) && $this->session->has("adminResultsWhere"))
+            $where= $this->session->get("adminResultsWhere");
+        if(!is_array($where)) $where= [];
+        if(empty($order))
+            $order= [
+                "id desc",
+            ];
+        $q= $this->db->table("polls")->where($where)->orderBy(is_array($order)?implode(", ",$order):$order)->get();
+        foreach ($q->getResult() as $result){
+            $result->questions= $this->getQuestions($result->id);
+            $results[$result->id]= $result;
+        }
+        return $results;
+    }
+
+
 }

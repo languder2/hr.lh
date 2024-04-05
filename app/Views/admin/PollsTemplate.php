@@ -14,4 +14,11 @@
         <?=$message->message?>
     </div>
 <?php endif; ?>
+
+<pre>
+    <?php isset($polls)&&print_r($polls);?>
+</pre>
+
+
+
 <?php if(isset($footer)) echo $footer; ?>

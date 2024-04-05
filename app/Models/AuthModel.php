@@ -7,7 +7,8 @@ use CodeIgniter\Session\Session;
 use CodeIgniter\Validation\ValidationInterface;
 use Config\Services;
 class AuthModel extends Model{
-    public Session $session ;
+
+    protected Session $session ;
     public function __construct(?ConnectionInterface $db = null, ?ValidationInterface $validation = null)
     {
         parent::__construct($db, $validation);

@@ -23,8 +23,11 @@
             </label>
         </div>
         <div class="mb-3">
-             <select class="form-select" name="form[fixed]">
-                <option value="0">Фиксированный результат</option>
+            <?=(isset($validator) && !empty($validator->getError("form.fixed")))?"alert alert-danger":"";?>
+             <select class="form-select
+            <?=(isset($validator) && !empty($validator->getError("form.fixed")))?"alert alert-danger":"";?>
+                    " name="form[fixed]">
+                <option value="">Результат по умолчанию</option>
                 <?php if(isset($results)) foreach ($results as $result):?>
                     <option value="<?=$result->id?>" <?=(isset($poll->fixed) && $poll->fixed==$result->id)?"selected":""?>><?=$result->name?></option>
                 <?php endforeach;?>
