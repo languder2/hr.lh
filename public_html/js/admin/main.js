@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $(".formResultStatus").change(function (){
         $.ajax({
@@ -16,8 +17,9 @@ $(document).ready(function(){
         console.log($(this).attr("href"));
         $("#modal-message .modal-title").html("Удалить результат #"+$(this).attr("data-id"));
         $("#modal-message .modal-body").html($(this).attr("data-name"));
-        $("#modal-message #messageLink").html("Удалить");
-        $("#modal-message #messageLink").attr({
+        let modal_message_link= $("#modal-message #messageLink");
+        modal_message_link.html("Удалить");
+        modal_message_link.attr({
             href: $(this).attr("href"),
             class: "btn btn-danger"
         });
@@ -26,8 +28,9 @@ $(document).ready(function(){
     });
 
     $(".addQuestion").click(function(){
-        let nq= $("[name='form[nq]']").val();
-        $("[name='form[nq]']").val("n"+(parseInt(nq.replace("n",""))+1));
+        let current= $("[name='form[nq]']");
+        let nq= current.val();
+        current.val("n"+(parseInt(nq.replace("n",""))+1));
         let question= $(".example-question").html();
         question= question.replaceAll("replace-qid",nq);
         $(".questions").append(question);

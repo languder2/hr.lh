@@ -1,18 +1,11 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\HubModel;
 use CodeIgniter\HTTP\RedirectResponse;
-use CodeIgniter\Model;
 
 class AuthController extends BaseController
 {
-    private Model $model;
     private array $data;
-
-    public function __construct(){
-        $this->model= model(HubModel::class);
-    }
     public function exit(): RedirectResponse
     {
         $this->model->exit();
@@ -21,7 +14,6 @@ class AuthController extends BaseController
 
     public function auth(): string|RedirectResponse
     {
-        $this->db->table("polls");
         if($this->model->hasAuth())
             return redirect()->to(base_url(ADMIN_MAIN_PAGE));
         $this->data["title"]= "Control Panel: Authentication";

@@ -16,7 +16,7 @@ class ResultsModel extends GeneralModel{
             if($q->getNumRows()>0){
                 $rec= $q->getFirstRow();
                 $this->db->table("results")->delete(["id"=>$id]);
-                $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат удален: #$rec->id, $rec->name"]);
+                $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат удален: #$rec->id: $rec->name"]);
             }
         }
         return true;
@@ -32,7 +32,7 @@ class ResultsModel extends GeneralModel{
             "sort"=> ($rec->sort<$q->getNumRows())?$q->getNumRows()+1:$rec->sort+1,
         ];
         $this->db->table("results")->insert($sql);
-        $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат добавлен: ".$form->name]);
+        $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат добавлен: #".$this->db->insertID().": ".$form->name]);
         return true;
     }
     public function resultChangeStatus($req){
@@ -46,7 +46,7 @@ class ResultsModel extends GeneralModel{
             "status"=> !empty($form->status)?1:0,
         ];
         $this->db->table("results")->where(["id"=>$form->id])->update($sql);
-        $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат изменен: ".$form->name]);
+        $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Результат изменен: #$form->id: ".$form->name]);
         return true;
     }
 

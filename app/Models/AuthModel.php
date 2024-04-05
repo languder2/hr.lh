@@ -1,6 +1,7 @@
 <?php
 namespace App\Models;
 use CodeIgniter\Database\ConnectionInterface;
+use CodeIgniter\HTTP\RedirectResponse;
 use CodeIgniter\Model;
 use CodeIgniter\Session\Session;
 use CodeIgniter\Validation\ValidationInterface;
@@ -11,6 +12,11 @@ class AuthModel extends Model{
     {
         parent::__construct($db, $validation);
         $this->session= Services::session();
+    }
+
+    public function test():bool{
+        echo "test";
+        return  false;
     }
     public function hasAuth():bool{
         if($this->session->get("adminAuthStatus")) return true;

@@ -7,10 +7,8 @@ use CodeIgniter\HTTP\RedirectResponse;
 
 class ResultsController extends BaseController
 {
+    public array $data;
     public function __construct(){
-        $this->session= \Config\Services::session();
-        $this->model= model(HubModel::class);
-        $this->data= [];
         helper(['form', 'url']);
     }
     public function list(){
