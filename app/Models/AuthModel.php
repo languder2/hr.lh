@@ -14,11 +14,6 @@ class AuthModel extends Model{
         parent::__construct($db, $validation);
         $this->session= Services::session();
     }
-
-    public function test():bool{
-        echo "test";
-        return  false;
-    }
     public function hasAuth():bool{
         if($this->session->get("adminAuthStatus")) return true;
         return false;

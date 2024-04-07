@@ -81,7 +81,7 @@ class PollsModel extends ResultsModel {
         }
         return $results;
     }
-    public function polls($where= [],$order= false, $view= false):array{
+    public function getPolls($where= [],$order= false):array{
         $results= [];
         if(empty($where) && $this->session->has("adminResultsWhere"))
             $where= $this->session->get("adminResultsWhere");
@@ -98,5 +98,15 @@ class PollsModel extends ResultsModel {
         return $results;
     }
 
+    public function getAdminPollsView(array $data):string{
+        $result= "";
+        $data['where']['status']= '1';
+        $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
+        $result.= view("admin/PollsTableView",$data);
+        $data['where']['status']= '0';
+        $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
+        $result.= view("admin/PollsTableView",$data);
+        return $result;
+    }
 
 }

@@ -16,8 +16,12 @@ class PollsController extends BaseController
         $this->data['footer']= view("admin/footer");
         if($this->session->has("message"))
             $this->data['message']= $this->session->getFlashdata("message");
-        $this->data['polls']= $this->model->polls(false,"id desc",true);
-        $this->data['results']= $this->model->results();
+        $results= $this->model->results();
+        $data= [
+            'results'=> $results,
+            "order"=>"id desc",
+        ];
+        $this->data['polls']= $this->model->getAdminPollsView($data);
         return view("admin/PollsTemplate",$this->data);
     }
     public function form($op= "add",$id= false):string|RedirectResponse{
