@@ -32,3 +32,6 @@ body{
     background-color: #0d6efd;
     color: white;
 }
+.test{
+background: linear-gradient(90deg,#ff000030,#0000ff30);
+}

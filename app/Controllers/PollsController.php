@@ -76,4 +76,17 @@ class PollsController extends BaseController
         return redirect()->to(base_url("/admin/polls/"));
     }
 
+    public function display($pid= false){
+        $this->data["title"]= "Опрос";
+        $this->data['header']= view("header",$this->data);
+        $this->data['footer']= view("footer");
+        if($pid=== false)
+            return view("PollsDisplayErrors",$this->data+["message"=>"Опрос не выбран"]);
+        $this->data['poll']= $this->model->getPoll($pid);
+        if(!is_object($this->data['poll']))
+            return view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
+        if($this->data['poll']->status!=1)
+            return view("PollsDisplayErrors",$this->data+["message"=>"Опрос отключен"]);
+        return view("PollsDisplay",$this->data);
+    }
 }

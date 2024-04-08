@@ -1,4 +1,4 @@
-<table class="table table-striped caption-top align-middle">
+<table class="table table-striped caption-top align-middle" style="table-layout: fixed;">
     <caption><?=$caption??""?></caption>
     <thead class="table-caption">
         <tr>

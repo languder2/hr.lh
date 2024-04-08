@@ -112,4 +112,12 @@ class PollsModel extends ResultsModel {
         return $result;
     }
 
+    public function getPoll($pid){
+        $poll= $this->db->table("polls")->where("id",$pid)->get()->getFirstRow();
+        $poll->questions= $this->getQuestions($poll->id);
+
+        return $poll;
+
+    }
+
 }
