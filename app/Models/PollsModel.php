@@ -101,9 +101,12 @@ class PollsModel extends ResultsModel {
     public function getAdminPollsView(array $data):string{
         $result= "";
         $data['where']['status']= '1';
+        $data['caption']= 'Активные';
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
         $result.= view("admin/PollsTableView",$data);
+
         $data['where']['status']= '0';
+        $data['caption']= 'Не активные';
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
         $result.= view("admin/PollsTableView",$data);
         return $result;

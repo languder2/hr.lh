@@ -14,10 +14,7 @@
         <?=$message->message?>
     </div>
 <?php endif; ?>
-
-<pre>
-    <?php isset($polls)&&print_r($polls);?>
-</pre>
+<?=$polls??"";?>
 
 
 

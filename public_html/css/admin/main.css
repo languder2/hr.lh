@@ -22,6 +22,13 @@ body{
     border-color: #ced4da;
 }
 .table-custom{
-    --bs-table-bg: green;
-    --bs-table-striped-bg: red;
+    --bs-table-bg: #eaebff;
+    --bs-table-striped-bg: #d2f5ff;
+}
+.table-custom td{
+    border: none;
+}
+.table-caption{
+    background-color: #0d6efd;
+    color: white;
 }
