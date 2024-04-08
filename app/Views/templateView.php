@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?=$title?></title>
+    <title><?=$title??""?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script defer src="<?= base_url('js/code.jquery.com_jquery-3.7.0.min.js');?>"></script>
     <script defer src="<?= base_url('js/admin/main.js');?>"></script>
@@ -12,3 +12,8 @@
 </head>
 <body>
 <main class="container-lg px-2">
+<?=$content??""?>
+</main>
+<footer>
+</footer>
+</body>

@@ -6,6 +6,9 @@ body{
     margin: 0;
     padding: 0;
 }
+.ml-10{
+    margin-left: 10px;
+}
 .callout{
     padding: 1rem;
     border: 1px solid #e9ecef;
@@ -34,4 +37,29 @@ body{
 }
 .test{
 background: linear-gradient(90deg,#ff000030,#0000ff30);
+}
+.poll-box{
+    overflow: hidden;
+}
+.poll-answer{
+
+}
+.hide{
+    transform: translate(100%,0);
+}
+@keyframes questionHide {
+    from { transform: translate(0); }
+    to { transform: translate(-100%); }
+}
+@keyframes questionShow {
+    from { transform: translate(-100%); }
+    to { transform: translate(0%); }
+}
+.animation1{
+    animation: questionHide 1s linear;
+    transform: translate(-100%);
+}
+.animation2{
+    animation: questionShow 1s linear;
+    transform: translate(0%);
 }

@@ -76,17 +76,22 @@ class PollsController extends BaseController
         return redirect()->to(base_url("/admin/polls/"));
     }
 
-    public function display($pid= false){
+    public function display($pid= false,$width=false,$hegiht=false):string{
         $this->data["title"]= "Опрос";
-        $this->data['header']= view("header",$this->data);
-        $this->data['footer']= view("footer");
-        if($pid=== false)
-            return view("PollsDisplayErrors",$this->data+["message"=>"Опрос не выбран"]);
-        $this->data['poll']= $this->model->getPoll($pid);
-        if(!is_object($this->data['poll']))
-            return view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
-        if($this->data['poll']->status!=1)
-            return view("PollsDisplayErrors",$this->data+["message"=>"Опрос отключен"]);
-        return view("PollsDisplay",$this->data);
+        if($pid=== false){
+            $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Опрос не выбран"]);
+        }
+        else{
+            $this->data['poll']= $this->model->getPoll($pid);
+            if(!is_object($this->data['poll']))
+                $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
+            elseif($this->data['poll']->status!=1)
+                $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Опрос отключен"]);
+            if(empty($this->data['content']))
+                $this->data['content']= view("PollsDisplay",$this->data);
+        }
+        $this->data['width']= $width??"auto";
+        $this->data['height']= $width??"auto";
+        return view("templateView",$this->data);
     }
 }

@@ -1,5 +1,6 @@
-
 $(document).ready(function(){
+    $(".btn_next").click(pollNextStep);
+    $(".btn_prev").click(pollPrevStep);
     $(".formResultStatus").change(function (){
         $.ajax({
             type: "POST",
@@ -45,4 +46,17 @@ function addAnswer(qid){
     answer= answer.replaceAll("replace-qid",qid);
     question.find(".answers tbody").append(answer);
     return false;
+}
+
+function pollNextStep(){
+    $(".poll-answer").removeClass("animation2");
+    $(".poll-answer").addClass("animation1");
+    return false;
+}
+
+function pollPrevStep() :boolean{
+    $(".poll-answer").removeClass("animation1");
+    $(".poll-answer").addClass("animation2");
+    return false;
+
 }

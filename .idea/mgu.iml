@@ -9,8 +9,10 @@
       <excludeFolder url="file://$MODULE_DIR$/writable/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/writable/logs" />
       <excludeFolder url="file://$MODULE_DIR$/writable/session" />
+      <excludeFolder url="file://$MODULE_DIR$/writable" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
   </component>
 </module>
