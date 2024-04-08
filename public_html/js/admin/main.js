@@ -59,10 +59,7 @@ jQuery(function($){
         if(step+1>=max_step) return false;
         $(".poll-box [name=poll_step]").val(step+1);
         pollAnswerHide(step);
-        let next_list= $(".poll-box [data-group="+(step+1)+"]");
-        $.each(next_list,function (i,el){
-            pollAnswerShow(i,el,next_list.length);
-        });
+        pollAnswerShow(step+1);
         changePollNavbar(step+2,max_step);
         return false;
     }
@@ -72,10 +69,7 @@ jQuery(function($){
         if(step-1<0) return false;
         $(".poll-box [name=poll_step]").val(step-1);
         pollAnswerHide(step);
-        let next_list= $(".poll-box [data-group="+(step-1)+"]");
-        $.each(next_list,function (i,el){
-            pollAnswerShow(i,el,next_list.length);
-        });
+        pollAnswerShow(step-1);
         changePollNavbar(step,max_step);
         return false;
     }
@@ -89,15 +83,18 @@ jQuery(function($){
             });
         });
     }
-    function pollAnswerShow(i,el,length){
-        $(el).css({"animation-delay":i*0.05+"s"}).addClass("poll-show1");
-        el.addEventListener("animationend", () => {
-            $(el).removeClass(["poll-show1","hide"]);
-            if(i+1==length){
-                let step= parseInt($(".poll-box [name=poll_step]").val());
-                $(".poll-box .poll-quetion").css({"z-index":0});
-                $(".poll-box .poll-quetion").eq(step).css({"z-index":1});
-            }
+    function pollAnswerShow(step){
+        let next_list= $(".poll-box [data-group="+step+"]");
+        $.each(next_list,function (i,el){
+            $(el).css({"animation-delay":i*0.05+"s"}).addClass("poll-show1");
+            el.addEventListener("animationend", () => {
+                $(el).removeClass(["poll-show1","hide"]);
+                if(i+1==next_list.length){
+                    let step= parseInt($(".poll-box [name=poll_step]").val());
+                    $(".poll-box .poll-quetion").css({"z-index":0});
+                    $(".poll-box .poll-quetion").eq(step).css({"z-index":1});
+                }
+            });
         });
     }
     function changePollNavbar(step,max){

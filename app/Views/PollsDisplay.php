@@ -32,11 +32,15 @@
                     <div class="progress-bar progress-bar-striped progress-bar-animated py-3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?=100/($qk+3)?>%"></div>
                 </div>
             </div>
-            <div class="text-end">
+            <div class="ms-3">
                 <input type="hidden" name="poll_step" value="0">
                 <input type="hidden" name="max_step" value="<?=isset($poll->questions)?count($poll->questions)+2:0?>">
-                <button class="btn btn-secondary btn_prev btn-sm  rounded-circle disabled" style="width: 30px; height: 30px"></button>
-                <button class="btn btn-primary btn_next btn-sm rounded-circle" style="width: 30px; height: 30px"></button>
+                <div class="float-start">
+                    <button class="btn btn-secondary btn_prev btn-sm  rounded-circle disabled" style="width: 30px; height: 30px"></button>
+                </div>
+                <div class="float-end">
+                    <button class="btn btn-primary btn_next btn-sm rounded-circle" style="width: 30px; height: 30px"></button>
+                </div>
             </div>
         </div>
     </div>
