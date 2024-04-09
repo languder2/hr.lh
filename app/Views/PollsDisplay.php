@@ -51,7 +51,8 @@
     <div class="poll-form hide" data-group="results">
         poll results
     </div>
-        <div class="poll-navbar position-absolute bottom-0 start-0 end-0 px-3 mx-3 text-secondary">
+    <!--END RESULTS-->
+    <div class="poll-navbar position-absolute bottom-0 start-0 end-0 px-3 mx-3 text-secondary">
             <div class="pt-1 position-relative">
                 <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=$qk+1?></div>
                 <div class="progress float-start w-100 rounded-4 position-relative mt-3">
@@ -69,7 +70,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 <pre><?php print_r($poll)?></pre>
 <?php if(isset($footer)) echo $footer; ?>
