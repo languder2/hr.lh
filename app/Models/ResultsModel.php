@@ -75,6 +75,13 @@ class ResultsModel extends GeneralModel{
         return  $q->getFirstRow("array");
     }
 
-
+    public function getResultByPoll($poll):array{
+        $results= [];
+        echo "<pre>";
+        print_r($poll);
+        echo "</pre>";
+        die();
+        return $results;
+    }
 
 }

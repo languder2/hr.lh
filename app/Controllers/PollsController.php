@@ -87,8 +87,10 @@ class PollsController extends BaseController
                 $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
             elseif($this->data['poll']->status!=1)
                 $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Опрос отключен"]);
-            if(empty($this->data['content']))
+            if(empty($this->data['content'])){
+                $this->data['results']= $this->model->getResultByPoll($this->data['poll']);
                 $this->data['content']= view("PollsDisplay",$this->data);
+            }
         }
         $this->data['width']= $width??"auto";
         $this->data['height']= $width??"auto";
