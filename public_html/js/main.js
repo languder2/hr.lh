@@ -5,7 +5,12 @@ jQuery(function($){
         $(".poll-box .radio-answer").on("click",pollSelectAnswer);
         $('#poll-form-phone').inputmask("+7(999)999-9999",{pos:0});
         $(".poll-app-from").on("submit",function(){
+            let valid= true;
             console.log("form submit",$(this).attr("class"));
+            if(valid){
+                pollAnswerHide("form");
+                pollAnswerShow("results");
+            }
             return false;
         });
     });
@@ -62,14 +67,13 @@ jQuery(function($){
     }
     function checkedPollNavbarBtns(){
         let max_step= parseInt($(".poll-box [name=max_step]").val());
-        let step= parseInt($(".poll-box [name=poll_step]").val())+1;
+        let step= parseInt($(".poll-box [name=poll_step]").val());
         let current= $(".poll-box [name=answer2q_"+step+"]:checked");
-        if(step==1)
+        if(step==0)
             $(".poll-navbar .btn_prev").addClass(["disabled","btn-secondary"]);
         else
             $(".poll-navbar .btn_prev").removeClass(["disabled","btn-secondary"]).addClass("btn-primary");
-
-        if(step>max_step-2 || current.length)
+        if(step>=max_step || current.length>0)
             $(".poll-navbar .btn_next").removeClass(["disabled","btn-secondary"]).addClass("btn-primary");
         else
             $(".poll-navbar .btn_next").addClass(["disabled","btn-secondary"]);
@@ -82,7 +86,17 @@ jQuery(function($){
         $(".poll-box [type=radio]:checked").closest("label").addClass("active");
         $(".poll-box [name=poll_step]").val(step+1);
         pollAnswerHide(step);
-        pollAnswerShow(step+1);
-        changePollNavbar(step+2,max_step);
+        if(step+2<=max_step){
+            changePollNavbar(step+2,max_step);
+            pollAnswerShow(step+1);
+        }
+        if(step+2>max_step){
+            pollAnswerShow("form");
+            $(".poll-box .poll-navbar").animate({opacity:0},500);
+
+
+
+        }
+
     }
 });
