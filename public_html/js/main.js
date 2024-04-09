@@ -3,7 +3,13 @@ jQuery(function($){
         $(".poll-box .btn_next").on("click",pollNextStep);
         $(".poll-box .btn_prev").on("click",pollPrevStep);
         $(".poll-box .radio-answer").on("click",pollSelectAnswer);
+        $('#poll-form-phone').inputmask("+7(999)999-9999",{pos:0});
+        $(".poll-app-from").on("submit",function(){
+            console.log("form submit",$(this).attr("class"));
+            return false;
+        });
     });
+
 
     function pollNextStep(){
         let max_step= parseInt($(".poll-box [name=max_step]").val());
@@ -79,5 +85,4 @@ jQuery(function($){
         pollAnswerShow(step+1);
         changePollNavbar(step+2,max_step);
     }
-
 });
