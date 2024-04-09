@@ -20,11 +20,10 @@
             </div>
         <?php endforeach;?>
         <!--END QUESTIONS-->
-        <!-- FORM -->
-        <!--END RESULTS-->
     </div>
     <div class="position-relative">
-        <div class="poll-form hide position-absolute w-100" data-group="form">
+        <!-- FORM -->
+            <div class="poll-form hide position-absolute w-100" data-group="form">
             <form class="pt-1 poll-app-from mx-auto" method="post" action="<?=base_url("/polls/save_results/")?>">
                 <h3 class="mt-0 mb-3 px-2">
                     Заполните форму для получения результатов
