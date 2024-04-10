@@ -32,9 +32,9 @@
     <!-- FORM -->
     <div class="position-relative poll-form">
         <div class="hide position-absolute w-100" data-group="form" data-step="form">
-            <form class="pt-1 poll-app-form mx-auto" method="post" action="<?=base_url("/polls/save_result/")?>">
-                <input type="text" name="form[pid]" value="<?=$poll->id?>">
-                <input type="text" name="form[poll]" value="">
+            <form class="pt-1 poll-app-form mx-auto" method="post" action="/poll/save_result">
+                <input type="hidden" name="form[pid]" value="<?=$poll->id?>">
+                <input type="hidden" name="form[poll]" value="">
                 <h3 class="mt-0 mb-3 px-2">
                     Заполните форму для получения результатов
                 </h3>

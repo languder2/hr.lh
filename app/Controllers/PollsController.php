@@ -92,8 +92,12 @@ class PollsController extends BaseController
         return view("templateView",$this->data);
     }
     public function saveResult():bool{
-        $req= $this->request->getVar();
+        $req= (object)$this->request->getVar("form");
+        $req->poll= json_decode($req->poll);
+        $poll= $this->model->getPoll($req->pid,true);
         print_r($req);
+        print_r($poll);
+
         return false;
     }
 }

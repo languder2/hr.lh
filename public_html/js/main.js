@@ -32,9 +32,7 @@ $(window).on('load', function () {
         $.ajax({
             type: "POST",
             url: $(this).attr("action"),
-            data: {
-                data: $(this).serialize(),
-            },
+            data: $(this).serialize(),
             success: function(data){
                 console.log(data);
             }
@@ -140,15 +138,15 @@ function ordersResult(){
             aid: aid,
         });
         if (typeof result.results[rid] === 'undefined')
-            result.results[rid]= rw;
+            result.results[rid]= {rid:rid,weight: rw};
         else
-            result.results[rid]+= rw;
+            result.results[rid].weight+= rw;
     });
     $(".poll-box .poll-result").css({display:"none"});
     $(".poll-box form [name='form[poll]']").val(JSON.stringify(result));
-    result.results.forEach(function (val,i){
-        if(val!=0)
-            $(".poll-box .poll-result[data-rid="+i+"]").css({display:"block", order:-val})
+    result.results.forEach(function (res,i){
+        if(res.weight!=0)
+            $(".poll-box .poll-result[data-rid="+i+"]").css({display:"block", order:-res.weight})
     });
     if($(".poll-box .poll-result:visible").length === 0)
         $(".poll-box .poll-base-result").css({display:"block"});

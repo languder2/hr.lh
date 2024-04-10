@@ -70,14 +70,17 @@ class PollsModel extends ResultsModel {
         $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Опрос добавлен: #$pid, $poll->name"]);
         return true;
     }
-    public function getQuestions($pid=false,$status= false){
+    public function getQuestions($pid=false,$status= false,$pkey= false){
         $results= [];
         $where= ["poll"=>$pid];
         if($status!== false) $where= ["status"=>$status];
         $q= $this->db->table("questions")->where($where)->get();
         foreach ($q->getResult() as $result){
             $result->answers= json_decode($result->answers);
-            $results[]= $result;
+            if($pkey)
+                $results[$result->id]= $result;
+            else
+                $results[]= $result;
         }
         return $results;
     }
@@ -112,7 +115,7 @@ class PollsModel extends ResultsModel {
         return $result;
     }
 
-    public function getPoll($pid=false):bool|object{
+    public function getPoll($pid=false,$pkey= false):bool|object{
         $q= $this->db->table("polls");
 
         if(empty($pid))
@@ -121,7 +124,7 @@ class PollsModel extends ResultsModel {
             $q= $q->where("id",$pid)->get();
         if($q->getNumRows()==0) return false;
         $poll= $q->getFirstRow();
-        $poll->questions= $this->getQuestions($poll->id);
+        $poll->questions= $this->getQuestions($poll->id,false,$pkey);
         return $poll;
     }
 }
