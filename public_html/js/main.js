@@ -92,9 +92,14 @@ function pollSelectAnswer(){
     if(step+2>max_step){
         pollAnswerShow("form");
         $(".poll-box .poll-navbar").animate({opacity:0},500);
-
-
-
     }
-
+    ordersResult();
 }
+function ordersResult(){
+    let result= [];
+    let list= document.querySelectorAll(".poll-box .poll-question [type=radio]:checked");
+    list.forEach(function(entry) {
+        let rid= $(entry).attr("data-result");
+        let rw= $(entry).attr("data-result-weight");
+        console.log(rid,rw);
+    });}

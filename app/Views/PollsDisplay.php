@@ -9,8 +9,8 @@
                 </h4>
                 <?php foreach ($question->answers as $ak=>$answer):?>
                     <div class="poll-answer <?=$qk?"hide":""?>" data-group="<?=$qk?>">
-                        <label class="form-check-label d-block border border-1 border-custom1 rounded-3 p-3 mb-2" for="a_<?=$question->id?>_<?=$ak?>" data-answer="<?=$answer->answer?>" data-result="<?=$answer->result?>" data-result-weight="<?=$answer->weight?>">
-                            <input class="form-check-input mr-5 radio-answer" type="radio" name="answer2q_<?=$qk?>" id="a_<?=$question->id?>_<?=$ak?>">
+                        <label class="form-check-label d-block border border-1 border-custom1 rounded-3 p-3 mb-2" for="a_<?=$question->id?>_<?=$ak?>">
+                            <input class="form-check-input mr-5 radio-answer" type="radio" name="answer2q_<?=$qk?>" id="a_<?=$question->id?>_<?=$ak?>"   data-answer="<?=$answer->answer?>" data-result="<?=$answer->result?>" data-result-weigh    t="<?=$answer->weight??0?>">
                             <span class="d-inline-block ml-10">
                                 <?=$answer->answer??""?>
                             </span>
