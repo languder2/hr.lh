@@ -26,7 +26,7 @@ class PollsModel extends ResultsModel {
                 "answer"=> $answers['answer'][$key],
                 "sort"=> $ns++,
                 "result"=> $answers['result'][$key],
-                "weight"=> $answers['weight'][$key],
+                "weight"=> $answers['weight'][$key] ?? 0,
                 "status"=> $answers['status'][$key] ?? 1,
             ];
         }
