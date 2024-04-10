@@ -3,7 +3,7 @@ $(window).on('load', function () {
     $(".poll-box .btn_prev").on("click",pollPrevStep);
     $(".poll-box .radio-answer").on("click",pollSelectAnswer);
     $('#poll-form-phone').inputmask("+7(999)999-9999",{pos:0});
-    $(".poll-app-from").on("submit",function(){
+    $(".poll-app-form").on("submit",function(){
         let list = $(".poll-box form .form-control");
         list.removeClass(["is-valid","is-invalid"])
 
@@ -29,6 +29,16 @@ $(window).on('load', function () {
             pollAnswerHide("form");
             pollAnswerShow("results");
         }
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: {
+                data: $(this).serialize(),
+            },
+            success: function(data){
+                console.log(data);
+            }
+        });
         return false;
     });
 });
@@ -115,20 +125,28 @@ function pollSelectAnswer(){
     ordersResult();
 }
 function ordersResult(){
-    let result= [];
+    let result= {
+        answers: [],
+        results: []
+    };
     let list= document.querySelectorAll(".poll-box .poll-question [type=radio]:checked");
-    list.forEach(function(entry) {
-        let rid= $(entry).attr("data-result");
-        let rw= parseInt($(entry).attr("data-result-weight"));
-        if (typeof result[rid] === 'undefined'){
-            result[rid]= rw;
-        }
-        else{
-            result[rid]+= rw;
-        }
+    list.forEach(function(el) {
+        let qid= parseInt($(el).attr("data-qid"));
+        let aid= parseInt($(el).attr("data-aid"));
+        let rid= $(el).attr("data-result");
+        let rw= parseInt($(el).attr("data-result-weight"));
+        result.answers.push({
+            qid: qid,
+            aid: aid,
+        });
+        if (typeof result.results[rid] === 'undefined')
+            result.results[rid]= rw;
+        else
+            result.results[rid]+= rw;
     });
     $(".poll-box .poll-result").css({display:"none"});
-    result.forEach(function (val,i){
+    $(".poll-box form [name='form[poll]']").val(JSON.stringify(result));
+    result.results.forEach(function (val,i){
         if(val!=0)
             $(".poll-box .poll-result[data-rid="+i+"]").css({display:"block", order:-val})
     });

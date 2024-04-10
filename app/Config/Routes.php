@@ -29,6 +29,7 @@ $routes->match(['get','post'],'admin/polls/status', [PollsController::class, 'st
 $routes->match(['get','post'],'admin/polls/remove/(:num)', [PollsController::class, 'delete/$1']);
 $routes->match(['get','post'],'admin/polls/remove/(:num)/(:num)/', [PollsController::class, 'delete/$1/$2']);
 /** Client: POLLS  */
-$routes->match(['get','post'],'/', [PollsController::class, 'display']);
-$routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
+$routes->match(['get','post'],'/polls/save_result', [PollsController::class, 'saveResult']);
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
+$routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
+$routes->match(['get','post'],'/', [PollsController::class, 'display']);

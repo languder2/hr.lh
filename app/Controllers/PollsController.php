@@ -91,4 +91,9 @@ class PollsController extends BaseController
         $this->data['height']= $width??"auto";
         return view("templateView",$this->data);
     }
+    public function saveResult():bool{
+        $req= $this->request->getVar();
+        print_r($req);
+        return false;
+    }
 }

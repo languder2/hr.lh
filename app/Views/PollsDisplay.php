@@ -10,7 +10,15 @@
                 <?php foreach ($question->answers as $ak=>$answer):?>
                     <div class="poll-answer <?=$qk?"hide":""?>" data-group="<?=$qk?>">
                         <label class="form-check-label d-block border border-1 border-custom1 rounded-3 p-3 mb-2" for="a_<?=$question->id?>_<?=$ak?>">
-                            <input class="form-check-input mr-5 radio-answer" type="radio" name="answer2q_<?=$qk?>" id="a_<?=$question->id?>_<?=$ak?>"   data-answer="<?=$answer->answer?>" data-result="<?=$answer->result?>" data-result-weight="<?=!empty($answer->weight)?$answer->weight:0?>">
+                            <input
+                                    class="form-check-input mr-5 radio-answer"
+                                    type="radio" name="answer2q_<?=$qk?>"
+                                    id="a_<?=$question->id?>_<?=$ak?>"
+                                    data-qid="<?=$question->id?>"
+                                    data-aid="<?=$ak?>"
+                                    data-result="<?=$answer->result?>"
+                                    data-result-weight="<?=!empty($answer->weight)?$answer->weight:0?>"
+                            >
                             <span class="d-inline-block ml-10">
                                 <?=$answer->answer??""?>
                             </span>
@@ -24,7 +32,9 @@
     <!-- FORM -->
     <div class="position-relative poll-form">
         <div class="hide position-absolute w-100" data-group="form" data-step="form">
-            <form class="pt-1 poll-app-from mx-auto" method="post" action="<?=base_url("/polls/save_results/")?>">
+            <form class="pt-1 poll-app-form mx-auto" method="post" action="<?=base_url("/polls/save_result/")?>">
+                <input type="text" name="form[pid]" value="<?=$poll->id?>">
+                <input type="text" name="form[poll]" value="">
                 <h3 class="mt-0 mb-3 px-2">
                     Заполните форму для получения результатов
                 </h3>
@@ -88,4 +98,7 @@
             </div>
         </div>
 </div>
+<pre class="debug">
+    <?php print_r($poll)?>
+</pre>
 <?php if(isset($footer)) echo $footer; ?>
