@@ -3,7 +3,7 @@
     <div class="poll-questions position-relative">
         <!--QUESTIONS-->
         <?php if(isset($poll)) foreach ($poll->questions as $qk=>$question):?>
-            <div class="poll-question position-absolute w-100"  style="z-index: <?=$qk?0:1?>" data-qid="<?=$qk?>">
+            <div class="poll-question position-absolute w-100"  style="z-index: <?=$qk?0:1?>" data-step="<?=$qk?>">
                 <h4 class="poll-caption px-2 pb-2 <?=$qk?"hide":""?>" data-group="<?=$qk?>">
                     <?=$question->question??""?>
                 </h4>
@@ -21,9 +21,9 @@
         <?php endforeach;?>
         <!--END QUESTIONS-->
     </div>
-    <div class="position-relative">
-        <!-- FORM -->
-            <div class="poll-form hide position-absolute w-100" data-group="form">
+    <!-- FORM -->
+    <div class="position-relative poll-form">
+        <div class="hide position-absolute w-100" data-group="form" data-step="form">
             <form class="pt-1 poll-app-from mx-auto" method="post" action="<?=base_url("/polls/save_results/")?>">
                 <h3 class="mt-0 mb-3 px-2">
                     Заполните форму для получения результатов
@@ -48,10 +48,27 @@
     </div>
     <!--END FORM-->
     <!--RESULTS-->
-    <div class="poll-form hide" data-group="results">
-        poll results
-    </div>
-    <!--END RESULTS-->
+    <div class="poll-results position-relative" data-step="results">
+        <div class="position-absolute hide container-fluid" data-group="results">
+            <div class="row">
+            <?php if(isset($results)) foreach($results as $key=>$result):?>
+                <div class="col-12 callout callout-result py-2 mb-2" style="order: <?=$key?>">
+                    <a href="<?=$result->link?>" class="fs-4 poll-result-title">
+                        <?=$result->name?>
+                    </a>
+                    <div class="result-description">
+                        <?=$result->description?>
+                    </div>
+                    <div class="text-end">
+                        <a href="<?=$result->link?>" class="poll-result-link fs-10">
+                            подробнее
+                        </a>
+                    </div>
+                </div>
+            <?php endforeach;?>
+            </div>
+        </div>
+    </div>    <!--END RESULTS-->
     <div class="poll-navbar position-absolute bottom-0 start-0 end-0 px-3 mx-3 text-secondary">
             <div class="pt-1 position-relative">
                 <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=$qk+1?></div>
@@ -71,5 +88,4 @@
             </div>
         </div>
 </div>
-<pre><?php print_r($poll)?></pre>
 <?php if(isset($footer)) echo $footer; ?>

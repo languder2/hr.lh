@@ -6,6 +6,16 @@ body{
     margin: 0;
     padding: 0;
 }
+.callout{
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+.callout-result{
+    border-left-color: #0a53be;
+}
+
 .ml-10{
     margin-left: 10px;
 }
@@ -79,4 +89,13 @@ body{
    box-shadow:  0 0 .2em hsla(0,0%,48%,.6);
    background: rgba(0,200,0,.1);
    // border: solid 1px var(--bs-success) !important;
+}
+.fs-10{
+    font-size: 10pt;
+}
+.poll-result-title{
+    text-decoration: none;
+}
+.poll-result-link{
+    text-decoration: none;
 }

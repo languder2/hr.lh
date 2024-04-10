@@ -50,14 +50,17 @@ class ResultsModel extends GeneralModel{
         return true;
     }
 
-    public function results($setWhere= false,$setOrder= false){
+    public function results($setWhere= false,$setOrder= false, $ids= false){
         $results= [];
-        $where= [];
+        $q= $this->db->table("results");
         if($this->session->has("adminResultsWhere"))
-                $where= $this->session->get("adminResultsWhere");
+            $where= $this->session->get("adminResultsWhere");
         if($setWhere)
             $where= $setWhere;
-        $q= $this->db->table("results")->where($where);
+        if(!empty($where))
+            $q= $q->where($where);
+        if($ids)
+            $q= $q->whereIn("id",$ids);
         if($setOrder)
             foreach ($setOrder as $field=>$direction)
                 $q= $q->orderBy($field,$direction);
@@ -76,12 +79,15 @@ class ResultsModel extends GeneralModel{
     }
 
     public function getResultByPoll($poll):array{
+        $ids= [];
         $results= [];
-        echo "<pre>";
-        print_r($poll);
-        echo "</pre>";
-        die();
-        return $results;
+        if(!is_object($poll)) return $results;
+        if(!empty($poll->result)) $ids[]= $poll->result;
+        foreach ($poll->questions as $question)
+            foreach ($question->answers as $answer)
+                if(!empty($answer->result) && !in_array($answer->result,$ids))
+                    $ids[]= $answer->result;
+        return $this->results(false,false,$ids);
     }
 
 }
