@@ -113,11 +113,15 @@ class PollsModel extends ResultsModel {
     }
 
     public function getPoll($pid=false):bool|object{
-        $q= $this->db->table("polls")->where("id",$pid)->get();
+        $q= $this->db->table("polls");
+
+        if(empty($pid))
+            $q= $q->where("status","1")->orderBy("RAND()")->get();
+        else
+            $q= $q->where("id",$pid)->get();
         if($q->getNumRows()==0) return false;
         $poll= $q->getFirstRow();
         $poll->questions= $this->getQuestions($poll->id);
         return $poll;
     }
-
 }

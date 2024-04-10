@@ -99,3 +99,19 @@ body{
 .poll-result-link{
     text-decoration: none;
 }
+.poll-questions{
+}
+/*
+[data-result-weight="0"]{
+    background: red;
+}
+[data-result="2"]{
+    background: red;
+}
+[data-result="3"]{
+    background: blue;
+}
+[data-result="4"]{
+    background: yellow
+}
+ */

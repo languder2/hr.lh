@@ -52,7 +52,7 @@
         <div class="position-absolute hide container-fluid" data-group="results">
             <div class="row">
             <?php if(isset($results)) foreach($results as $key=>$result):?>
-                <div class="col-12 callout callout-result py-2 mb-2" style="order: <?=$key?>">
+                <div class="col-12 callout callout-result poll-result py-2 mb-2 <?=($result->id==$poll->result)?"poll-base-result":""?>" data-rid="<?=$result->id?>">
                     <a href="<?=$result->link?>" class="fs-4 poll-result-title">
                         <?=$result->name?>
                     </a>

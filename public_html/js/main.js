@@ -4,9 +4,28 @@ $(window).on('load', function () {
     $(".poll-box .radio-answer").on("click",pollSelectAnswer);
     $('#poll-form-phone').inputmask("+7(999)999-9999",{pos:0});
     $(".poll-app-from").on("submit",function(){
-        let valid= true;
-        console.log("form submit",$(this).attr("class"));
-        if(valid){
+        let list = $(".poll-box form .form-control");
+        list.removeClass(["is-valid","is-invalid"])
+
+        let name= $("#poll-form-name");
+        if(name.val().length==0)
+            name.addClass("is-invalid");
+        else
+            name.addClass("is-valid");
+
+        let email= $("#poll-form-email");
+        if(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email.val()))
+            email.addClass("is-valid");
+        else
+            email.addClass("is-invalid");
+
+        let phone= $("#poll-form-phone");
+        if(/^(\+7|8)\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$/.test(phone.val()))
+            phone.addClass("is-valid");
+        else
+            phone.addClass("is-invalid");
+
+        if($(".poll-box form .is-invalid").length === 0){
             pollAnswerHide("form");
             pollAnswerShow("results");
         }
@@ -89,7 +108,7 @@ function pollSelectAnswer(){
         changePollNavbar(step+2,max_step);
         pollAnswerShow(step+1);
     }
-    if(step+2>max_step){
+    if(step+1>=max_step){
         pollAnswerShow("form");
         $(".poll-box .poll-navbar").animate({opacity:0},500);
     }
@@ -100,6 +119,19 @@ function ordersResult(){
     let list= document.querySelectorAll(".poll-box .poll-question [type=radio]:checked");
     list.forEach(function(entry) {
         let rid= $(entry).attr("data-result");
-        let rw= $(entry).attr("data-result-weight");
-        console.log(rid,rw);
-    });}
+        let rw= parseInt($(entry).attr("data-result-weight"));
+        if (typeof result[rid] === 'undefined'){
+            result[rid]= rw;
+        }
+        else{
+            result[rid]+= rw;
+        }
+    });
+    $(".poll-box .poll-result").css({display:"none"});
+    result.forEach(function (val,i){
+        if(val!=0)
+            $(".poll-box .poll-result[data-rid="+i+"]").css({display:"block", order:-val})
+    });
+    if($(".poll-box .poll-result:visible").length === 0)
+        $(".poll-box .poll-base-result").css({display:"block"});
+}
