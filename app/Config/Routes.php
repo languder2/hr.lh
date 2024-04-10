@@ -3,6 +3,7 @@
 use App\Controllers\AuthController;
 use App\Controllers\PollsController;
 use App\Controllers\ResultsController;
+use App\Controllers\AppsController;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -33,3 +34,6 @@ $routes->match(['get','post'],'/poll/save_result', [PollsController::class, 'sav
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
 $routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
 $routes->match(['get','post'],'/', [PollsController::class, 'display']);
+
+
+$routes->get('/test', [AppsController::class, 'test']);

@@ -127,4 +127,5 @@ class PollsModel extends ResultsModel {
         $poll->questions= $this->getQuestions($poll->id,false,$pkey);
         return $poll;
     }
+
 }

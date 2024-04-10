@@ -34,7 +34,8 @@
         <div class="hide position-absolute w-100" data-group="form" data-step="form">
             <form class="pt-1 poll-app-form mx-auto" method="post" action="/poll/save_result">
                 <input type="hidden" name="form[pid]" value="<?=$poll->id?>">
-                <input type="hidden" name="form[poll]" value="">
+                <input type="hidden" name="form[answers]" value="">
+                <input type="hidden" name="form[results]" value="">
                 <h3 class="mt-0 mb-3 px-2">
                     Заполните форму для получения результатов
                 </h3>
@@ -98,7 +99,4 @@
             </div>
         </div>
 </div>
-<pre class="debug">
-    <?php print_r($poll)?>
-</pre>
 <?php if(isset($footer)) echo $footer; ?>

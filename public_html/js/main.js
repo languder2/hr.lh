@@ -2,7 +2,7 @@ $(window).on('load', function () {
     $(".poll-box .btn_next").on("click",pollNextStep);
     $(".poll-box .btn_prev").on("click",pollPrevStep);
     $(".poll-box .radio-answer").on("click",pollSelectAnswer);
-    $('#poll-form-phone').inputmask("+7(999)999-9999",{pos:0});
+    $('#poll-form-phone').inputmask("+7 (999) 999-99-99",{pos:3});
     $(".poll-app-form").on("submit",function(){
         let list = $(".poll-box form .form-control");
         list.removeClass(["is-valid","is-invalid"])
@@ -28,15 +28,15 @@ $(window).on('load', function () {
         if($(".poll-box form .is-invalid").length === 0){
             pollAnswerHide("form");
             pollAnswerShow("results");
+            $.ajax({
+                type: "POST",
+                url: $(this).attr("action"),
+                data: $(this).serialize(),
+                success: function(data){
+                    console.log(data);
+                }
+            });
         }
-        $.ajax({
-            type: "POST",
-            url: $(this).attr("action"),
-            data: $(this).serialize(),
-            success: function(data){
-                console.log(data);
-            }
-        });
         return false;
     });
 });
@@ -143,7 +143,8 @@ function ordersResult(){
             result.results[rid].weight+= rw;
     });
     $(".poll-box .poll-result").css({display:"none"});
-    $(".poll-box form [name='form[poll]']").val(JSON.stringify(result));
+    $(".poll-box form [name='form[answers]']").val(JSON.stringify(result.answers));
+    $(".poll-box form [name='form[results]']").val(JSON.stringify(result.results));
     result.results.forEach(function (res,i){
         if(res.weight!=0)
             $(".poll-box .poll-result[data-rid="+i+"]").css({display:"block", order:-res.weight})
