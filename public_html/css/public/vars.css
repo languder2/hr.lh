@@ -1,37 +1,10 @@
-*{
-    --hr-ff: 'Manrope',Arial,sans-serif;
-    --hr-fs-base: 16px;
-    --hr-fc: red;
+.my-2rem{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
-@media (max-width: 576px){
-    *{
-        --hr-width:  100%;
-    }
+.fs-24{
+    font-size: 24px;
 }
-@media (min-width: 576px){
-    *{
-        --hr-width:  540px;
-    }
+.color-grey{
+    color: #7f7f7f;
 }
-@media (min-width: 768px){
-    *{
-        --hr-width:  720px;
-    }
-}
-@media (min-width: 992px){
-    *{
-        --hr-width:  960px;
-    }
-}
-@media (min-width: 1200px){
-    *{
-        --hr-width:  1140px;
-    }
-}
-@media (min-width: 1400px){
-    *{
-        --hr-width:  1320px;
-    }
-}
-
-
