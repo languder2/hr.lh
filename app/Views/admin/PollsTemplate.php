@@ -1,4 +1,3 @@
-<?php if(isset($header)) echo $header; ?>
 <div class="row">
     <div class="col-lg-10 col-sm-8">
         <h3 class="mt-2 mb-3">Опросы</h3>
@@ -15,7 +14,3 @@
     </div>
 <?php endif; ?>
 <?=$polls??"";?>
-
-
-
-<?php if(isset($footer)) echo $footer; ?>

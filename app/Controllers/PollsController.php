@@ -12,8 +12,6 @@ class PollsController extends BaseController
         $this->data["title"]= "Control Panel: Polls";
         $this->data['menu4MainMenu']= $this->model->getMenu("admin");
         $this->data['mainMenu']= view("admin/mainMenu",$this->data);
-        $this->data['header']= view("admin/header",$this->data);
-        $this->data['footer']= view("admin/footer");
         if($this->session->has("message"))
             $this->data['message']= $this->session->getFlashdata("message");
         $results= $this->model->results();
@@ -22,7 +20,8 @@ class PollsController extends BaseController
             "order"=>"id desc",
         ];
         $this->data['polls']= $this->model->getAdminPollsView($data);
-        return view("admin/PollsTemplate",$this->data);
+        $this->data['content']= view("admin/PollsTemplate",$this->data);
+        return view(ADMIN."/templateView",$this->data);
     }
     public function form($op= "add",$id= false):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));

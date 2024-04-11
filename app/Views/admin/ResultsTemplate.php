@@ -15,19 +15,19 @@
     </div>
 <?php endif; ?>
 <?php if(isset($results) && !empty($results)):?>
-    <table class="table table-striped table-hover table-light caption-top align-middle">
+    <table class="table table-striped caption-top align-middle" style="table-layout: fixed;">
         <caption>Активные</caption>
-        <thead class="table-primary">
-        <tr>
-            <th class="text-center" scope="col">#</th>
-            <th scope="col">Название</th>
-            <th scope="col">Ссылка</th>
-            <td style="width: 40px"></td>
-            <td style="width: 60px"></td>
-            <td style="width: 60px"></td>
-        </tr>
+        <thead class="table-caption">
+            <tr>
+                <th class="text-center" style="width: 50px">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Ссылка</th>
+                <td style="width: 40px"></td>
+                <td style="width: 60px"></td>
+                <td style="width: 60px"></td>
+            </tr>
         </thead>
-        <tbody>
+        <tbody class="table-custom">
             <?php foreach ($results as $record):?>
                 <?php if($record->status!=1)continue;?>
                 <tr >
@@ -54,19 +54,19 @@
         </tbody>
     </table>
 
-    <table class="table table-striped table-hover table-light caption-top align-middle">
+    <table class="table table-striped caption-top align-middle" style="table-layout: fixed;">
         <caption>Активные</caption>
-        <thead class="table-primary">
-        <tr>
-            <th class="text-center" scope="col">#</th>
-            <th scope="col">Название</th>
-            <th scope="col">Ссылка</th>
-            <td style="width: 40px"></td>
-            <td style="width: 60px"></td>
-            <td style="width: 60px"></td>
-        </tr>
+        <thead class="table-caption">
+            <tr>
+                <th class="text-center" style="width: 50px">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Ссылка</th>
+                <td style="width: 40px"></td>
+                <td style="width: 60px"></td>
+                <td style="width: 60px"></td>
+            </tr>
         </thead>
-        <tbody>
+        <tbody class="table-custom">
         <?php foreach ($results as $record):?>
             <?php if($record->status==1)continue;?>
             <tr >
