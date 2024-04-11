@@ -3,7 +3,7 @@ namespace App\Models;
 use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Validation\ValidationInterface;
 
-class AppModel extends PollsModel {
+class AppsModel extends PollsModel {
 
     public function __construct(?ConnectionInterface $db = null, ?ValidationInterface $validation = null)
     {
@@ -66,6 +66,21 @@ class AppModel extends PollsModel {
         else
             $this->db->table("clients")->where("id",$q->getFirstRow()->id)->update($sql);
       return  false;
+    }
+    public function getApps($param= []):bool|array{
+        if(empty($param['orders']))
+            $param['orders']= ["time desc"];
+        $results= [];
+        $q= $this->db->table("apps");
+        $q= $q->orderBy(implode(", ",$param['orders']))->get();
+        foreach ($q->getResult() as $result) {
+            $date= date_create($result->time);
+            $result->day= date_format($date,"d-m-Y");
+            $result->time= date_format($date,"H:i:s");
+            $result->results= json_decode($result->results);
+            $results[$result->day][]= $result;
+        }
+        return $results;
     }
 
 }

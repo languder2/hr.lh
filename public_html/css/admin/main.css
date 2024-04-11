@@ -28,8 +28,8 @@ body{
     border-color: #ced4da;
 }
 .table-custom{
-    --bs-table-bg: #eaebff;
-    --bs-table-striped-bg: #d2f5ff;
+    //--bs-table-bg: #eaebff;
+    //--bs-table-striped-bg: #d2f5ff;
 }
 .table-custom td{
     border: none;

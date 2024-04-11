@@ -87,7 +87,7 @@ class PollsController extends BaseController
             $this->data['content']= view("PollsDisplay",$this->data);
         }
         $this->data['width']= $width??"auto";
-        $this->data['height']= $width??"auto";
+        $this->data['height']= $hegiht??"auto";
         return view("templateView",$this->data);
     }
     public function saveResult():bool|string{

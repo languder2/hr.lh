@@ -34,6 +34,7 @@ $routes->match(['get','post'],'/poll/save_result', [PollsController::class, 'sav
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
 $routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
 $routes->match(['get','post'],'/', [PollsController::class, 'display']);
-
-
+/** TEST */
 $routes->get('/test', [AppsController::class, 'test']);
+/** APPS */
+$routes->match(['get','post'],'/admin/apps', [AppsController::class, 'list']);

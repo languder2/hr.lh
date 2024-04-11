@@ -96,4 +96,4 @@ define('EVENT_PRIORITY_HIGH', 10);
 
 /* My Constant*/
 define('ADMIN', 'admin');
-define('ADMIN_MAIN_PAGE', ADMIN.'/polls');
+define('ADMIN_MAIN_PAGE', ADMIN.'/apps');
