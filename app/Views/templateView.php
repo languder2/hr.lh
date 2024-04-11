@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +9,9 @@
     <link href="<?=base_url('css/public/base.css')?>" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="test">
-    test
-</div>
+<header>
+
+</header>
 <main class="container-lg px-2">
 
 <?=$content??""?>

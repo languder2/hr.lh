@@ -1,7 +1,10 @@
 *{
     --hr-ff: 'Manrope',Arial,sans-serif;
     --hr-fs-base: 16px;
-    --hr-fc: red;
+    --hr-fc: blue;
+    --hr-fc-white: white;
+    --hr-body-bg: #f3f3f3;
+    --hr-header-bg: #ffffff;
 }
 @media (max-width: 576px){
     *{
