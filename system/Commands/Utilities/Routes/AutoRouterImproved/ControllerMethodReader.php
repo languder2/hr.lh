@@ -49,7 +49,7 @@ final class ControllerMethodReader
      * @return array<int, array<string, array|string>>
      * @phpstan-return list<array<string, string|array>>
      */
-    public function read(string $class, string $defaultController = 'Home', string $defaultMethod = 'index'): array
+    public function read(string $class, string $defaultController = 'HomeController', string $defaultMethod = 'index'): array
     {
         $reflection = new ReflectionClass($class);
 

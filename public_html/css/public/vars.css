@@ -1,0 +1,37 @@
+*{
+    --hr-ff: 'Manrope',Arial,sans-serif;
+    --hr-fs-base: 16px;
+    --hr-fc: red;
+}
+@media (max-width: 576px){
+    *{
+        --hr-width:  100%;
+    }
+}
+@media (min-width: 576px){
+    *{
+        --hr-width:  540px;
+    }
+}
+@media (min-width: 768px){
+    *{
+        --hr-width:  720px;
+    }
+}
+@media (min-width: 992px){
+    *{
+        --hr-width:  960px;
+    }
+}
+@media (min-width: 1200px){
+    *{
+        --hr-width:  1140px;
+    }
+}
+@media (min-width: 1400px){
+    *{
+        --hr-width:  1320px;
+    }
+}
+
+

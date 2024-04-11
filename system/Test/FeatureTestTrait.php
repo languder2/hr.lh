@@ -36,7 +36,7 @@ trait FeatureTestTrait
      *
      * Example routes:
      * [
-     *    ['get', 'home', 'Home::index']
+     *    ['get', 'home', 'HomeController::index']
      * ]
      *
      * @param array|null $routes Array to set routes

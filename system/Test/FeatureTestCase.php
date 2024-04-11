@@ -46,7 +46,7 @@ class FeatureTestCase extends CIUnitTestCase
      *
      * Example routes:
      * [
-     *    ['get', 'home', 'Home::index']
+     *    ['get', 'home', 'HomeController::index']
      * ]
      *
      * @return $this
