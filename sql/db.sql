@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 11 2024 г., 00:17
+-- Время создания: Апр 11 2024 г., 06:53
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -94,10 +94,10 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `parent`, `name`, `link`, `section`, `sort`, `newTab`, `comment`, `display`) VALUES
-(1, 0, 'Exit', 'admin/exit/', 'admin', 100, 'false', '', '1'),
-(2, 0, 'Polls', 'admin/polls/', 'admin', 10, 'false', '', '1'),
-(5, 0, 'Results', 'admin/results/', 'admin', 20, 'false', '', '1'),
-(6, 0, 'Applications', 'admin/applications/', 'admin', 30, 'false', '', '1');
+(1, 0, 'Выход', 'admin/exit/', 'admin', 100, 'false', '', '1'),
+(2, 0, 'Опросы', 'admin/polls/', 'admin', 20, 'false', '', '1'),
+(5, 0, 'Результаты', 'admin/results/', 'admin', 30, 'false', '', '1'),
+(6, 0, 'Заявки', 'admin/apps/', 'admin', 10, 'false', '', '1');
 
 -- --------------------------------------------------------
 
