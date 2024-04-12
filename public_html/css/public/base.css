@@ -42,3 +42,119 @@ a.logo{
     background-repeat: no-repeat;
     background-position: bottom right;
 }
+.d-content-1{
+    display: grid;
+}
+.gift-title{
+    display: inline-block;
+    position: relative;
+    color: var(--bs-white);
+    border-radius: 40px;
+    background-color: #333333;
+    position: relative;
+    font-size: 16px;
+    padding: 10px 25px 10px 55px;
+}
+.gift-title:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    left: 20px;
+    background-image: url(../../img/giftbox.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.gift-desc{
+    font-size: 20px;
+}
+.gift-box{
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    padding: 10px 90px 10px 15px;
+    color: #333333;
+    position: relative;
+    font-size: 14px;
+}
+.gift-box .title{
+    font-size: 16px;
+    line-height: 25px;
+}
+.gift-box.gift-box-1:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 10px;
+    bottom: -3px;
+    background-image: url(../../img/gift_1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.gift-box.gift-box-2:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url(../../img/gift_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.gift-box.gift-box-3{
+    padding-right: 90px;
+    overflow: hidden;
+}
+.gift-box.gift-box-3:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -20px;
+    bottom: -30px;
+    background-image: url(../../img/gift_3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+}
+.gift-box.gift-box-3 div{
+    position: relative;
+    z-index: 1;
+}
+.advantages-block{
+    background-image: url(../../img/bg_phyton.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 40%;
+}
+ul.advantages{
+    list-style: none;
+    color: #4f4f4f;
+    font-size: 20px;
+    padding: 0;
+    max-width: 640px;
+}
+.advantages li{
+    padding: 10px 10px 10px 30px;
+    background-image: url(../../img/Tick_Square.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+footer{
+    background-color: #333333;
+    padding: 20px 0;
+    color: var(--bs-light);
+}

@@ -76,8 +76,11 @@ class PollsController extends BaseController
     }
 
     public function display($pid= false,$width=false,$hegiht=false):string{
+        $pid= 1;
         $this->data["title"]= "Опрос";
         $this->data['poll']= $this->model->getPoll($pid);
+        $this->data['width']= "100%";
+        $this->data['height']= 400;
         if(!is_object($this->data['poll']))
             $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
         elseif($this->data['poll']->status!=1)
@@ -86,8 +89,6 @@ class PollsController extends BaseController
             $this->data['results']= $this->model->getResultByPoll($this->data['poll']);
             $this->data['content']= view("PollsDisplay",$this->data);
         }
-        $this->data['width']= $width??"auto";
-        $this->data['height']= $hegiht??"auto";
         return view("templateView",$this->data);
     }
     public function saveResult():bool|string{

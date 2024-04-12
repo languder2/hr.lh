@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 11 2024 г., 06:53
+-- Время создания: Апр 12 2024 г., 16:04
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -31,14 +31,14 @@ CREATE TABLE `apps` (
   `id` int NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `poll_id` int NOT NULL,
-  `poll_name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `poll_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `answers` json NOT NULL,
   `results` json NOT NULL,
-  `name` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
-  `status` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `comment` text COLLATE utf8mb4_general_ci NOT NULL
+  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -48,7 +48,11 @@ CREATE TABLE `apps` (
 INSERT INTO `apps` (`id`, `time`, `poll_id`, `poll_name`, `answers`, `results`, `name`, `phone`, `email`, `status`, `comment`) VALUES
 (1, '2024-04-10 22:16:33', 2, 'test poll 2', '[{\"answer\": \"a3\", \"question\": \"q1\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}]', '', '', 'languder2@gmail.com', 'new', ''),
 (2, '2024-04-10 22:22:48', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd12', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
-(3, '2024-04-10 23:47:27', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', '2del', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', '');
+(3, '2024-04-10 23:47:27', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', '2del', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
+(4, '2024-04-11 09:12:06', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdasd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
+(5, '2024-04-11 09:17:59', 1, 'test poll', '[{\"answer\": \"q1a2\", \"question\": \"q1\"}, {\"answer\": \"q1a2\", \"question\": \"q2\"}, {\"answer\": \"q3a1\", \"question\": \"q3\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asd', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'new', ''),
+(6, '2024-04-11 09:32:55', 3, 'test', '[{\"answer\": \"2\", \"question\": \"123\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
+(7, '2024-04-11 09:33:27', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdas', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'new', '');
 
 -- --------------------------------------------------------
 
@@ -58,8 +62,8 @@ INSERT INTO `apps` (`id`, `time`, `poll_id`, `poll_name`, `answers`, `results`, 
 
 CREATE TABLE `clients` (
   `id` int NOT NULL,
-  `type` enum('email','phone') COLLATE utf8mb4_general_ci NOT NULL,
-  `contact` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` enum('email','phone') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `contact` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `count` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -68,8 +72,10 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `type`, `contact`, `count`) VALUES
-(1, 'email', 'languder2@gmail.com', 3),
-(2, 'phone', '+7 (990) 046-32-14', 2);
+(1, 'email', 'languder2@gmail.com', 5),
+(2, 'phone', '+7 (990) 046-32-14', 4),
+(3, 'email', 'i.ivanov@ya.ru', 2),
+(4, 'phone', '+7 (990) 041-28-69', 2);
 
 -- --------------------------------------------------------
 
@@ -120,7 +126,9 @@ INSERT INTO `polls` (`id`, `name`, `result`, `status`) VALUES
 (1, 'test poll', 11, '1'),
 (2, 'test poll 2', 11, '1'),
 (3, 'test', 2, '1'),
-(4, 'poll1', 3, '1');
+(4, 'poll1', 3, '1'),
+(5, 'test poll new', 11, '1'),
+(6, 'test poll new', 11, '1');
 
 -- --------------------------------------------------------
 
@@ -142,12 +150,9 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `question`, `poll`, `answers`, `sort`, `status`) VALUES
-(1, 'q1', 1, '[{\"sort\": 1, \"answer\": \"q1a1\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"q1a2\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"q1a3\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 1, '1'),
-(2, 'q2', 1, '[{\"sort\": 1, \"answer\": \"q1a1\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"q1a2\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"q1a3\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 2, '1'),
-(3, 'q3', 1, '[{\"sort\": 1, \"answer\": \"q3a1\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 2, \"answer\": \"q3a2\", \"result\": \"4\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"q3a3\", \"result\": \"2\", \"status\": 1, \"weight\": \"0\"}]', 3, '1'),
-(4, 'q1', 2, '[{\"sort\": 1, \"answer\": \"a1\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"a2\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"a3\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}, {\"sort\": 4, \"answer\": \"a4\", \"result\": \"3\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 5, \"answer\": \"a5\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 6, \"answer\": \"a6\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 7, \"answer\": \"a7\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 8, \"answer\": \"a8\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 9, \"answer\": \"a9\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 10, \"answer\": \"a10\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 11, \"answer\": \"a11\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 12, \"answer\": \"a12\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '1'),
-(5, '123', 3, '[{\"sort\": 1, \"answer\": \"3\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"2\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"a\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '1'),
-(6, '', 4, '[{\"sort\": 1, \"answer\": \"3\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"a\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"4\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '1');
+(1, 'worked?', 1, '[{\"sort\": 1, \"answer\": \"yes\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"who?\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"(Oo)\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 1, '1'),
+(2, 'why', 1, '[{\"sort\": 1, \"answer\": \"worktime?\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"(OO)\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"42\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 2, '1'),
+(3, '...', 1, '[{\"sort\": 1, \"answer\": \"...?\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 2, \"answer\": \"friday\", \"result\": \"4\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"...!\", \"result\": \"2\", \"status\": 1, \"weight\": \"0\"}]', 3, '1');
 
 -- --------------------------------------------------------
 
@@ -251,13 +256,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `apps`
 --
 ALTER TABLE `apps`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `menu`
@@ -269,13 +274,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT для таблицы `polls`
 --
 ALTER TABLE `polls`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `results`
