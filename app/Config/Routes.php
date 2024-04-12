@@ -34,10 +34,9 @@ $routes->match(['get','post'],'admin/polls/remove/(:num)/(:num)/', [PollsControl
 $routes->match(['get','post'],'/poll/save_result', [PollsController::class, 'saveResult']);
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
 $routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
+$routes->match(['get','post'],'/', [PollsController::class, 'display/1']);
 /** TEST */
 $routes->get('/test', [AppsController::class, 'test']);
 /** APPS */
 $routes->match(['get','post'],'/admin/apps', [AppsController::class, 'list']);
 /** CLIENT */
-
-$routes->match(['get','post'],'/', [HomeController::class, 'index']);
