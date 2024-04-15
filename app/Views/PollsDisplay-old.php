@@ -79,7 +79,8 @@
             <?php endforeach;?>
             </div>
         </div>
-    </div>    <!--END RESULTS-->
+    </div>
+    <!--END RESULTS-->
     <div class="poll-navbar position-absolute bottom-0 start-0 end-0 px-3 mx-3 text-secondary d-none">
             <div class="pt-1 position-relative">
                 <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=$qk+1?></div>

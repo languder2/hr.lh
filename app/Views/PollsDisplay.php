@@ -1,4 +1,4 @@
-<form class="poll-box position-relative" style="height: 400px;"  method="post" action="/poll/save_result" onsubmit="return false;">
+<form class="poll-box position-relative" style="height: 100%;"  method="post" action="/poll/save_result" onsubmit="return false;">
     <input type="hidden" name="step" value="1">
     <input type="hidden" name="max" value="<?=isset($poll->questions)?count($poll->questions):0?>">
     <input type="hidden" name="pid" value="<?=$poll->id??0?>">
@@ -8,7 +8,7 @@
     <!---->
     <div style="height: 400px; position:relative;">
         <?php foreach($poll->questions as $qi=>$question):?>
-            <div class="poll-question <?=$qi?"":"poll-step-active"?>" data-step-box="<?=$qi+1?>">
+            <div class="poll-question  px-1 <?=$qi?"":"poll-step-active"?>" data-step-box="<?=$qi+1?>">
                 <div class="poll-el poll-question-title p-3 fs-4 <?=$qi?"poll-hidden":""?>" data-step="<?=$qi+1?>">
                     <?=$question->question?>
                 </div>
@@ -18,8 +18,11 @@
                             class="form-check-input mr-5 radio-answer"
                             type="radio"
                             name="a2q[<?=$qi+1?>]"
-                            data-qid="<?=$qi+1?>"
-                            onchange="answerbySelected(this)"
+                            data-qid="<?=$question->id?>"
+                            data-aid="<?=$ai?>"
+                            data-rid="<?=$answer->result?>"q
+                            data-rw="<?=$answer->weight?>"
+                            onchange="answerBySelected(this)"
                     >
                     <span class="d-inline-block ms-2">
                        <?=$answer->answer?>
@@ -30,28 +33,53 @@
         <?php endforeach;?>
     </div>
     <!---->
-    <div class="position-absolute poll-form poll-hidden top-0 w-100" data-step="form data-step-box="form>
+    <div class="position-absolute poll-form poll-hidden top-0 w-100" data-step="form" data-step-box="form">
         <h3 class="mt-0 mb-3 px-2">
             Заполните форму для получения результатов
         </h3>
-        <div class="form-floating my-2">
-            <input type="text" class="form-control h-auto" id="poll-form-name" name="form[name]" placeholder="Имя" value="" >
-            <label for="poll-form-name">Имя</label>
+        <div class="form-floating my-2 px-1">
+            <input type="text" class="form-control h-auto" id="poll-form-name" name="form[name]" value="" >
+            <label for="poll-form-name" class="h-auto w-auto">Имя</label>
         </div>
-        <div class="form-floating my-2">
-            <input type="email" class="form-control h-auto" id="poll-form-email" name="form[email]" placeholder="name@ya.ru" value="">
-            <label for="poll-form-email">Email</label>
+        <div class="form-floating my-2 px-1">
+            <input type="email" class="form-control h-auto" id="poll-form-email" name="form[email]" value="">
+            <label for="poll-form-email" class="h-auto w-auto">Email</label>
         </div>
-        <div class="form-floating my-2">
-            <input type="text" class="form-control h-auto" id="poll-form-phone" name="form[phone]" placeholder="+7(999)999-99-99" value="">
-            <label for="poll-form-phone">Телефон</label>
+        <div class="form-floating my-2 px-1">
+            <input type="text" class="form-control h-auto" id="poll-form-phone" name="form[phone]" value="+7 ">
+            <label for="poll-form-phone" class="h-auto w-auto">Телефон</label>
         </div>
-        <div class="my-1 text-end">
+        <div class="my-1 text-end px-1">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-    <!---->
-    <!---->
+    <!-- RESULTS -->
+    <div class="poll-results position-absolute w-100 top-0" data-step-box="results">
+        <div class="container-fluid">
+            <div class="row">
+                <?php if(isset($results)) foreach($results as $key=>$result):?>
+                    <div class="col col-12 poll-hidden position-relative callout callout-result poll-result py-2 mb-2 w-100 <?=($result->id==$poll->result)?"poll-base-result":""?> d-none"
+                         data-rid="<?=$result->id?>"
+                         data-step="results"
+                    >
+                        <a href="<?=$result->link?>" class="fs-4 poll-result-title">
+                            <?=$result->name?>
+                        </a>
+                        <div class="result-description">
+                            <?=$result->description?>
+                        </div>
+                        <div class="text-end">
+                            <a href="<?=$result->link?>" class="poll-result-link fs-10">
+                                подробнее
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
+    <!-- END RESULTS -->
+    <!-- NAVBAR -->
     <div class="poll-navbar position-absolute bottom-0 start-0 end-0 text-secondary">
         <div class="pt-0 position-relative">
             <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=count($poll->questions)+1;?></div>
@@ -69,4 +97,4 @@
         </div>
     </div>
 </form>
-<?php //dd($poll->questions) ?>
+<?php //    dd($results) ?>

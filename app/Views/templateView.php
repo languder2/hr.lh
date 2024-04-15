@@ -10,6 +10,7 @@
     <link href="<?=base_url('css/public/base.css')?>?t=<?php echo(microtime(true).rand()); ?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('css/public/poll.css')?>?t=<?php echo(microtime(true).rand()); ?>" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/imask"></script>
     <script defer src="<?= base_url('js/public/poll.js');?>?t=<?php echo(microtime(true).rand()); ?>"></script>
 </head>
 <body>

@@ -1,6 +1,7 @@
 .poll-box{
-    overflow-x: hidden;
-    padding-bottom: 70px;
+    overflow: hidden;
+    padding-bottom: 40px;
+    --animation-delay: 0.4s;
 }
 .poll-box .poll-box-container{
     overflow-x: hidden;
@@ -37,20 +38,20 @@
 .poll-bar-hide{
     animation-name: pollBarHide;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.6s;
+    animation-duration: var(--animation-delay);
 }
 .poll-animation-hide{
     animation-name: questionHide;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.6s;
+    animation-duration: var(--animation-delay);
 }
 .poll-animation-show{
     animation-name: questionShow;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.6s;
+    animation-duration: var(--animation-delay);
 }
 .poll-box .poll-hidden{
-    transform: translate(100%);
+    transform: translate(110%);
 }
 .poll-box .poll-show{
 }
@@ -78,4 +79,14 @@
 }
 .poll-navbar .progress{
     --bs-progress-height: 10px;
+}
+
+.callout{
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+}
+.callout-result{
+    border-left-color: #0a53be;
 }
