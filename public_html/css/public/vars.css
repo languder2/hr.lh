@@ -1,5 +1,14 @@
 *{
-    --color: #9c1dff;
+    --color-purple: #9c1dff;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('../fonts/Gilroy Regular'), local('Gilroy-Regular'),
+    url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('../fonts/Gilroy-Regular.woff') format('woff'),
+    url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 .my-2rem{
     margin-top: 2rem;
@@ -11,6 +20,13 @@
 .fs-24{
     font-size: 24px;
 }
+.fs-16{
+    font-size: 16px;
+}
+.ff-gilroy{
+    font-family: "Gilroy",Helvetica,Arial,sans-serif;
+}
+
 .color-grey{
     color: #7f7f7f;
 }
@@ -32,4 +48,29 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #673be6;
     --bs-btn-disabled-border-color: #673be6;
+}
+.btn-purple:after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,.1)),to(hsla(0,0%,100%,.6)));
+    background: linear-gradient(90deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.6) 100%);
+    width: 45px;
+    -webkit-transform: skewX(-22deg);
+    transform: skewX(-22deg);
+    left: -65%;
+    -webkit-animation-name: blick;
+    animation-name: blick;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.form-check-purple:checked{
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+}
+.cursor-pointer{
+    cursor: pointer;
 }

@@ -1,13 +1,12 @@
-<form class="poll-box position-relative" style="height: 100%;"  method="post" action="/poll/save_result" onsubmit="return false;">
+<form class="poll-box position-relative" style="height: 100%; min-height: 490px"  method="post" action="/apps/save_result">
     <input type="hidden" name="step" value="1">
     <input type="hidden" name="max" value="<?=isset($poll->questions)?count($poll->questions):0?>">
-    <input type="hidden" name="pid" value="<?=$poll->id??0?>">
-    <input type="hidden" name="pid" value="<?=$poll->name??""?>">
+    <input type="hidden" name="form[pid]" value="<?=$poll->id??0?>">
     <input type="hidden" name="form[answers]" value="">
     <input type="hidden" name="form[results]" value="">
     <!---->
     <div style="height: 400px; position:relative;">
-        <?php foreach($poll->questions as $qi=>$question):?>
+        <?php if(isset($poll)) foreach($poll->questions as $qi=>$question):?>
             <div class="poll-question  px-1 <?=$qi?"":"poll-step-active"?>" data-step-box="<?=$qi+1?>">
                 <div class="poll-el poll-question-title p-3 fs-4 <?=$qi?"poll-hidden":""?>" data-step="<?=$qi+1?>">
                     <?=$question->question?>
@@ -20,7 +19,7 @@
                             name="a2q[<?=$qi+1?>]"
                             data-qid="<?=$question->id?>"
                             data-aid="<?=$ai?>"
-                            data-rid="<?=$answer->result?>"q
+                            data-rid="<?=$answer->result?>"
                             data-rw="<?=$answer->weight?>"
                             onchange="answerBySelected(this)"
                     >
@@ -32,9 +31,9 @@
             </div>
         <?php endforeach;?>
     </div>
-    <!---->
+    <!-- FORM -->
     <div class="position-absolute poll-form poll-hidden top-0 w-100" data-step="form" data-step-box="form">
-        <h3 class="mt-0 mb-3 px-2">
+        <h3 class="mt-0 mb-3 px-2 ff-gilroy">
             Заполните форму для получения результатов
         </h3>
         <div class="form-floating my-2 px-1">
@@ -49,8 +48,16 @@
             <input type="text" class="form-control h-auto" id="poll-form-phone" name="form[phone]" value="+7 ">
             <label for="poll-form-phone" class="h-auto w-auto">Телефон</label>
         </div>
-        <div class="my-1 text-end px-1">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="px-1 mt-1 mb-3">
+            <div class="form-check">
+                <input class="form-check-input cursor-pointer form-check-purple" type="checkbox"  name="form[success]" value="success" id="flexCheckDefault" checked >
+                <label class="form-check-label cursor-pointer ff-gilroy" for="flexCheckDefault">
+                    Я соглашаюсь на обработку персональных данных
+                </label>
+            </div>
+            </div>
+        <div class="my-1 text-center px-1">
+            <button type="submit" class="btn btn-purple btn-lg fs-16 rounded-4 ff-gilroy position-relative">Получить результаты теста</button>
         </div>
     </div>
     <!-- RESULTS -->
@@ -58,7 +65,7 @@
         <div class="container-fluid">
             <div class="row">
                 <?php if(isset($results)) foreach($results as $key=>$result):?>
-                    <div class="col col-12 poll-hidden position-relative callout callout-result poll-result py-2 mb-2 w-100 <?=($result->id==$poll->result)?"poll-base-result":""?> d-none"
+                    <div class="col col-12 poll-hidden position-relative callout callout-result poll-result py-2 mb-2 w-100 <?=(isset($poll->result) && $result->id==$poll->result)?"poll-base-result":""?> d-none"
                          data-rid="<?=$result->id?>"
                          data-step="results"
                     >
@@ -82,9 +89,9 @@
     <!-- NAVBAR -->
     <div class="poll-navbar position-absolute bottom-0 start-0 end-0 text-secondary">
         <div class="pt-0 position-relative">
-            <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=count($poll->questions)+1;?></div>
+            <div class="caption position-absolute text-left w-100 bottom-50">Шаг: <span class="current">1</span> из <?=isset($poll->questions)?count($poll->questions)+1:1;?></div>
             <div class="progress float-start w-100 rounded-4 position-relative mt-3">
-                <div class="progress-bar progress-purple progress-bar-striped progress-bar-animated py-3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?=100/(count($poll->questions)+1)?>%"></div>
+                <div class="progress-bar progress-purple progress-bar-striped progress-bar-animated py-3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?=100/(isset($poll)?count($poll->questions)+1:1)?>%"></div>
             </div>
         </div>
         <div class="ms-3">

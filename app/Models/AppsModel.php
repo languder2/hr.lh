@@ -23,7 +23,6 @@ class AppsModel extends PollsModel {
             "poll_name"=>$poll->name,
             "answers"=>[],
             "results"=>[],
-            "status"=>"new"
         ];
         foreach ($form->answers as $answer)
             $app->answers[]=(object)[
@@ -67,14 +66,19 @@ class AppsModel extends PollsModel {
             $this->db->table("clients")->where("id",$q->getFirstRow()->id)->update($sql);
       return  false;
     }
-    public function getApps($param= []):bool|array{
+    public function getApps($param= [],$filter= []):bool|array{
         if(empty($param['orders']))
-            $param['orders']= ["time desc"];
+            $param['orders']= ["date desc"];
         $results= [];
         $q= $this->db->table("apps");
+        if(!empty($filter)) {
+            if($filter['status'] === "all")
+                unset($filter['status']);
+            $q= $q->like($filter);
+        }
         $q= $q->orderBy(implode(", ",$param['orders']))->get();
         foreach ($q->getResult() as $result) {
-            $date= date_create($result->time);
+            $date= date_create($result->date);
             $result->day= date_format($date,"d-m-Y");
             $result->time= date_format($date,"H:i:s");
             $result->results= json_decode($result->results);
@@ -82,5 +86,13 @@ class AppsModel extends PollsModel {
         }
         return $results;
     }
+    public function appsChangeStatus($req):bool{
+        $this->db->table("apps")->update(["status"=>$req['status']],["id"=>$req['id']]);
+        $this->db->error()['message'];
+        return false;
+    }
+    public function test(){
+    }
+
 
 }

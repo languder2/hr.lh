@@ -91,9 +91,4 @@ class PollsController extends BaseController
         }
         return view("templateView",$this->data);
     }
-    public function saveResult():bool|string{
-        $form= (object)$this->request->getVar("form");
-        $this->model->addApp($form);
-       return false;
-    }
 }

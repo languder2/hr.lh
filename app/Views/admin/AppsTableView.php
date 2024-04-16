@@ -3,23 +3,20 @@
     <caption class="fs-5 text-primary fw-bold"><?=$day?></caption>
     <thead class="table-caption">
         <tr>
-            <td>Опрос</td>
-            <td style="width: 50px">#</td>
-            <td>Дата</td>
+            <td style="width: 30px" class="text-center">#</td>
+            <td style="width: 100px"  class="text-center">Время</td>
             <td>Имя</td>
-            <td>Email</td>
+            <td>E-mail</td>
             <td>Телефон</td>
-            <td style="width: 300px"></td>
+            <td style="width: 80px"></td>
+            <td style="width: 150px"  class="text-center">статус</td>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($appByDays as $app):?>
-            <tr>
-                <td>
-                    <?=isset($polls[$app->poll_id])?$polls[$app->poll_id]->name:"Не действителен #$app->poll_id"?>
-                </td>
+            <tr class="<?=$app->status?>">
                 <td><?=$app->id?></td>
-                <td>
+                <td class="text-center">
                     <?=$app->time?>
                 </td>
                 <td>
@@ -27,21 +24,29 @@
                 </td>
                 <td>
                     <a href="mailto:<?=$app->email?>"><?=$app->email?></a>
-                    <br>
+                </td>
+                <td>
                     <a href="tel:<?=$app->phone?>"><?=$app->phone?></a>
                 </td>
                 <td>
-                    <?php foreach ($app->results as $result):?>
-                        <div>
-                            <?=$result->name?>
-                            <?=$result->weight?>
-                            <a href="<?=$result->link?>" target="_blank">
-                                link
-                            </a>
-                        </div>
-                    <?php endforeach;?>
+                    <a href="/<?=ADMIN?>/app/detail/<?=$app->id?>/!modal" class="btn btn-sm btn-primary btn-add-detail" target="_blank" data-show="1modal">
+                        детали
+                    </a>
                 </td>
-                <td>btn</td>
+                <td class="text-center">
+                    <label>
+                        <select class="form-select form-select-sm set-status" data-app="<?=$app->id?>">
+                            <?php if(isset($statuses->app)) foreach ($statuses->app as $code=>$status): ?>
+                                <option value="<?=$code?>" data-access="<?=$status->access?>"
+                                    <?=($code==$app->status)?"selected":""?>
+                                    <?=!$status->access?"disabled":""?>
+                                >
+                                    <?=$status->name?>
+                                </option>
+                            <?php endforeach;?>
+                        </select>
+                    </label>
+                </td>
             </tr>
         <?php endforeach;?>
     </tbody>

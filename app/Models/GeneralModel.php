@@ -31,4 +31,14 @@ class GeneralModel extends AuthModel{
         }
         return $results;
     }
+    public function getStatuses($group= [],$sort= "sort asc"):array|object{
+        $results= (object)[];
+        $q= $this->db->table("statuses")->where($group)->orderBy($sort)->get();
+        foreach ($q->getResult() as $record){
+            if(!isset($results->{$record->grp})) $results->{$record->grp}= [];
+            $results->{$record->grp}[$record->code]= $record;
+        }
+        return $results;
+    }
+
 }

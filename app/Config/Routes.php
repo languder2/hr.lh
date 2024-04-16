@@ -4,7 +4,6 @@ use App\Controllers\AuthController;
 use App\Controllers\PollsController;
 use App\Controllers\ResultsController;
 use App\Controllers\AppsController;
-use App\Controllers\HomeController;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -31,7 +30,7 @@ $routes->match(['get','post'],'admin/polls/status', [PollsController::class, 'st
 $routes->match(['get','post'],'admin/polls/remove/(:num)', [PollsController::class, 'delete/$1']);
 $routes->match(['get','post'],'admin/polls/remove/(:num)/(:num)/', [PollsController::class, 'delete/$1/$2']);
 /** Client: POLLS  */
-$routes->match(['get','post'],'/poll/save_result', [PollsController::class, 'saveResult']);
+$routes->match(['get','post'],'/apps/save_result', [AppsController::class, 'saveResult']);
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
 $routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
 $routes->match(['get','post'],'/', [PollsController::class, 'display/1']);
@@ -39,4 +38,8 @@ $routes->match(['get','post'],'/', [PollsController::class, 'display/1']);
 $routes->get('/test', [AppsController::class, 'test']);
 /** APPS */
 $routes->match(['get','post'],'/admin/apps', [AppsController::class, 'list']);
+$routes->match(['get','post'],'/admin/apps/change/status', [AppsController::class, 'changeStatus']);
+$routes->match(['get','post'],'/admin/apps/set/filter', [AppsController::class, 'setFilter']);
+$routes->match(['get','post'],'/admin/apps/modal', [AppsController::class, 'list/modal']);
+$routes->match(['get','post'],"/".ADMIN."/app/detail/(:any)", [AppsController::class, 'detail/$1']);
 /** CLIENT */

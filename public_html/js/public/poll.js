@@ -1,19 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     let form= document.querySelector(".poll-box form");
-    form.addEventListener("submit",(e)=>{
+    form.onsubmit =  ()=>{
         let check= checkForm();
         if(check){
             sortResults();
             pollHide("form");
             pollShow("results");
+            let data= new FormData(form);
+            fetch(form.getAttribute("action"),{
+                method: "POST",
+                body: data,
+            })
+                .then(response => {return response.text();})
+                .then(data => {
+                    data= JSON.parse(data);
+                    console.log(data);
+                });
         }
-        //const form = document.querySelector('form');
-        const params = new FormData(form);
-//        const request = new XMLHttpRequest();
-//        request.send(params);
-        console.log(params);
+        //let success= document.querySelector(".poll-box [name='form[success]']");
         return false;
-    });
+    }
+    document.querySelector(".poll-box [name='form[success]']").onchange = (e) =>{
+        checkFormField(e.target,"success");
+    }
+
     document.getElementById('poll-form-name').addEventListener("keyup",(e)=>{
         checkFormField(e.target,"name");
     });
@@ -50,10 +60,13 @@ function checkFormField(el,type){
             el.classList.add(el.value.length?"is-valid":"is-invalid");
         break;
         case "email":
-            el.classList.add(/^\w+@\w+[.][a-z]{2,3}$/i.test(el.value)?"is-valid":"is-invalid");
+            el.classList.add(/^[\w.]+@\w+[.][a-z]{2,3}$/i.test(el.value)?"is-valid":"is-invalid");
         break;
         case "phone":
             el.classList.add(/^\+7 \([0-9]{3}\) [0-9]{3}(-[0-9]{2}){2}$/.test(el.value)?"is-valid":"is-invalid");
+        break;
+        case "success":
+            if(!el.checked) el.classList.add("is-invalid");
         break;
     }
 }
@@ -167,7 +180,7 @@ function sortResults(){
         let rw = parseInt(el.getAttribute("data-rw"));
         let qid = parseInt(el.getAttribute("data-qid"));
         let aid = parseInt(el.getAttribute("data-aid"));
-        if(rid!=0){
+        if(rid!==0){
             if(order[rid])
                 order[rid]+= rw
             else
@@ -185,7 +198,7 @@ function sortResults(){
         resEl.classList.remove("d-none");
         results.push({rid: rid,weight: weight});
     });
-    if(results.length == 0){
+    if(results.length === 0){
         let el= document.querySelector(".poll-box .poll-base-result");
         el.classList.remove("d-none");
         results.push({rid: el.getAttribute("data-rid"),weight: 1});
@@ -197,5 +210,6 @@ function checkForm(){
     checkFormField(document.getElementById('poll-form-name'),"name");
     checkFormField(document.getElementById('poll-form-email'),"email");
     checkFormField(document.getElementById('poll-form-phone'),"phone");
-    return document.querySelectorAll('.poll-box .poll-form .is-invalid').length?false:true;
+    checkFormField(document.querySelector(".poll-box [name='form[success]']"),"success");
+    return !document.querySelectorAll('.poll-box .poll-form .is-invalid').length;
 }

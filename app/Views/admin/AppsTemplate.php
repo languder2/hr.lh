@@ -8,4 +8,13 @@
         <?=$message->message?>
     </div>
 <?php endif; ?>
-<?=$appsTable??"";?>
+<?php if(isset($filterBox)):?>
+    <div class="filter-box">
+        <?=$filterBox;?>
+    </div>
+<?php endif;?>
+<?php if(isset($appsTable)):?>
+    <div class="apps-box">
+        <?=$appsTable;?>
+    </div>
+<?php endif;?>

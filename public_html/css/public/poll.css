@@ -88,5 +88,9 @@
     border-radius: 0.25rem;
 }
 .callout-result{
-    border-left-color: #0a53be;
+    border-left-color: #673be6;
+}
+.poll-result-title{
+    text-decoration: none;
+    color: var(--color-purple);
 }

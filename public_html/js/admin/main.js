@@ -1,4 +1,35 @@
 $(window).on('load', function () {
+    let phone= document.querySelector(".filter-box [name='filter[phone]']");
+    IMask(phone, {
+        mask: '+{7} (000) 000-00-00',
+    });
+    $("form.apps-filter")
+        .on("submit",()=>{return false;})
+        .on("change",function(){
+            let formData= $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: $(this).attr("action"),
+                data: formData,
+                success: function (data) {
+                    $(".apps-box").html(data);
+                }
+            });
+        });
+    $("select.set-status").on("change",function(){
+        if($(this).attr("data-access") === "0") return false;
+        $.ajax({
+            type: "POST",
+            url: "/admin/apps/change/status",
+            data: {
+                "id": $(this).attr("data-app"),
+                "status": $(this).val()
+            },
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    });
     $(".formResultStatus").change(function (){
         $.ajax({
             type: "POST",
@@ -42,9 +73,13 @@ $(window).on('load', function () {
         console.log("add answer 1");
         return false;
     });
+    $(".btn-add-detail").on("click",function(){
+        if($(this).attr("data-show")!== "modal") return true;
+        console.log($(this).attr("data-show"));
+        return false;
+    });
 
 });
-
 function addAnswer(qid){
     let answer= $(".example-answer tbody").html();
     let question= $("[data-qid="+qid+"]");
@@ -52,3 +87,4 @@ function addAnswer(qid){
     question.find(".answers tbody").append(answer);
     return false;
 }
+
