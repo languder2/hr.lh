@@ -76,7 +76,7 @@ class PollsController extends BaseController
     }
 
     public function display($pid= false,$width=false,$hegiht=false):string{
-        $pid= 1;
+        $pid= 7;
         $this->data["title"]= "Опрос";
         $this->data['poll']= $this->model->getPoll($pid);
         $this->data['width']= "100%";

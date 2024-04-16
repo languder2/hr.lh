@@ -71,7 +71,7 @@ function checkFormField(el,type){
     }
 }
 function answerBySelected(el){
-    let current= parseInt(el.getAttribute("data-qid"));
+    let current= parseInt(el.parentElement.getAttribute("data-step"));
     let max= parseInt(document.querySelector(".poll-box [name=max]").value);
     let next= getNextStep(current,max);
     document.querySelector(".poll-box [name=step]").value= next;
