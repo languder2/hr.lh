@@ -50,10 +50,19 @@ class AppsController extends BaseController
     }
     public function detail($aid= false,$modal=false):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
-        if(empty($aid)) return redirect()->to(base_url(ADMIN_MAIN_PAGE));
-        echo "$aid<hr>$modal";
-        return "";
+        $data["title"]= "Control Panel: Заяка #$aid";
+        $data['mainMenu']= view("admin/mainMenu",["menu4MainMenu"=>$this->model->getMenu("admin")]);
+        $data['statuses']= $this->model->getStatuses();
+
+        if($this->session->has("message"))
+            $data['message']= $this->session->getFlashdata("message");
+        $data['appD']= $this->model->getAppByID($aid);
+        if(!$data['appD'])
+            return redirect()->to(base_url(ADMIN_MAIN_PAGE));
+//        $data['polls']= $this->model->getPolls(false,false,true);
+//        $data['results']= $this->model->results();
+        $data['appsTable']= view("admin/AppsTableView",$data);
+        $data['content']= view("admin/AppDetailView",$data);
+        return view(ADMIN."/templateView",$data);
     }
-
-
 }

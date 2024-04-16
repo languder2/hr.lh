@@ -1,8 +1,9 @@
 $(window).on('load', function () {
-    let phone= document.querySelector(".filter-box [name='filter[phone]']");
-    IMask(phone, {
-        mask: '+{7} (000) 000-00-00',
-    });
+    let filterPhone= document.querySelector(".filter-box [name='filter[phone]']");
+    let formPhone= document.querySelector("form [name='form[phone]']");
+    let phoneMask = {mask: '+{7} (000) 000-00-00'};
+    if(filterPhone)IMask(filterPhone,phoneMask);
+    if(formPhone)IMask(formPhone,phoneMask);
     $("form.apps-filter")
         .on("submit",()=>{return false;})
         .on("change",function(){

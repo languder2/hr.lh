@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 12 2024 г., 16:04
+-- Время создания: Апр 16 2024 г., 15:52
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `apps` (
   `id` int NOT NULL,
-  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `poll_id` int NOT NULL,
   `poll_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `answers` json NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `apps` (
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'app-new',
   `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -45,14 +45,24 @@ CREATE TABLE `apps` (
 -- Дамп данных таблицы `apps`
 --
 
-INSERT INTO `apps` (`id`, `time`, `poll_id`, `poll_name`, `answers`, `results`, `name`, `phone`, `email`, `status`, `comment`) VALUES
-(1, '2024-04-10 22:16:33', 2, 'test poll 2', '[{\"answer\": \"a3\", \"question\": \"q1\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}]', '', '', 'languder2@gmail.com', 'new', ''),
-(2, '2024-04-10 22:22:48', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd12', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
-(3, '2024-04-10 23:47:27', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', '2del', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
-(4, '2024-04-11 09:12:06', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdasd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
-(5, '2024-04-11 09:17:59', 1, 'test poll', '[{\"answer\": \"q1a2\", \"question\": \"q1\"}, {\"answer\": \"q1a2\", \"question\": \"q2\"}, {\"answer\": \"q3a1\", \"question\": \"q3\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asd', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'new', ''),
-(6, '2024-04-11 09:32:55', 3, 'test', '[{\"answer\": \"2\", \"question\": \"123\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'new', ''),
-(7, '2024-04-11 09:33:27', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdas', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'new', '');
+INSERT INTO `apps` (`id`, `date`, `poll_id`, `poll_name`, `answers`, `results`, `name`, `phone`, `email`, `status`, `comment`) VALUES
+(1, '2024-04-10 22:16:33', 2, 'test poll 2', '[{\"answer\": \"a3\", \"question\": \"q1\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}]', '', '', 'languder2@gmail.com', 'app-new', ''),
+(2, '2024-04-10 22:22:48', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd12', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
+(3, '2024-04-10 23:47:27', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', '2del', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
+(4, '2024-04-11 09:12:06', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdasd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
+(5, '2024-04-11 09:17:59', 1, 'test poll', '[{\"answer\": \"q1a2\", \"question\": \"q1\"}, {\"answer\": \"q1a2\", \"question\": \"q2\"}, {\"answer\": \"q3a1\", \"question\": \"q3\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asd', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'app-new', ''),
+(6, '2024-04-11 09:32:55', 3, 'test', '[{\"answer\": \"2\", \"question\": \"123\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
+(7, '2024-04-11 09:33:27', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdas', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'app-new', ''),
+(8, '2024-04-15 09:10:24', 1, 'test poll', '[{\"answer\": \"who?\", \"question\": \"worked?\"}, {\"answer\": \"worktime?\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'Султан Сергей', '+7 (131) 231-23-12', 'languder2@gmail.com', 'app-open', ''),
+(9, '2024-04-15 09:13:50', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asdasd', '+7 (990) 046-32-14', 'asdsa123@asdasd.ru', 'app-atwork', ''),
+(10, '2024-04-15 09:39:25', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd', '+7 (123) 132-13-13', 'languder2@gmail.com', 'app-open', ''),
+(13, '2024-04-15 11:42:29', 1, 'test poll', '[]', '[{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}]', 'Sultan', '+7 (123) 213-23-12', 'asdsa123@asdasd.ru', 'app-new', ''),
+(14, '2024-04-16 09:09:28', 1, 'test poll', '[]', '[{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-atwork', ''),
+(15, '2024-04-16 09:10:59', 1, 'test poll', '[{\"answer\": \"who?\", \"question\": \"worked?\"}, {\"answer\": \"worktime?\", \"question\": \"why\"}, {\"answer\": \"...!\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Султан Сергей', '+7 (123) 213-23-12', 'ivanov@as.ru', 'app-atwork', ''),
+(16, '2024-04-16 09:12:30', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'Султан Сергей', '+7 (123) 213-23-12', 'i.ivanov@ya.ru', 'app-open', ''),
+(17, '2024-04-16 09:45:13', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Султан Сергей', '+7 (123) 123-12-12', 'languder2@gmail.com', 'app-closed', ''),
+(18, '2024-04-16 13:11:48', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Sultan', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-banned', ''),
+(19, '2024-04-16 14:03:25', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'test2', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-atwork', '');
 
 -- --------------------------------------------------------
 
@@ -72,10 +82,17 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `type`, `contact`, `count`) VALUES
-(1, 'email', 'languder2@gmail.com', 5),
-(2, 'phone', '+7 (990) 046-32-14', 4),
-(3, 'email', 'i.ivanov@ya.ru', 2),
-(4, 'phone', '+7 (990) 041-28-69', 2);
+(1, 'email', 'languder2@gmail.com', 11),
+(2, 'phone', '+7 (990) 046-32-14', 7),
+(3, 'email', 'i.ivanov@ya.ru', 3),
+(4, 'phone', '+7 (990) 041-28-69', 3),
+(5, 'phone', '+7 (131) 231-23-12', 1),
+(6, 'email', 'asdsa123@asdasd.ru', 2),
+(7, 'phone', '+7 (123) 132-13-13', 1),
+(8, 'email', 'vanov@ya.ru', 1),
+(9, 'phone', '+7 (123) 213-23-12', 3),
+(10, 'email', 'ivanov@as.ru', 1),
+(11, 'phone', '+7 (123) 123-12-12', 1);
 
 -- --------------------------------------------------------
 
@@ -182,6 +199,31 @@ INSERT INTO `results` (`id`, `name`, `link`, `description`, `status`, `sort`) VA
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `statuses`
+--
+
+CREATE TABLE `statuses` (
+  `code` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `grp` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `sort` int NOT NULL DEFAULT '1000',
+  `access` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `statuses`
+--
+
+INSERT INTO `statuses` (`code`, `grp`, `name`, `sort`, `access`) VALUES
+('app-atwork', 'app', 'В работе', 200, 1),
+('app-banned', 'app', 'Забанен', 500, 1),
+('app-closed', 'app', 'Закрытая', 300, 1),
+('app-new', 'app', 'Новая', 100, 0),
+('app-open', 'app', 'Открытая', 150, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -243,6 +285,12 @@ ALTER TABLE `results`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `statuses`
+--
+ALTER TABLE `statuses`
+  ADD PRIMARY KEY (`code`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -256,13 +304,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `apps`
 --
 ALTER TABLE `apps`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `menu`

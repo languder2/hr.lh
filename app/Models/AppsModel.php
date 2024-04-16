@@ -91,7 +91,15 @@ class AppsModel extends PollsModel {
         $this->db->error()['message'];
         return false;
     }
-    public function test(){
+    public function getAppByID($id):object|bool{
+        if(!$id) return false;
+        $q= $this->db->table("apps")->where("id",$id)->get();
+        if(!$q->getNumRows())  return false;
+        $result= $q->getFirstRow();
+        $date= date_create($result->date);
+        $result->day= date_format($date,"d-m-Y");
+        $result->time= date_format($date,"H:i:s");
+        return $result;
     }
 
 
