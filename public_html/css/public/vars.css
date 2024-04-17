@@ -49,24 +49,6 @@
     --bs-btn-disabled-bg: #673be6;
     --bs-btn-disabled-border-color: #673be6;
 }
-.btn-purple:after{
-    content: "";
-    position: absolute;
-    top: -50%;
-    bottom: -50%;
-    background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,100%,.1)),to(hsla(0,0%,100%,.6)));
-    background: linear-gradient(90deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.6) 100%);
-    width: 45px;
-    -webkit-transform: skewX(-22deg);
-    transform: skewX(-22deg);
-    left: -65%;
-    -webkit-animation-name: blick;
-    animation-name: blick;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
 .form-check-purple:checked{
     background-color: var(--color-purple);
     border-color: var(--color-purple);

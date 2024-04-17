@@ -8,16 +8,20 @@
     <script defer src="<?= base_url('js/lib/bootstrap.bundle.min.js');?>"></script>
     <script defer src="<?= base_url('js/lib/imask.js');?>"></script>
     <link href="<?=base_url('css/lib/bootstrap.min.css')?>" rel="stylesheet" type="text/css">
-
     <link href="<?=base_url("css/admin/main.css"); ?>?t=<?php echo(microtime(true).rand()); ?>" rel="stylesheet" type="text/css">
     <script defer src="<?= base_url('/js/admin/main.js');?>?t=<?php echo(microtime(true).rand()); ?>"></script>
+
+    <?php if(!empty($includes->js)) foreach ($includes->js as $js):?>
+        <script defer src="<?= base_url($js);?>?t=<?php echo(microtime(true).rand()); ?>"></script>
+    <?php endforeach; ?>
+
 </head>
 <body>
 <header class="container-fluid px-0">
     <?php if(!empty($mainMenu)) echo $mainMenu?>
 </header>
 <main class="container-lg px-2">
-<?=$content??""?>
+<?=$pageContent??""?>
 </main>
 <footer>
 </footer>

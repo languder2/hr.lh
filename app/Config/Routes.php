@@ -41,5 +41,6 @@ $routes->match(['get','post'],'/admin/apps', [AppsController::class, 'list']);
 $routes->match(['get','post'],'/admin/apps/change/status', [AppsController::class, 'changeStatus']);
 $routes->match(['get','post'],'/admin/apps/set/filter', [AppsController::class, 'setFilter']);
 $routes->match(['get','post'],'/admin/apps/modal', [AppsController::class, 'list/modal']);
-$routes->match(['get','post'],"/".ADMIN."/app/detail/(:any)", [AppsController::class, 'detail/$1']);
+$routes->match(['get','post'],"/admin/app/detail/(:any)", [AppsController::class, 'detail/$1']);
+$routes->match(['get','post'],"/admin/app/addComment", [AppsController::class, 'addComment']);
 /** CLIENT */

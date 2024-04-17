@@ -20,33 +20,39 @@ class AppsModel extends PollsModel {
             "phone"=>$form->phone,
             "email"=>$form->email,
             "poll_id"=>$form->pid,
-            "poll_name"=>$poll->name,
-            "answers"=>[],
-            "results"=>[],
+        ];
+        $this->db->table("apps")->insert($app);
+        $appDetail= (object)[
+            "appID"=>$this->db->insertID(),
+            "poll"=>(object)[
+                "poll_id"=>$form->pid,
+                "poll_name"=>$poll->name,
+                "answers"=>[],
+                "results"=>[],
+            ],
         ];
         foreach ($form->answers as $answer)
-            $app->answers[]=(object)[
+            $appDetail->poll->answers[]=(object)[
                 "question"=> $poll->questions[$answer->qid]->question,
                 "answer"=> $poll->questions[$answer->qid]->answers[$answer->aid]->answer
             ];
         foreach ($form->results as $result)
             if(is_object($result) && !empty($result->rid) && !empty($result->weight))
-                $app->results[]= (object)[
+                $appDetail->poll->results[]= (object)[
                     "id"=>$result->rid,
                     "name"=>$results[$result->rid]->name,
                     "link"=>$results[$result->rid]->link,
                     "weight"=>$result->weight
                 ];
-        if(empty($app->results))
-            $app->results[]= (object)[
+        if(empty($appDetail->results))
+            $appDetail->poll->results[]= (object)[
                 "id"=>$poll->result,
                 "name"=>$results[$poll->result]->name,
                 "link"=>$results[$poll->result]->link,
                 "weight"=>1
             ];
-        $app->answers= json_encode($app->answers);
-        $app->results= json_encode($app->results);
-        $this->db->table("apps")->insert($app);
+        $appDetail->poll= json_encode($appDetail->poll);
+        $this->db->table("apps_detail")->insert($appDetail);
         $this->checkClient("email",$app->email);
         $this->checkClient("phone",$app->phone);
         return false;
@@ -81,7 +87,6 @@ class AppsModel extends PollsModel {
             $date= date_create($result->date);
             $result->day= date_format($date,"d-m-Y");
             $result->time= date_format($date,"H:i:s");
-            $result->results= json_decode($result->results);
             $results[$result->day][]= $result;
         }
         return $results;
@@ -93,14 +98,33 @@ class AppsModel extends PollsModel {
     }
     public function getAppByID($id):object|bool{
         if(!$id) return false;
-        $q= $this->db->table("apps")->where("id",$id)->get();
+        $q= $this->db->table("apps")->where("id",$id)
+            ->join("apps_detail","apps.id=apps_detail.appID","left")
+            ->get();
         if(!$q->getNumRows())  return false;
         $result= $q->getFirstRow();
         $date= date_create($result->date);
         $result->day= date_format($date,"d-m-Y");
         $result->time= date_format($date,"H:i:s");
+        $result->poll= json_decode($result->poll);
+        $result->comments= json_decode($result->comments);
         return $result;
     }
 
+    public function addComment2App($form):bool{
+        $q= $this->db->table("apps_detail")->where("appID",$form['appID'])->get();
+        if(!$q->getNumrows()) return false;
+        $app= $q->getFirstRow();
+        if(!empty($app->comments)){
+            $comments= json_decode($app->comments);
+        }
+        $comments[]= (object)[
+            "dt"=>date("d-m-Y H:i:s"),
+            "comment"=>$form['comment']
+        ];
+        $comments= json_encode($comments);
+        $this->db->table("apps_detail")->update(["comments"=>$comments],["appID"=>$form['appID']]);
+        return true;
+    }
 
 }
