@@ -12,7 +12,7 @@
                     <?=$question->question?>
                 </div>
                 <?php foreach ($question->answers as $ai=>$answer):?>
-                <label class="poll-el form-check-label d-block border border-1 border-custom1 rounded-3 p-3 mb-2 <?=$qi?"poll-hidden":""?>" data-step="<?=$qi+1?>">
+                <label class="poll-el form-check-label d-block border border-1 border-custom1 rounded-3 p-3 mb-2 cursor-pointer <?=$qi?"poll-hidden":""?>" data-step="<?=$qi+1?>">
                     <input
                             class="form-check-input mr-5 radio-answer"
                             type="radio"

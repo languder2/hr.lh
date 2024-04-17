@@ -21,27 +21,27 @@
     </form>
 </section>
 <section class="mt-2 box-app-detail-comments">
-    <div class="container">
+    <form action="/admin/app/addComment" method="post" class="container form-app-detail-new-comment">
+        <input type="hidden" name="form[appID]" value="<?=$appDetail->id??0?>">
         <div class="row">
             <h5 class="col-12 px-0">Комментарии</h5>
             <div class="col-9 col-lg-10 px-0">
                 <label for="app-form-phone" class="d-block">
                     <input type="text"
                            class="form-control"
-                           name="new-comment"
+                           name="form[comment]"
                            placeholder="Новый комментарий">
                 </label>
             </div>
-            <div class="col-3 col-lg-2 px-1">
+            <div class="col-3 col-lg-2 px-1 mb-2">
                 <button class="btn btn-primary btn-add-comment w-100">добавить</button>
             </div>
-            <?php if(isset($appDetail) && $appDetail->comments === NULL):?>
-            <?php else:?>
-                not null
-            <?php endif;?>
         </div>
+    </form>
+    <div class="comments px-1">
+        <?=$appDetail->tabComments??""?>
     </div>
-    </section>
+</section>
 <?php
     //dd($includes);
 ?>

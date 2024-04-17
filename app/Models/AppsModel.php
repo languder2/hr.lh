@@ -108,6 +108,8 @@ class AppsModel extends PollsModel {
         $result->time= date_format($date,"H:i:s");
         $result->poll= json_decode($result->poll);
         $result->comments= json_decode($result->comments);
+        if(is_array($result->comments))
+            krsort($result->comments);
         return $result;
     }
 
@@ -126,5 +128,16 @@ class AppsModel extends PollsModel {
         $this->db->table("apps_detail")->update(["comments"=>$comments],["appID"=>$form['appID']]);
         return true;
     }
-
+    public function removeCommentByApp($appID,$key):bool{
+        $q= $this->db->table("apps_detail")->where("appID",$appID)->get();
+        if(!$q->getNumrows()) return false;
+        $app= $q->getFirstRow();
+        if(empty($app->comments)) return false;
+        $comments= json_decode($app->comments);
+        if(isset($comments[$key]))
+            unset($comments[$key]);
+        $comments= json_encode(array_values($comments));
+        $this->db->table("apps_detail")->update(["comments"=>$comments],["appID"=>$appID]);
+        return true;
+    }
 }

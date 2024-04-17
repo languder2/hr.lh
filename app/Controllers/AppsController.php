@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Controllers;
-
 use CodeIgniter\HTTP\RedirectResponse;
-
 class AppsController extends BaseController
 {
     public function saveResult():bool|string{
@@ -64,15 +61,25 @@ class AppsController extends BaseController
         $data['appDetail']= $this->model->getAppByID($aid);
         if(!$data['appDetail'])
             return redirect()->to(base_url(ADMIN_MAIN_PAGE));
-        $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonal.php",$data);
+        $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
+        $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonalView",$data);
         $data['pageContent']= view("admin/AppDetailView",$data);
         return view(ADMIN."/templateView",$data);
     }
 
     public function addComment(){
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
-        $req= $this->request->getVar();
+        $req= $this->request->getVar('form');
         $this->model->addComment2App($req);
-        die();
+        $data['appDetail']= $this->model->getAppByID($req['appID']);
+        return $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
     }
+
+    public function removeComment($appID,$key){
+        if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
+        $this->model->removeCommentByApp($appID,$key);
+        $data['appDetail']= $this->model->getAppByID($appID);
+        return $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
+    }
+
 }

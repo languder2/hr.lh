@@ -55,9 +55,6 @@
 }
 .poll-box .poll-show{
 }
-.poll-el{
-    cursor: pointer
-}
 .poll-navbar{
     display: grid;
     grid-template-columns: 1fr 90px;
