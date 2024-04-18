@@ -20,7 +20,7 @@ class PollsController extends BaseController
             "order"=>"id desc",
         ];
         $this->data['polls']= $this->model->getAdminPollsView($data);
-        $this->data['content']= view("admin/PollsTemplate",$this->data);
+        $this->data['pageContent']= view("admin/PollsTemplate",$this->data);
         return view(ADMIN."/templateView",$this->data);
     }
     public function form($op= "add",$id= false):string|RedirectResponse{

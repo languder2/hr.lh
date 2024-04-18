@@ -10,6 +10,12 @@ class AppsController extends BaseController
     }
     public function list($modal= false):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
+        $data['includes']=(object)[
+            'js'=>[
+                "js/admin/apps.js",
+            ],
+            'css'=>[],
+        ];
         $data["title"]= "Control Panel: Заявки";
         $data['mainMenu']= view("admin/mainMenu",["menu4MainMenu"=>$this->model->getMenu("admin")]);
         $data['filter']= $this->session->get("appsFilter");
@@ -28,11 +34,6 @@ class AppsController extends BaseController
         $data['filterBox']= view("admin/AppsFilterView",$data);
         $data['pageContent']= view("admin/AppsTemplate",$data);
         return $modal?$data['appsTable']:view(ADMIN."/templateView",$data);
-    }
-    public function test():bool|string{
-
-
-        return false;
     }
     public function changeStatus():bool|string{
         $req= $this->request->getVar();
@@ -53,8 +54,10 @@ class AppsController extends BaseController
             ],
             'css'=>[],
         ];
-        $data["title"]= "Control Panel: Заяка #$aid";
-        $data['mainMenu']= view("admin/mainMenu",["menu4MainMenu"=>$this->model->getMenu("admin")]);
+        if(!$modal){
+            $data["title"]= "Control Panel: Заяка #$aid";
+            $data['mainMenu']= view("admin/mainMenu",["menu4MainMenu"=>$this->model->getMenu("admin")]);
+        }
         $data['statuses']= $this->model->getStatuses();
         if($this->session->has("message"))
             $data['message']= $this->session->getFlashdata("message");
@@ -64,18 +67,17 @@ class AppsController extends BaseController
         $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
         $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonalView",$data);
         $data['pageContent']= view("admin/AppDetailView",$data);
-        return view(ADMIN."/templateView",$data);
-    }
 
-    public function addComment(){
+        return $modal?$data['pageContent']:view(ADMIN."/templateView",$data);
+    }
+    public function addComment():string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
         $req= $this->request->getVar('form');
         $this->model->addComment2App($req);
         $data['appDetail']= $this->model->getAppByID($req['appID']);
         return $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
     }
-
-    public function removeComment($appID,$key){
+    public function removeComment($appID,$key):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
         $this->model->removeCommentByApp($appID,$key);
         $data['appDetail']= $this->model->getAppByID($appID);

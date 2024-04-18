@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 16 2024 г., 15:52
+-- Время создания: Апр 18 2024 г., 15:53
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -31,38 +31,49 @@ CREATE TABLE `apps` (
   `id` int NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `poll_id` int NOT NULL,
-  `poll_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `answers` json NOT NULL,
-  `results` json NOT NULL,
   `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'app-new',
-  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+  `status` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'app-new'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `apps`
 --
 
-INSERT INTO `apps` (`id`, `date`, `poll_id`, `poll_name`, `answers`, `results`, `name`, `phone`, `email`, `status`, `comment`) VALUES
-(1, '2024-04-10 22:16:33', 2, 'test poll 2', '[{\"answer\": \"a3\", \"question\": \"q1\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}]', '', '', 'languder2@gmail.com', 'app-new', ''),
-(2, '2024-04-10 22:22:48', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd12', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
-(3, '2024-04-10 23:47:27', 1, 'test poll', '[{\"answer\": \"q1a1\", \"question\": \"q1\"}, {\"answer\": \"q1a3\", \"question\": \"q2\"}, {\"answer\": \"q3a2\", \"question\": \"q3\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 3}, {\"id\": \"4\", \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', '2del', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
-(4, '2024-04-11 09:12:06', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdasd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
-(5, '2024-04-11 09:17:59', 1, 'test poll', '[{\"answer\": \"q1a2\", \"question\": \"q1\"}, {\"answer\": \"q1a2\", \"question\": \"q2\"}, {\"answer\": \"q3a1\", \"question\": \"q3\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asd', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'app-new', ''),
-(6, '2024-04-11 09:32:55', 3, 'test', '[{\"answer\": \"2\", \"question\": \"123\"}]', '[{\"id\": \"2\", \"link\": \"https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/\", \"name\": \"res 3\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-new', ''),
-(7, '2024-04-11 09:33:27', 2, 'test poll 2', '[{\"answer\": \"a2\", \"question\": \"q1\"}]', '[{\"id\": \"3\", \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}]', 'asdas', '+7 (990) 041-28-69', 'i.ivanov@ya.ru', 'app-new', ''),
-(8, '2024-04-15 09:10:24', 1, 'test poll', '[{\"answer\": \"who?\", \"question\": \"worked?\"}, {\"answer\": \"worktime?\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'Султан Сергей', '+7 (131) 231-23-12', 'languder2@gmail.com', 'app-open', ''),
-(9, '2024-04-15 09:13:50', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asdasd', '+7 (990) 046-32-14', 'asdsa123@asdasd.ru', 'app-atwork', ''),
-(10, '2024-04-15 09:39:25', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'asd', '+7 (123) 132-13-13', 'languder2@gmail.com', 'app-open', ''),
-(13, '2024-04-15 11:42:29', 1, 'test poll', '[]', '[{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}]', 'Sultan', '+7 (123) 213-23-12', 'asdsa123@asdasd.ru', 'app-new', ''),
-(14, '2024-04-16 09:09:28', 1, 'test poll', '[]', '[{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}]', 'asd', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-atwork', ''),
-(15, '2024-04-16 09:10:59', 1, 'test poll', '[{\"answer\": \"who?\", \"question\": \"worked?\"}, {\"answer\": \"worktime?\", \"question\": \"why\"}, {\"answer\": \"...!\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Султан Сергей', '+7 (123) 213-23-12', 'ivanov@as.ru', 'app-atwork', ''),
-(16, '2024-04-16 09:12:30', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"friday\", \"question\": \"...\"}]', '[{\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 3}]', 'Султан Сергей', '+7 (123) 213-23-12', 'i.ivanov@ya.ru', 'app-open', ''),
-(17, '2024-04-16 09:45:13', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Султан Сергей', '+7 (123) 123-12-12', 'languder2@gmail.com', 'app-closed', ''),
-(18, '2024-04-16 13:11:48', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'Sultan', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-banned', ''),
-(19, '2024-04-16 14:03:25', 1, 'test poll', '[{\"answer\": \"yes\", \"question\": \"worked?\"}, {\"answer\": \"(OO)\", \"question\": \"why\"}, {\"answer\": \"...?\", \"question\": \"...\"}]', '[{\"id\": 3, \"link\": \"https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/\", \"name\": \"res 2\", \"weight\": 2}, {\"id\": 4, \"link\": \"https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/\", \"name\": \"res 1\", \"weight\": 1}]', 'test2', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-atwork', '');
+INSERT INTO `apps` (`id`, `date`, `poll_id`, `name`, `phone`, `email`, `status`) VALUES
+(1, '2024-04-17 14:02:55', 7, 'test1', '+7 (990) 046-32-14', 'languder2@gmail.com', 'app-open'),
+(2, '2024-04-18 08:38:59', 7, 'John Dow', '+7 (990) 046-32-14', 'asd@sda.ru', 'app-open'),
+(3, '2024-04-18 08:39:23', 7, 'John Dow', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-closed'),
+(4, '2024-04-18 08:39:39', 7, 'test', '+7 (131) 231-23-12', 'i.ivanov@ya.ru', 'app-banned'),
+(5, '2024-04-18 12:49:48', 7, 'asdasd', '+7 (990) 041-28-69', 'asd@sda.ru', 'app-open'),
+(6, '2024-04-18 12:50:13', 7, '123123asd', '+7 (449) 903-27-44', 'languder2@gmail.com', 'app-open'),
+(7, '2024-04-18 13:33:41', 7, 'ktrasdasd', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-new');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `apps_detail`
+--
+
+CREATE TABLE `apps_detail` (
+  `appID` int NOT NULL,
+  `poll` json DEFAULT NULL,
+  `comments` json DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `apps_detail`
+--
+
+INSERT INTO `apps_detail` (`appID`, `poll`, `comments`) VALUES
+(1, '{\"answers\": [{\"answer\": \"С машинами, механизмами\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Иметь возможность заниматься творчеством\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Интересных изобретениях\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Экономической ситуации\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В помещении, где много людей\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', '[]'),
+(2, '{\"answers\": [{\"answer\": \"С детьми или сверстниками\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Вести здоровый образ жизни\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Интересных изобретениях\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В помещении, где много людей\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', NULL),
+(3, '{\"answers\": [{\"answer\": \"С машинами, механизмами\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Вести здоровый образ жизни\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Выдающихся ученых и их открытиях\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В помещении, где много людей\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', '[]'),
+(4, '{\"answers\": [{\"answer\": \"С детьми или сверстниками\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Вести здоровый образ жизни\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Жизни и творчестве писателей, художников, музыкантов\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В необычных условиях\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', NULL),
+(5, '{\"answers\": [{\"answer\": \"С детьми или сверстниками\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Вести здоровый образ жизни\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Жизни и творчестве писателей, художников, музыкантов\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В помещении, где много людей\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', NULL),
+(6, '{\"answers\": [{\"answer\": \"С детьми или сверстниками\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Вести здоровый образ жизни\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Интересных изобретениях\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В необычных условиях\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', '[{\"dt\": \"18-04-2024 12:57:24\", \"comment\": \"asdas123\"}, {\"dt\": \"18-04-2024 12:57:26\", \"comment\": \"rear\"}, {\"dt\": \"18-04-2024 12:57:28\", \"comment\": \"435432413\"}, {\"dt\": \"18-04-2024 12:57:30\", \"comment\": \"test\"}]'),
+(7, '{\"answers\": [{\"answer\": \"С машинами, механизмами\", \"question\": \"Мне хотелось бы работать:\"}, {\"answer\": \"Иметь возможность заниматься творчеством\", \"question\": \"Главное в жизни:\"}, {\"answer\": \"Выдающихся ученых и их открытиях\", \"question\": \"Я предпочитаю читать статьи о:\"}, {\"answer\": \"Научном открытии\", \"question\": \"Больший интерес у меня вызовет сообщение о:\"}, {\"answer\": \"В помещении, где много людей\", \"question\": \"Я предпочту работать:\"}], \"poll_id\": \"7\", \"results\": [{\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}, {\"id\": \"11\", \"link\": \"https://mgu-mlt.ru/\", \"name\": \"фиксированный результат\", \"weight\": 1}], \"poll_name\": \"active\"}', NULL);
 
 -- --------------------------------------------------------
 
@@ -82,17 +93,13 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `type`, `contact`, `count`) VALUES
-(1, 'email', 'languder2@gmail.com', 11),
-(2, 'phone', '+7 (990) 046-32-14', 7),
-(3, 'email', 'i.ivanov@ya.ru', 3),
-(4, 'phone', '+7 (990) 041-28-69', 3),
-(5, 'phone', '+7 (131) 231-23-12', 1),
-(6, 'email', 'asdsa123@asdasd.ru', 2),
-(7, 'phone', '+7 (123) 132-13-13', 1),
-(8, 'email', 'vanov@ya.ru', 1),
-(9, 'phone', '+7 (123) 213-23-12', 3),
-(10, 'email', 'ivanov@as.ru', 1),
-(11, 'phone', '+7 (123) 123-12-12', 1);
+(1, 'email', 'languder2@gmail.com', 4),
+(2, 'email', 'asd@sda.ru', 2),
+(3, 'email', 'i.ivanov@ya.ru', 1),
+(4, 'phone', '+7 (990) 046-32-14', 2),
+(5, 'phone', '+7 (990) 041-28-69', 3),
+(6, 'phone', '+7 (131) 231-23-12', 1),
+(7, 'phone', '+7 (449) 903-27-44', 1);
 
 -- --------------------------------------------------------
 
@@ -145,7 +152,8 @@ INSERT INTO `polls` (`id`, `name`, `result`, `status`) VALUES
 (3, 'test', 2, '1'),
 (4, 'poll1', 3, '1'),
 (5, 'test poll new', 11, '1'),
-(6, 'test poll new', 11, '1');
+(6, 'test poll new', 11, '1'),
+(7, 'active', 11, '1');
 
 -- --------------------------------------------------------
 
@@ -169,7 +177,12 @@ CREATE TABLE `questions` (
 INSERT INTO `questions` (`id`, `question`, `poll`, `answers`, `sort`, `status`) VALUES
 (1, 'worked?', 1, '[{\"sort\": 1, \"answer\": \"yes\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"who?\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"(Oo)\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 1, '1'),
 (2, 'why', 1, '[{\"sort\": 1, \"answer\": \"worktime?\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"(OO)\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"42\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 2, '1'),
-(3, '...', 1, '[{\"sort\": 1, \"answer\": \"...?\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 2, \"answer\": \"friday\", \"result\": \"4\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"...!\", \"result\": \"2\", \"status\": 1, \"weight\": \"0\"}]', 3, '1');
+(3, '...', 1, '[{\"sort\": 1, \"answer\": \"...?\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 2, \"answer\": \"friday\", \"result\": \"4\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"...!\", \"result\": \"2\", \"status\": 1, \"weight\": \"0\"}]', 3, '1'),
+(9, 'Мне хотелось бы работать:', 7, '[{\"sort\": 1, \"answer\": \"С детьми или сверстниками\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"С машинами, механизмами\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"С объектами природы\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '1'),
+(10, 'Главное в жизни:', 7, '[{\"sort\": 1, \"answer\": \"Иметь возможность заниматься творчеством\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Вести здоровый образ жизни\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Тщательно планировать свои дела\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 2, '1'),
+(11, 'Я предпочитаю читать статьи о:', 7, '[{\"sort\": 1, \"answer\": \"Выдающихся ученых и их открытиях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Интересных изобретениях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Жизни и творчестве писателей, художников, музыкантов\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 3, '1'),
+(12, 'Больший интерес у меня вызовет сообщение о:', 7, '[{\"sort\": 1, \"answer\": \"Научном открытии\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Художественной выставке\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Экономической ситуации\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 4, '1'),
+(13, 'Я предпочту работать:', 7, '[{\"sort\": 1, \"answer\": \"В помещении, где много людей\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"В необычных условиях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"В обычном кабинете\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 5, '1');
 
 -- --------------------------------------------------------
 
@@ -255,6 +268,12 @@ ALTER TABLE `apps`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `apps_detail`
+--
+ALTER TABLE `apps_detail`
+  ADD PRIMARY KEY (`appID`);
+
+--
 -- Индексы таблицы `clients`
 --
 ALTER TABLE `clients`
@@ -304,13 +323,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `apps`
 --
 ALTER TABLE `apps`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `menu`
@@ -322,13 +341,13 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT для таблицы `polls`
 --
 ALTER TABLE `polls`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `results`
