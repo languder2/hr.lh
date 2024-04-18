@@ -53,11 +53,11 @@ class AppsModel extends PollsModel {
             ];
         $appDetail->poll= json_encode($appDetail->poll);
         $this->db->table("apps_detail")->insert($appDetail);
-        $this->checkClient("email",$app->email);
-        $this->checkClient("phone",$app->phone);
+        $this->updateDuplicate("email",$app->email);
+        $this->updateDuplicate("phone",$app->phone);
         return false;
     }
-    public function checkClient($type= false,$contact= false):bool{
+    public function updateDuplicate($type= false,$contact= false):bool{
         if($type === false || $contact === false) return false;
         $cnt= $this->db->table("apps")->where([$type=>$contact])->get()->getNumRows();
         $sql= [
@@ -87,14 +87,10 @@ class AppsModel extends PollsModel {
             $date= date_create($result->date);
             $result->day= date_format($date,"d-m-Y");
             $result->time= date_format($date,"H:i:s");
+            $result->duplicates= $this->checkDuplicates($result);
             $results[$result->day][]= $result;
         }
         return $results;
-    }
-    public function appsChangeStatus($req):bool{
-        $this->db->table("apps")->update(["status"=>$req['status']],["id"=>$req['id']]);
-        $this->db->error()['message'];
-        return false;
     }
     public function getAppByID($id):object|bool{
         if(!$id) return false;
@@ -108,11 +104,64 @@ class AppsModel extends PollsModel {
         $result->time= date_format($date,"H:i:s");
         $result->poll= json_decode($result->poll);
         $result->comments= json_decode($result->comments);
+        $result->duplicates= $this->getDuplicates($result);
         if(is_array($result->comments))
             krsort($result->comments);
         return $result;
     }
-
+    public function checkDuplicate($type,$contact){
+        $q= $this->db->table("clients")->where(["type"=>$type,"contact"=>$contact])->get();
+        if($q->getNumRows()==0){
+            $this->updateDuplicate($type,$contact);
+            return $this->checkDuplicate($type,$contact);
+        }
+        return $q->getFirstRow()->count-1;
+    }
+    public function checkDuplicates($app):object{
+        $duplicates= (object)['email'=>0,'phone'=>0];
+        foreach ($duplicates as $field=>$val)
+                $duplicates->{$field}= $this->checkDuplicate($field,$app->{$field});
+        return $duplicates;
+    }
+    public function getDuplicates($app):array{
+        $duplicates= [];
+        $q= $this->db->table("apps")
+            ->select("appID,date,name,email,phone,comments")
+            ->orWhere(["email"=>$app->email,"phone"=>$app->phone])
+            ->join("apps_detail","apps.id=apps_detail.appID","left")
+            ->get();
+        foreach ($q->getResult() as $result)
+            if($result->appID !== $app->id){
+                $result->comments= json_decode($result->comments);
+                $result->type= match(true){
+                    $result->name === $app->name &&
+                    $result->email === $app->email &&
+                    $result->phone === $app->phone => "full",
+                    $result->email === $app->email &&
+                    $result->phone === $app->phone => "phone + email",
+                    $result->email === $app->email=> "email",
+                    $result->phone === $app->phone => "phone",
+                };
+                $duplicates[$result->appID]= $result;
+            }
+        return $duplicates;
+    }
+    public function revisionDuplicates():bool{
+        $this->db->table("clients")->truncate();
+        $fields= ['email',"phone"];
+        foreach ($fields as $field) {
+            $q= $this->db->table("apps")->select($field)->groupBy($field)->get();
+            if($q->getNumRows())
+                foreach ($q->getResult() as $app)
+                    $this->updateDuplicate($field,$app->{$field});
+        }
+        return false;
+    }
+    public function appsChangeStatus($req):bool{
+        $this->db->table("apps")->update(["status"=>$req['status']],["id"=>$req['id']]);
+        $this->db->error()['message'];
+        return false;
+    }
     public function addComment2App($form):bool{
         $q= $this->db->table("apps_detail")->where("appID",$form['appID'])->get();
         if(!$q->getNumrows()) return false;

@@ -105,3 +105,12 @@ background: linear-gradient(90deg,#ff000030,#0000ff30);
     box-shadow:  0 0 .2em hsla(0,0%,48%,.6);
     background: var(--bs-light);
 }
+.duplicate{
+    display: inline-block;
+    background-image: url(../../img/copy.svg);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 26px;
+    margin-left: 10px;
+}

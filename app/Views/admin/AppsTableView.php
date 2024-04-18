@@ -24,12 +24,18 @@
                 </td>
                 <td>
                     <a href="mailto:<?=$app->email?>"><?=$app->email?></a>
+                    <?php if($app->duplicates->email):?>
+                        <a href="<?=$app->email?>" class="duplicate duplicate-email"><?=$app->duplicates->email?></a>
+                    <?php endif;?>
                 </td>
                 <td>
                     <a href="tel:<?=$app->phone?>"><?=$app->phone?></a>
+                    <?php if($app->duplicates->phone):?>
+                        <a href="<?=$app->phone?>" class="duplicate duplicate-phone"><?=$app->duplicates->phone?></a>
+                    <?php endif;?>
                 </td>
                 <td>
-                    <a href="/<?=ADMIN?>/app/detail/<?=$app->id?>/!modal" class="btn btn-sm btn-primary btn-add-detail" target="_blank" data-show="1modal">
+                    <a href="/<?=ADMIN?>/app/detail/<?=$app->id?>/" class="btn btn-sm btn-primary btn-add-detail" target="_self" data-show="1modal">
                         детали
                     </a>
                 </td>

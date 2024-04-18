@@ -1,36 +1,4 @@
 $(window).on('load', function () {
-    let filterPhone= document.querySelector(".filter-box [name='filter[phone]']");
-    let formPhone= document.querySelector("form [name='form[phone]']");
-    let phoneMask = {mask: '+{7} (000) 000-00-00'};
-    if(filterPhone)IMask(filterPhone,phoneMask);
-    if(formPhone)IMask(formPhone,phoneMask);
-    $("form.apps-filter")
-        .on("submit",()=>{return false;})
-        .on("change",function(){
-            let formData= $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: $(this).attr("action"),
-                data: formData,
-                success: function (data) {
-                    $(".apps-box").html(data);
-                }
-            });
-        });
-    $("select.set-status").on("change",function(){
-        if($(this).attr("data-access") === "0") return false;
-        $.ajax({
-            type: "POST",
-            url: "/admin/apps/change/status",
-            data: {
-                "id": $(this).attr("data-app"),
-                "status": $(this).val()
-            },
-            success: function (data) {
-                console.log(data);
-            }
-        });
-    });
     $(".formResultStatus").change(function (){
         $.ajax({
             type: "POST",
