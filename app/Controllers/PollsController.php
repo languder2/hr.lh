@@ -9,19 +9,25 @@ class PollsController extends BaseController
     protected array $data;
     public function list():string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
-        $this->data["title"]= "Control Panel: Polls";
-        $this->data['menu4MainMenu']= $this->model->getMenu("admin");
-        $this->data['mainMenu']= view("admin/mainMenu",$this->data);
+        $data['includes']=(object)[
+            'js'=>[
+                "js/admin/polls.js",
+            ],
+        ];
+
+        $data["title"]= "Control Panel: Polls";
+        $data['menu4MainMenu']= $this->model->getMenu("admin");
+        $data['mainMenu']= view("admin/mainMenu",$data);
         if($this->session->has("message"))
-            $this->data['message']= $this->session->getFlashdata("message");
+            $data['message']= $this->session->getFlashdata("message");
         $results= $this->model->results();
-        $data= [
+        $dataPolls= [
             'results'=> $results,
             "order"=>"id desc",
         ];
-        $this->data['polls']= $this->model->getAdminPollsView($data);
-        $this->data['pageContent']= view("admin/PollsTemplate",$this->data);
-        return view(ADMIN."/templateView",$this->data);
+        $data['polls']= $this->model->getAdminPollsView($dataPolls);
+        $data['pageContent']= view("admin/PollsTemplate",$data);
+        return view(ADMIN."/templateView",$data);
     }
     public function form($op= "add",$id= false):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));

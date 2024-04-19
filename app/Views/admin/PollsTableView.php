@@ -19,7 +19,11 @@
                         <a href="<?=$results[$poll->result]->link?>" target="_blank"><?=$results[$poll->result]->link?></a>
                     <?php endif; ?>
                 </td>
-                <td>btns</td>
+                <td>
+                    <a href="/admin/poll/edit/<?=$poll->id?>" class="btn btn-sm btn bg-primary text-white">
+                        ред.
+                    </a>
+                </td>
             </tr>
         <?php endforeach;?>
     </tbody>
