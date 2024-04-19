@@ -47,17 +47,20 @@ class PollsModel extends ResultsModel {
         }
         return $poll;
     }
-    public function addPoll($poll= false):bool{
+    public function changePoll($poll= false):bool{
         if(!is_object($poll)) return false;
         $sql= (object)[
             "name"=>$poll->name,
             "result"=>$poll->fixed,
             "status"=>'1',
         ];
-        $this->db->table("polls")->insert($sql);
-        $pid= $this->db->insertID();
+        if(!$poll->id)
+            $this->db->table("polls")->insert($sql);
+        else
+            $this->db->table("polls")->update($sql,["id"=>$poll->id]);
+        $pid= $poll->id??$this->db->insertID();
         $si= 1;
-        foreach ($poll->questions as $question){
+        foreach ($poll->questions as $qid=>$question){
             $sql= (object)[
                 "poll"=>$pid,
                 "question"=> $question->question,
@@ -65,9 +68,20 @@ class PollsModel extends ResultsModel {
                 "status"=>"1",
                 "sort"=>$si++,
             ];
-            $this->db->table("questions")->insert($sql);
+            if($question->type=== "isset")
+                $this->db->table("questions")->update($sql,["id"=>$qid]);
+            else
+                $this->db->table("questions")->insert($sql);
         }
-        $this->session->setFlashdata("message",(object)["type"=>"success","class"=>"callout-success","message"=>"Опрос добавлен: #$pid, $poll->name"]);
+        $this->session->setFlashdata(
+            "message",
+            (object)[
+                "type"=>"success",
+                "class"=>"callout-success",
+                "message"=>"Опрос ".($poll->id?"сохранен":"добавлен").": #$pid, $poll->name"
+            ]
+        );
+        $this->checkPoll($pid);
         return true;
     }
     public function getQuestions($pid=false,$status= false,$pkey= false):array|bool{
@@ -109,18 +123,17 @@ class PollsModel extends ResultsModel {
         $data['where']['status']= '1';
         $data['caption']= 'Активные';
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
-        $result.= view("admin/PollsTableView",$data);
+        $result.= view("admin/Polls/TableView",$data);
 
-        $data['where']['status']= '0';
+        $data['where']['status']= '';
         $data['caption']= 'Не активные';
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
-        $result.= view("admin/PollsTableView",$data);
+        $result.= view("admin/Polls/TableView",$data);
         return $result;
     }
 
     public function getPoll($pid=false,$pkey= false):bool|object{
         $q= $this->db->table("polls");
-
         if(empty($pid))
             $q= $q->where("status","1")->orderBy("RAND()")->get();
         else
@@ -129,6 +142,30 @@ class PollsModel extends ResultsModel {
         $poll= $q->getFirstRow();
         $poll->questions= $this->getQuestions($poll->id,false,$pkey);
         return $poll;
+    }
+    public function checkPoll($pid):bool{
+        $q= $this->db->table("polls")->where("id",$pid)->get();
+        if($q->getNumRows() === 0) return false;
+        $this->db->table("questions")->delete("poll=$pid and answers like '[]'");
+        $q= $this->db->table("questions")->where("poll",$pid)->get();
+        if(!$q->getNumRows()){
+            $this->db->table("polls")->update(["status"=>0],["id"=>$pid]);
+            return true;
+        }
+        return true;
+    }
+    public function removePoll($pid):bool{
+        $this->db->table("polls")->delete(["id"=>$pid]);
+        return true;
+    }
+    public function removeQuestions($qid= false,$pid= false):bool{
+        $q= $this->db->table("questions");
+        if($qid)
+            $q->delete(["id"=>$qid]);
+        if($pid)
+            $q->delete(["poll"=>$pid]);
+
+        return  true;
     }
 
 }

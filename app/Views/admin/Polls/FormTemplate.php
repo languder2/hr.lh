@@ -18,16 +18,15 @@
         <div class="mb-3">
             <label class="w-100">
                 <input type="text" class="form-control py-2 px-2
-                    <?=((isset($validator) && !empty($validator->getError("form.poll-name")))?"alert alert-danger":"")?>
+                    <?=((isset($validator) && !empty($validator->getError("form.poll-name")))?"is-invalid":"")?>
                     " name="form[poll-name]" placeholder="Название опроса" value="<?=$poll->name??""?>">
             </label>
         </div>
         <div class="mb-3">
-            <?=(isset($validator) && !empty($validator->getError("form.fixed")))?"alert alert-danger":"";?>
              <select class="form-select
-            <?=(isset($validator) && !empty($validator->getError("form.fixed")))?"alert alert-danger":"";?>
+                <?=(isset($validator) && !empty($validator->getError("form.fixed")))?"is-invalid":"";?>
                     " name="form[fixed]">
-                <option value="">Результат по умолчанию</option>
+                <option value="0" <?=empty($poll->fixed)?"selected":""?> disabled>Результат по умолчанию</option>
                 <?php if(isset($results)) foreach ($results as $result):?>
                     <option value="<?=$result->id?>" <?=(isset($poll->fixed) && $poll->fixed==$result->id)?"selected":""?>><?=$result->name?></option>
                 <?php endforeach;?>
@@ -37,6 +36,7 @@
             <div class="questions">
                 <?php if(empty($poll->questions)):?>
                     <div class="accordion-item question" data-qid="n0">
+                        <input type="hidden" name="form[questions][n0][type]" value="new"">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q-n0">
                                 Вопрос
@@ -86,12 +86,15 @@
                 <?php else:?>
                     <?php foreach ($poll->questions as $qid=>$question):?>
                         <div class="accordion-item question" data-qid="<?=$qid;?>">
-                        <h2 class="accordion-header">
+                            <input type="hidden" name="form[questions][<?=$qid;?>][type]"
+                                value="<?=$question->type??(isset($poll->result)?"isset":"new")?>"
+                            >
+                            <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q-<?=$qid;?>">
                                 Вопрос
                             </button>
                         </h2>
-                        <div id="collapse-q-<?=$qid;?>" class="accordion-collapse collapse question">
+                            <div id="collapse-q-<?=$qid;?>" class="accordion-collapse collapse question">
                             <div class="accordion-body">
                                 <div class="mb-2">
                                     <input type="text" class="form-control py-2 px-2" name="form[questions][<?=$qid;?>][question]" placeholder="Вопрос" value="<?=$question->question?>">
@@ -133,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
                     <?php endforeach;?>
                 <?php endif;?>
             </div>
@@ -173,6 +176,7 @@
 </div>
 <div class="example-question d-none">
     <div class="accordion-item question" data-qid="replace-qid">
+        <input type="hidden" name="form[questions][replace-qid][type]" value="new"">
         <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-q-replace-qid">
                 Вопрос
@@ -202,4 +206,5 @@
         </div>
     </div>
 </div>
+
 <?php if(isset($footer)) echo $footer; ?>

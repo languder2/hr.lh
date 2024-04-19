@@ -66,7 +66,7 @@ class AppsController extends BaseController
             return redirect()->to(base_url(ADMIN_MAIN_PAGE));
         $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
         $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonalView",$data);
-        $data['pageContent']= view("admin/AppDetailView",$data);
+        $data['pageContent']= view("admin/AppDetail/templateView",$data);
 
         return $modal?$data['pageContent']:view(ADMIN."/templateView",$data);
     }

@@ -21,7 +21,7 @@
     <?php if(!empty($mainMenu)) echo $mainMenu?>
 </header>
 <main class="container-lg px-2">
-<?=$pageContent??""?>
+    <?=$pageContent??""?>
 </main>
 <footer>
 </footer>

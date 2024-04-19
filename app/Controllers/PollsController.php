@@ -14,7 +14,6 @@ class PollsController extends BaseController
                 "js/admin/polls.js",
             ],
         ];
-
         $data["title"]= "Control Panel: Polls";
         $data['menu4MainMenu']= $this->model->getMenu("admin");
         $data['mainMenu']= view("admin/mainMenu",$data);
@@ -26,31 +25,32 @@ class PollsController extends BaseController
             "order"=>"id desc",
         ];
         $data['polls']= $this->model->getAdminPollsView($dataPolls);
-        $data['pageContent']= view("admin/PollsTemplate",$data);
+        $data['pageContent']= view("admin/Polls/Template",$data);
         return view(ADMIN."/templateView",$data);
     }
-    public function form($op= "add",$id= false):string|RedirectResponse{
+    public function form($op= "add",$id= false,$modal= false):string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
-        $this->data["title"]= "Control Panel: Results";
-        $this->data['menu4MainMenu']= $this->model->getMenu("admin");
-        $this->data['mainMenu']= view("admin/mainMenu",$this->data);
-        $this->data['header']= view("admin/header",$this->data);
-        $this->data['footer']= view("admin/footer");
-        $this->data['op']= $op;
-        $this->data['id']= $id;
-        $this->data['results']= $this->model->results(["status"=>"1"],["name"=>"asc"]);
+        $data["title"]= "Control Panel: Results";
+        $data['menu4MainMenu']= $this->model->getMenu("admin");
+        $data['mainMenu']= view("admin/mainMenu",$data);
+        $data['op']= $op;
+        $data['id']= $id;
+        $data['results']= $this->model->results(["status"=>"1"],["name"=>"asc"]);
         if($this->session->has("poll")){
-            $this->data['poll']= $this->session->getFlashdata("poll");
-            $this->data['validator']= $this->session->getFlashdata("validator");
-            $this->data['errors'] = $this->model->getFormErrors($this->data['validator']);
+                $data['poll']= $this->session->getFlashdata("poll");
+            $data['validator']= $this->session->getFlashdata("validator");
+            $data['errors'] = $this->model->getFormErrors($data['validator']);
         }
-        elseif($op=="edit")
-            $this->data['form']= $this->model->getResult($id);
-        if($op=="edit" && empty($this->data['form']))
-            return redirect()->to(base_url("/admin/results/"));
-        return view("admin/PollsFormTemplate",$this->data);
+        elseif($op=="edit"){
+            $data['poll']= $this->model->getPoll($id,true);
+            $data['poll']->fixed= $data['poll']->result;
+        }
+        if($op=="edit" && empty($data['poll']))
+            return redirect()->to(base_url("/admin/polls/"));
+        $data['pageContent']=  view("admin/Polls/FormTemplate",$data);
+        echo $modal;
+        return $modal?$data['pageContent']:view("admin/templateView",$data);
     }
-
     public function processing():string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
         $form= $this->request->getVar("form");
@@ -74,27 +74,33 @@ class PollsController extends BaseController
             if($form['op']=="add")
                 return redirect()->to(base_url("/admin/polls/add"));
             if($form['op']=="edit")
-                return redirect()->to(base_url("/admin/polls/edit/".$poll->id));
+                return redirect()->to(base_url("/admin/poll/edit/".$poll->id));
             return false;
         }
-        if($form['op']=="add") $this->model->addPoll($poll);
+        if($form['op']=="add") $this->model->changePoll($poll);
+        if($form['op']=="edit") $this->model->changePoll($poll);
         return redirect()->to(base_url("/admin/polls/"));
     }
-
     public function display($pid= false,$width=false,$hegiht=false):string{
         $pid= 7;
-        $this->data["title"]= "Опрос";
-        $this->data['poll']= $this->model->getPoll($pid);
-        $this->data['width']= "100%";
-        $this->data['height']= 400;
-        if(!is_object($this->data['poll']))
-            $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Неверный идентификатор опроса"]);
-        elseif($this->data['poll']->status!=1)
-            $this->data['content']= view("PollsDisplayErrors",$this->data+["message"=>"Опрос отключен"]);
-        if(empty($this->data['content'])){
-            $this->data['results']= $this->model->getResultByPoll($this->data['poll']);
-            $this->data['content']= view("PollsDisplay",$this->data);
+        $data["title"]= "Опрос";
+        $data['poll']= $this->model->getPoll($pid);
+        $data['width']= $width??"100%";
+        $data['height']= $hegiht??400;
+        if(!is_object($data['poll']))
+            $data['content']= view("PollsDisplayErrors",$data+["message"=>"Неверный идентификатор опроса"]);
+        elseif($data['poll']->status!=1)
+            $data['content']= view("PollsDisplayErrors",$data+["message"=>"Опрос отключен"]);
+        if(empty($data['content'])){
+            $data['results']= $this->model->getResultByPoll($data['poll']);
+            $data['content']= view("PollsDisplay",$data);
         }
-        return view("templateView",$this->data);
+        return view("templateView",$data);
     }
+    public function remove($pid){
+        //$poll= $this->model->getPoll($pid);
+        $this->model->removePoll($pid);
+        $this->model->removeQuestions(false,$pid);
+    }
+
 }

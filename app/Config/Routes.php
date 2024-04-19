@@ -24,7 +24,8 @@ $routes->match(['get','post'],'admin/results/remove/(:num)', [ResultsController:
 /** ADMIN: POLLS  */
 $routes->match(['get','post'],'/admin/polls', [PollsController::class, 'list']);
 $routes->match(['get','post'],'/admin/polls/add', [PollsController::class, 'form']);
-$routes->match(['get','post'],'/admin/polls/edit/(:num)', [PollsController::class, 'form/edit/$1']);
+$routes->match(['get','post'],'/admin/poll/edit/(:num)', [PollsController::class, 'form/edit/$1/$2']);
+$routes->match(['get','post'],'/admin/poll/remove/(:num)', [PollsController::class, 'remove']);
 $routes->match(['get','post'],'/admin/polls/form/processing', [PollsController::class, 'processing']);
 $routes->match(['get','post'],'admin/polls/status', [PollsController::class, 'status']);
 $routes->match(['get','post'],'admin/polls/remove/(:num)', [PollsController::class, 'delete/$1']);
