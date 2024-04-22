@@ -6,6 +6,21 @@ function setPollsInteractive(){
     editBtnList.forEach((el)=> el.onclick= editBtnClick);
     let removeBtnList= document.querySelectorAll(".btn-remove");
     removeBtnList.forEach((el)=> el.onclick= removeBtnClick);
+    let changeStatusBtnList= document.querySelectorAll(".btnPollChangeStatus");
+    changeStatusBtnList.forEach((el)=> el.onclick= pollChangeStatus);
+}
+
+function pollChangeStatus(e){
+    let pid= e.target.getAttribute("data-pid");
+    fetch("/admin/poll/change/status",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({pid: pid})
+    })
+        .then(response => {return response.text();})
+        .then(data =>{
+            console.log(data);
+        });
 }
 function editBtnClick(e){
     window.location.href= e.target.getAttribute("data-action");

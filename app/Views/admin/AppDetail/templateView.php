@@ -20,31 +20,12 @@
             </div>
             <?php if($appDetail->duplicates):?>
                 <div class="tab-pane fade border border-1 px-2 pt-2 pb-3 rounded-bottom border-top-0" id="duplicates" role="tabpanel" aria-labelledby="duplicates-tab">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <?php foreach ($appDetail->duplicates as $duplicate):?>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="duplicate-<?=$duplicate->appID?>">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#duplicate-collapse-<?=$duplicate->appID?>" aria-expanded="false" aria-controls="duplicate-collapse-<?=$duplicate->appID?>">
-                                        <?=$duplicate->date?>
-                                        ->
-                                        <?=$duplicate->type?>
-                                        ->
-                                        <?php if()($duplicate->comments)?>
-                                        comments
-                                    </button>
-                                </h2>
-                                <div id="duplicate-collapse-<?=$duplicate->appID?>" class="accordion-collapse collapse" aria-labelledby="duplicate-<?=$duplicate->appID?>" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                </div>
-                            </div>
-                        <?php endforeach;;?>
-                    </div>
+                    <?=$appDetail->tabDuplicates??""?>
                 </div>
             <?php endif;?>
         </div>
     </div>
 <?php endif;?>
-<pre>
 <?php
 //print_r($appDetail->duplicates);
 ?>

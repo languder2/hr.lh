@@ -27,9 +27,7 @@ $routes->match(['get','post'],'/admin/polls/add', [PollsController::class, 'form
 $routes->match(['get','post'],'/admin/poll/edit/(:num)', [PollsController::class, 'form/edit/$1/$2']);
 $routes->match(['get','post'],'/admin/poll/remove/(:num)', [PollsController::class, 'remove']);
 $routes->match(['get','post'],'/admin/polls/form/processing', [PollsController::class, 'processing']);
-$routes->match(['get','post'],'admin/polls/status', [PollsController::class, 'status']);
-$routes->match(['get','post'],'admin/polls/remove/(:num)', [PollsController::class, 'delete/$1']);
-$routes->match(['get','post'],'admin/polls/remove/(:num)/(:num)/', [PollsController::class, 'delete/$1/$2']);
+$routes->match(['get','post'],'/admin/poll/change/status', [PollsController::class, 'changeStatus']);
 /** Client: POLLS  */
 $routes->match(['get','post'],'/apps/save_result', [AppsController::class, 'saveResult']);
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
@@ -45,4 +43,5 @@ $routes->match(['get','post'],'/admin/apps/modal', [AppsController::class, 'list
 $routes->match(['get','post'],"/admin/app/detail/(:any)", [AppsController::class, 'detail']);
 $routes->match(['get','post'],"/admin/app/addComment", [AppsController::class, 'addComment']);
 $routes->match(['get','post'],"/admin/app/(:num)/comment/remove/(:num)", [AppsController::class, 'removeComment']);
+$routes->match(['get','post'],"/admin/app/change/personal", [AppsController::class, 'changeApp']);
 /** CLIENT */

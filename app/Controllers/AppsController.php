@@ -66,6 +66,7 @@ class AppsController extends BaseController
             return redirect()->to(base_url(ADMIN_MAIN_PAGE));
         $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
         $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonalView",$data);
+        $data['appDetail']->tabDuplicates= view(ADMIN."/AppDetail/tabDuplicatesView",$data);
         $data['pageContent']= view("admin/AppDetail/templateView",$data);
 
         return $modal?$data['pageContent']:view(ADMIN."/templateView",$data);
@@ -82,6 +83,12 @@ class AppsController extends BaseController
         $this->model->removeCommentByApp($appID,$key);
         $data['appDetail']= $this->model->getAppByID($appID);
         return $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
+    }
+    public function changeApp():bool|string{
+        if(!$this->model->hasAuth()) return false;
+        $req= $this->request->getVar("form");
+        $this->model->changeApp($req);
+        return false;
     }
 
 }

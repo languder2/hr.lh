@@ -1,5 +1,6 @@
 <section class="container">
-    <form method="post" action="/admin/app/change/personal">
+    <form method="post" action="/admin/app/change/personal" class="formChangeApp">
+        <input type="hidden" name="form[id]" value="<?=$appDetail->appID??0?>">
         <div class="row">
             <h5 class="col-12 px-0">Персональные данные</h5>
             <div class="my-2 px-1 ps-0 col-3 col-sm-12 col-md-3">

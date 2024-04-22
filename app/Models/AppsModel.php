@@ -189,4 +189,15 @@ class AppsModel extends PollsModel {
         $this->db->table("apps_detail")->update(["comments"=>$comments],["appID"=>$appID]);
         return true;
     }
+    public function changeApp($req):bool{
+        $sql= [
+            "name"=> $req['name'],
+            "email"=> $req['email'],
+            "phone"=> $req['phone'],
+        ];
+        $q= $this->db->table("apps")->where("id",$req['id'])->get();
+        if(!$q->getNumRows()) return false;
+        $this->db->table("apps")->update($sql,["id"=>$req['id']]);
+        return true;
+    }
 }

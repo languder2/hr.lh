@@ -5,7 +5,7 @@
             <td class="text-center" style="width: 50px">#</td>
             <td>Название</td>
             <td>Результат</td>
-            <td style="width: 150px"></td>
+            <td style="width: 190px"></td>
         </tr>
     </thead>
     <tbody class="table-custom">
@@ -20,12 +20,17 @@
                     <?php endif; ?>
                 </td>
                 <td class="align-middle text-center">
-                    <button class="btn btn-primary mx-1 btn-edit" data-action="<?=base_url("/admin/poll/edit/$poll->id")?>">
-                        edit
-                    </button>
-                    <button class="btn btn-danger mx-1 btn-remove" data-action="/admin/poll/remove/<?=$poll->id?>" data-pid="<?=$poll->id?>">
-                        del
-                    </button>
+                    <div class="d-flex align-content-between">
+                        <label class="form-check form-switch mx-1 mt-2">
+                            <input class="form-check-input btnPollChangeStatus" type="checkbox" role="switch" data-pid="<?=$poll->id?>" checked="">
+                        </label>
+                        <button class="btn btn-primary mx-1 btn-edit" data-action="<?=base_url("/admin/poll/edit/$poll->id")?>">
+                            edit
+                        </button>
+                        <button class="btn btn-danger mx-1 btn-remove" data-action="/admin/poll/remove/<?=$poll->id?>" data-pid="<?=$poll->id?>">
+                            del
+                        </button>
+                    </div>
                 </td>
             </tr>
         <?php endforeach;?>

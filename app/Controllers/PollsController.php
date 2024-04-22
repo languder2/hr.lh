@@ -103,4 +103,12 @@ class PollsController extends BaseController
         $this->model->removeQuestions(false,$pid);
     }
 
+    public function changeStatus():string|bool{
+        if(!$this->model->hasAuth()) return false;
+        $req= $this->request->getVar();
+        print_r($req);
+        die();
+        return true;
+    }
+
 }
