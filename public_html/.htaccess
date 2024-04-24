@@ -42,8 +42,15 @@ Options -Indexes
 	# If we don't have mod_rewrite installed, all 404's
 	# can be sent to _index.php, and everything works as normal.
 	ErrorDocument 404 index.php
+	#ErrorDocument 403 403.html
 </IfModule>
 
 # Disable server signature start
 	ServerSignature Off
 # Disable server signature end
+
+#Order deny,allow
+#Deny from all
+#Allow from 127.0.0.3
+#Allow from 10.89.0
+#Allow from 37.44.255.122

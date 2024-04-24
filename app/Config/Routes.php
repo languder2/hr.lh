@@ -4,6 +4,7 @@ use App\Controllers\AuthController;
 use App\Controllers\PollsController;
 use App\Controllers\ResultsController;
 use App\Controllers\AppsController;
+use App\Controllers\TestController;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -32,9 +33,9 @@ $routes->match(['get','post'],'/admin/poll/change/status', [PollsController::cla
 $routes->match(['get','post'],'/apps/save_result', [AppsController::class, 'saveResult']);
 $routes->match(['get','post'],'/polls/(:num)/', [PollsController::class, 'display/$1']);
 $routes->match(['get','post'],'/polls/', [PollsController::class, 'display']);
-$routes->match(['get','post'],'/', [PollsController::class, 'display/1']);
+$routes->match(['get','post'],'/', [PollsController::class, 'display']);
 /** TEST */
-$routes->get('/test', [AppsController::class, 'test']);
+$routes->get('/test', [TestController::class, 'test']);
 /** APPS */
 $routes->match(['get','post'],'/admin/apps', [AppsController::class, 'list']);
 $routes->match(['get','post'],'/admin/apps/change/status', [AppsController::class, 'changeStatus']);

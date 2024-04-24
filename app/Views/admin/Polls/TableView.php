@@ -22,7 +22,7 @@
                 <td class="align-middle text-center">
                     <div class="d-flex align-content-between">
                         <label class="form-check form-switch mx-1 mt-2">
-                            <input class="form-check-input btnPollChangeStatus" type="checkbox" role="switch" data-pid="<?=$poll->id?>" checked="">
+                            <input class="form-check-input btnPollChangeStatus" type="checkbox" role="switch" data-pid="<?=$poll->id?>" <?=($poll->status)?"checked":""?>>
                         </label>
                         <button class="btn btn-primary mx-1 btn-edit" data-action="<?=base_url("/admin/poll/edit/$poll->id")?>">
                             edit

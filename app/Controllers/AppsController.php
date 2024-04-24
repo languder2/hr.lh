@@ -67,6 +67,7 @@ class AppsController extends BaseController
         $data['appDetail']->tabComments= view(ADMIN."/AppDetail/tabCommentsView",$data);
         $data['appDetail']->tabPresonal= view(ADMIN."/AppDetail/tabPersonalView",$data);
         $data['appDetail']->tabDuplicates= view(ADMIN."/AppDetail/tabDuplicatesView",$data);
+        $data['appDetail']->tabNotifications= $this->model->getNotificationsByApp($data['appDetail']->appID);
         $data['pageContent']= view("admin/AppDetail/templateView",$data);
 
         return $modal?$data['pageContent']:view(ADMIN."/templateView",$data);

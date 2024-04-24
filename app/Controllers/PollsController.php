@@ -6,7 +6,6 @@ use CodeIgniter\HTTP\RedirectResponse;
 
 class PollsController extends BaseController
 {
-    protected array $data;
     public function list():string|RedirectResponse{
         if(!$this->model->hasAuth()) return redirect()->to(base_url(ADMIN));
         $data['includes']=(object)[
@@ -82,8 +81,9 @@ class PollsController extends BaseController
         return redirect()->to(base_url("/admin/polls/"));
     }
     public function display($pid= false,$width=false,$hegiht=false):string{
-        $pid= 7;
         $data["title"]= "Опрос";
+        if($pid === false)
+            $pid= $this->model->getActivePoll();
         $data['poll']= $this->model->getPoll($pid);
         $data['width']= $width??"100%";
         $data['height']= $hegiht??400;
@@ -98,7 +98,6 @@ class PollsController extends BaseController
         return view("templateView",$data);
     }
     public function remove($pid){
-        //$poll= $this->model->getPoll($pid);
         $this->model->removePoll($pid);
         $this->model->removeQuestions(false,$pid);
     }
@@ -106,8 +105,7 @@ class PollsController extends BaseController
     public function changeStatus():string|bool{
         if(!$this->model->hasAuth()) return false;
         $req= $this->request->getVar();
-        print_r($req);
-        die();
+        $this->model->changePollStatus($req->pid);
         return true;
     }
 

@@ -19,7 +19,7 @@ function pollChangeStatus(e){
     })
         .then(response => {return response.text();})
         .then(data =>{
-            console.log(data);
+            window.location.reload();
         });
 }
 function editBtnClick(e){
@@ -31,7 +31,7 @@ function removeBtnClick(e){
     })
         .then(response => {return response.text();})
         .then(data => {
-            document.querySelector("tr[data-pid='"+e.target.getAttribute("data-pid")+"']").remove();
+            window.location.reload();
         });
     return false;
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 18 2024 г., 15:53
+-- Время создания: Апр 24 2024 г., 16:30
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -48,7 +48,7 @@ INSERT INTO `apps` (`id`, `date`, `poll_id`, `name`, `phone`, `email`, `status`)
 (4, '2024-04-18 08:39:39', 7, 'test', '+7 (131) 231-23-12', 'i.ivanov@ya.ru', 'app-banned'),
 (5, '2024-04-18 12:49:48', 7, 'asdasd', '+7 (990) 041-28-69', 'asd@sda.ru', 'app-open'),
 (6, '2024-04-18 12:50:13', 7, '123123asd', '+7 (449) 903-27-44', 'languder2@gmail.com', 'app-open'),
-(7, '2024-04-18 13:33:41', 7, 'ktrasdasd', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-new');
+(7, '2024-04-18 13:33:41', 7, 'ktrasdasd', '+7 (990) 041-28-69', 'languder2@gmail.com', 'app-atwork');
 
 -- --------------------------------------------------------
 
@@ -132,6 +132,27 @@ INSERT INTO `menu` (`id`, `parent`, `name`, `link`, `section`, `sort`, `newTab`,
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` int NOT NULL,
+  `date` datetime NOT NULL,
+  `appID` int DEFAULT NULL,
+  `name` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `date`, `appID`, `name`, `description`) VALUES
+(1, '2024-04-24 16:30:00', 7, 'asd', 'asdasd123 123 2');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `polls`
 --
 
@@ -147,13 +168,8 @@ CREATE TABLE `polls` (
 --
 
 INSERT INTO `polls` (`id`, `name`, `result`, `status`) VALUES
-(1, 'test poll', 11, '1'),
-(2, 'test poll 2', 11, '1'),
-(3, 'test', 2, '1'),
-(4, 'poll1', 3, '1'),
-(5, 'test poll new', 11, '1'),
-(6, 'test poll new', 11, '1'),
-(7, 'active', 11, '1');
+(7, 'Активный', 11, '1'),
+(29, 'asd', 3, '0');
 
 -- --------------------------------------------------------
 
@@ -175,14 +191,12 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `question`, `poll`, `answers`, `sort`, `status`) VALUES
-(1, 'worked?', 1, '[{\"sort\": 1, \"answer\": \"yes\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"who?\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"(Oo)\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 1, '1'),
-(2, 'why', 1, '[{\"sort\": 1, \"answer\": \"worktime?\", \"result\": \"4\", \"status\": 1, \"weight\": \"1\"}, {\"sort\": 2, \"answer\": \"(OO)\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"42\", \"result\": \"2\", \"status\": 1, \"weight\": \"3\"}]', 2, '1'),
-(3, '...', 1, '[{\"sort\": 1, \"answer\": \"...?\", \"result\": \"3\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 2, \"answer\": \"friday\", \"result\": \"4\", \"status\": 1, \"weight\": \"2\"}, {\"sort\": 3, \"answer\": \"...!\", \"result\": \"2\", \"status\": 1, \"weight\": \"0\"}]', 3, '1'),
 (9, 'Мне хотелось бы работать:', 7, '[{\"sort\": 1, \"answer\": \"С детьми или сверстниками\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"С машинами, механизмами\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"С объектами природы\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '1'),
 (10, 'Главное в жизни:', 7, '[{\"sort\": 1, \"answer\": \"Иметь возможность заниматься творчеством\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Вести здоровый образ жизни\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Тщательно планировать свои дела\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 2, '1'),
 (11, 'Я предпочитаю читать статьи о:', 7, '[{\"sort\": 1, \"answer\": \"Выдающихся ученых и их открытиях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Интересных изобретениях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Жизни и творчестве писателей, художников, музыкантов\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 3, '1'),
 (12, 'Больший интерес у меня вызовет сообщение о:', 7, '[{\"sort\": 1, \"answer\": \"Научном открытии\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"Художественной выставке\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"Экономической ситуации\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 4, '1'),
-(13, 'Я предпочту работать:', 7, '[{\"sort\": 1, \"answer\": \"В помещении, где много людей\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"В необычных условиях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"В обычном кабинете\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 5, '1');
+(13, 'Я предпочту работать:', 7, '[{\"sort\": 1, \"answer\": \"В помещении, где много людей\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 2, \"answer\": \"В необычных условиях\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}, {\"sort\": 3, \"answer\": \"В обычном кабинете\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 5, '1'),
+(37, 'asd', 29, '[{\"sort\": 1, \"answer\": \"asd\", \"result\": \"0\", \"status\": 1, \"weight\": \"\"}]', 1, '0');
 
 -- --------------------------------------------------------
 
@@ -206,7 +220,6 @@ CREATE TABLE `results` (
 INSERT INTO `results` (`id`, `name`, `link`, `description`, `status`, `sort`) VALUES
 (2, 'res 3', 'https://mgu-mlt.ru/fakultety/fakultet-estestvennyh-nauk/', 'asda', '1', 6),
 (3, 'res 2', 'https://mgu-mlt.ru/fakultety/gumanitarno-pedagogicheskiy-fakultet/', 'asda', '1', 7),
-(4, 'res 1', 'https://mgu-mlt.ru/fakultety/tehnicheskiy-fakultet/', 'asdasd asdas d as', '1', 8),
 (11, 'фиксированный результат', 'https://mgu-mlt.ru/', 'desc 1', '1', 9);
 
 -- --------------------------------------------------------
@@ -286,6 +299,12 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `polls`
 --
 ALTER TABLE `polls`
@@ -338,16 +357,22 @@ ALTER TABLE `menu`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT для таблицы `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблицы `polls`
 --
 ALTER TABLE `polls`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT для таблицы `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT для таблицы `results`

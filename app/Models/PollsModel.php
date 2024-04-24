@@ -52,20 +52,19 @@ class PollsModel extends ResultsModel {
         $sql= (object)[
             "name"=>$poll->name,
             "result"=>$poll->fixed,
-            "status"=>'1',
         ];
         if(!$poll->id)
             $this->db->table("polls")->insert($sql);
         else
             $this->db->table("polls")->update($sql,["id"=>$poll->id]);
-        $pid= $poll->id??$this->db->insertID();
+        $pid= empty($poll->id)?$this->db->insertID():$poll->id;
         $si= 1;
         foreach ($poll->questions as $qid=>$question){
             $sql= (object)[
                 "poll"=>$pid,
                 "question"=> $question->question,
                 "answers"=> json_encode($question->answers),
-                "status"=>"1",
+                "status"=>"0",
                 "sort"=>$si++,
             ];
             if($question->type=== "isset")
@@ -125,7 +124,7 @@ class PollsModel extends ResultsModel {
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
         $result.= view("admin/Polls/TableView",$data);
 
-        $data['where']['status']= '';
+        $data['where']['status']= '0';
         $data['caption']= 'Не активные';
         $data['polls']= $this->getPolls($data['where']??false,$data['order']??false);
         $result.= view("admin/Polls/TableView",$data);
@@ -164,8 +163,20 @@ class PollsModel extends ResultsModel {
             $q->delete(["id"=>$qid]);
         if($pid)
             $q->delete(["poll"=>$pid]);
-
         return  true;
     }
-
+    public function changePollStatus($pid= false):bool{
+        if(!$pid) return false;
+        $this->db->table("polls")->update(["status"=>"0"],"id!=$pid");
+        $q= $this->db->table("polls")->where("id",$pid)->get();
+        if(!$q->getNumRows()) return false;
+        $poll= $q->getFirstRow();
+        $this->db->table("polls")->update(["status"=>$poll->status?"0":"1"],["id"=>$pid]);
+        return true;
+    }
+    public function getActivePoll():int|bool{
+        $q= $this->db->table("polls")->where("status","1")->get();
+        if($q->getNumRows()) return $q->getFirstRow()->id;
+        return false;
+    }
 }
